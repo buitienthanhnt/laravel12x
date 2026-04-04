@@ -5,13 +5,29 @@ use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'canRegister' => Features::enabled(Features::registration()),
-    ]);
+	return Inertia::render('welcome', [
+		'canRegister' => Features::enabled(Features::registration()),
+	]);
 })->name('home');
 
 Route::get('dashboard', function () {
-    return Inertia::render('dashboard');
+	return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/settings.php';
+Route::get('home', function () {
+	return Inertia::render('home');
+});
+
+
+Route::get('akho/manage/{id?}', [\App\Http\Controllers\Akho\Manage::class, 'manage'])->name('akho.manage');
+
+Route::post('akho/register', [\App\Http\Controllers\Akho\Manage::class, 'register'])->name('akho.register');
+
+/**
+ * phai co name thi moi generate sang js source gom router
+ */
+Route::get('demo-inertia', function () {
+	return Inertia::render('demo-inertia');
+})->name('demo-inertia');
+
+require __DIR__ . '/settings.php';

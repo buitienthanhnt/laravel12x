@@ -22,7 +22,7 @@ export default function Login({
     canResetPassword,
     canRegister,
 }: Props) {
-  console.log(store.form());
+  console.log(store, store.form());
   
     return (
         <AuthLayout

@@ -364,3 +364,77 @@ dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =
 })
 
 dashboard.form = dashboardForm
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+export const demoInertia = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: demoInertia.url(options),
+    method: 'get',
+})
+
+demoInertia.definition = {
+    methods: ["get","head"],
+    url: '/demo-inertia',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+demoInertia.url = (options?: RouteQueryOptions) => {
+    return demoInertia.definition.url + queryParams(options)
+}
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+demoInertia.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: demoInertia.url(options),
+    method: 'get',
+})
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+demoInertia.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: demoInertia.url(options),
+    method: 'head',
+})
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+const demoInertiaForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: demoInertia.url(options),
+    method: 'get',
+})
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+demoInertiaForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: demoInertia.url(options),
+    method: 'get',
+})
+
+/**
+* @see routes/web.php:29
+* @route '/demo-inertia'
+*/
+demoInertiaForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: demoInertia.url({
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+demoInertia.form = demoInertiaForm

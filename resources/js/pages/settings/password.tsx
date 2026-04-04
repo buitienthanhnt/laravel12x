@@ -23,7 +23,7 @@ export default function Password() {
     const passwordInput = useRef<HTMLInputElement>(null);
     const currentPasswordInput = useRef<HTMLInputElement>(null);
 
-    console.log('????', PasswordController.update.form());
+    console.log('????', PasswordController, PasswordController.update,PasswordController.update.form());
     
 
     return (
