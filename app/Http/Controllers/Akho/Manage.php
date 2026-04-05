@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Akho;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 final class Manage extends Controller
 {
@@ -15,7 +16,9 @@ final class Manage extends Controller
 
 	public function manage(Request $request)
 	{
-		dd($request->id);
+		return Inertia::render('akhoglobal/Manage', [
+			'id' => $request->id,
+		]);
 		return view('akho.manage');
 	}
 
