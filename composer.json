@@ -8,19 +8,24 @@
         "framework"
     ],
     "license": "MIT",
-		"repositories": [
-					{
-			"type": "path",
-			"url": "packages/thanhnt/agameglobal"
-		}
-		],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/thanhnt/agameglobal"
+        },
+        {
+            "type": "path",
+            "url": "packages/thanhnt/akhoglobal"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "inertiajs/inertia-laravel": "^2.0",
         "laravel/fortify": "^1.30",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-				"thanhnt/agameglobal": "@dev",
+        "thanhnt/agameglobal": "@dev",
+        "thanhnt/akhoglobal": "@dev",
         "laravel/wayfinder": "^0.1.9"
     },
     "require-dev": {
@@ -103,7 +108,7 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-				"platform-check": false,
+        "platform-check": false,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true

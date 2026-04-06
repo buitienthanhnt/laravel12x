@@ -1,0 +1,16 @@
+{
+    "name": "thanhnt/akhoglobal",
+    "description": "design package for stock manage",
+    "autoload": {
+        "psr-4": {
+            "Thanhnt\\Akhoglobal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thanhnt",
+            "email": "buitienthanhnt@gmail.com"
+        }
+    ],
+    "require": {}
+}
