@@ -36,7 +36,7 @@ export default function Register() {
                                     autoComplete="name"
                                     name="name"
                                     placeholder="Full name"
-                                    defaultValue={'123x@gmail.com'}
+                                    // defaultValue={'123x@gmail.com'}
                                 />
                                 <InputError
                                     message={errors.name}
