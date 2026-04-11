@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create(ProductInterface::TABLE_NAME, function (Blueprint $table) {
             $table->id(ProductInterface::_ID);
             $table->char(ProductInterface::_NAME);
+            $table->boolean(ProductInterface::_ACTIVE)->default(true);
             $table->char(ProductInterface::_ALIAS)->unique(ProductInterface::_ALIAS);
             $table->text(ProductInterface::_DESCRIPTION)->nullable();
             $table->char(ProductInterface::_IMAGE_PATH)->nullable();

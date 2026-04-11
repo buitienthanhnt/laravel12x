@@ -4,14 +4,14 @@ namespace Thanhnt\Akhoglobal\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Thanhnt\Akhoglobal\Models\ShareAction\AliasAttr;
-use Thanhnt\Akhoglobal\Models\Types\AttributeInterface;
-use Thanhnt\Akhoglobal\Models\Types\GalleryInterface;
-use Thanhnt\Akhoglobal\Models\Types\ProductInterface;
+use Thanhnt\Akhoglobal\Models\ShareAction\{ActiveAttr, AliasAttr, ImagePath};
+use Thanhnt\Akhoglobal\Models\Types\{AttributeInterface, GalleryInterface, ProductInterface};
 
 final class Product extends Model implements ProductInterface
 {
     use AliasAttr;
+    use ActiveAttr;
+    use ImagePath;
 
     /**
      * define for table of the Model
@@ -22,6 +22,10 @@ final class Product extends Model implements ProductInterface
      * define for list attribute mass fill
      */
     protected $fillable = self::FILLED_FILEDS;
+
+    protected $casts = [
+        self::_ACTIVE => 'boolean',
+    ];
 
     /**
      * define relation to attributes

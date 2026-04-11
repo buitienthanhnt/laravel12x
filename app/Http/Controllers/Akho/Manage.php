@@ -5,13 +5,16 @@ namespace App\Http\Controllers\Akho;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Thanhnt\Akhoglobal\Actions\Product\RegisterProductAction;
 use Thanhnt\Akhoglobal\Models\Product;
+use Thanhnt\Akhoglobal\Requests\Product\RegisterProduct;
 
 final class Manage extends Controller
 {
 
-    public function __construct()
-    {
+    public function __construct(
+        public RegisterProductAction $registerProductAction,
+    ) {
         // $this->middleware('auth');
     }
 
@@ -41,9 +44,11 @@ final class Manage extends Controller
         return view('akho.manage');
     }
 
-    public function register()
+    public function store(RegisterProduct $request)
     {
-        return view('akho.manage');
+        $this->registerProductAction->execute($request);
+
+        return redirect()->route('akho.manage');
     }
 
     public function __invoke()

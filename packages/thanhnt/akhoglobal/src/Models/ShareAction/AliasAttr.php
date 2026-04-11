@@ -19,7 +19,7 @@ trait AliasAttr
          * defined('SomeNamespace\SomeClass::CHECKED_CONSTANT');
          */
         return Attribute::make(
-            set: fn($value, $attributes) => $value ?: Str::slug($attributes[defined(self::class . "::_NAME") ? self::_NAME : self::_TITLE] ?? ''),
+            set: fn($value, $attributes) => $value ? Str::slug($value) : Str::slug($attributes[defined(self::class . "::_NAME") ? self::_NAME : self::_TITLE] ?? Str::random(10)),
         );
     }
 }

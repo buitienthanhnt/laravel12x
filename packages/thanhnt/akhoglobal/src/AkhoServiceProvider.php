@@ -14,6 +14,11 @@ final class AkhoServiceProvider extends ServiceProvider
          * load the package config
          */
         $this->mergeConfigFrom(__DIR__ . '/config/Config.php', 'akhoglobal');
+
+        /**
+         * load for event service provider.
+         */
+        $this->app->register(\Thanhnt\Akhoglobal\Providers\AkhoEventServiceProvider::class);
     }
 
     public function boot()

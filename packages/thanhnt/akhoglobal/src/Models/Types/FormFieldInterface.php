@@ -17,7 +17,7 @@ interface FormFieldInterface
     const TYPE_CHECKBOX = 'checkbox';
     const TYPE_RADIO = 'radio';
     const TYPE_COLOR = 'color';
-    const TYPE_FILE = 'file';
+    const TYPE_FILE = 'choose-file';
     const TYPE_MULTIFILE = 'multifile';
     const TYPE_PHONE = 'tel';
     const TYPE_DATE = 'date';

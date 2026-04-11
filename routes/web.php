@@ -23,6 +23,8 @@ Route::get('akho/manage/{id?}', [\App\Http\Controllers\Akho\Manage::class, 'mana
 
 Route::get('akho/register', [\App\Http\Controllers\Akho\Manage::class, 'create'])->name('akho.register');
 
+Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->name('akho.store');
+
 /**
  * phai co name thi moi generate sang js source gom router
  */
