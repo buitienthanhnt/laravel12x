@@ -3,19 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
+use EdSDK\FlmngrServer\FlmngrServer;
 
 Route::get('/', function () {
-	return Inertia::render('welcome', [
-		'canRegister' => Features::enabled(Features::registration()),
-	]);
+    return Inertia::render('welcome', [
+        'canRegister' => Features::enabled(Features::registration()),
+    ]);
 })->name('home');
 
 Route::get('dashboard', function () {
-	return Inertia::render('dashboard');
+    return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('home', function () {
-	return Inertia::render('home');
+    return Inertia::render('home');
 });
 
 
@@ -29,7 +30,13 @@ Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->
  * phai co name thi moi generate sang js source gom router
  */
 Route::get('demo-inertia', function () {
-	return Inertia::render('demo-inertia');
+    return Inertia::render('demo-inertia');
 })->name('demo-inertia');
 
 require __DIR__ . '/settings.php';
+// Đảm bảo thư mục public/uploads đã tồn tại trên host của bạn
+Route::post('/flmngr', function () {
+    FlmngrServer::flmngrRequest([
+        'dirFiles' => public_path('uploads') // Nơi lưu trữ file thực tế
+    ]);
+})->name('flmngr.api');

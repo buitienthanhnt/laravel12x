@@ -9,6 +9,7 @@ import akho from '@/routes/akho';
 import { Input } from '@/components/ui/input';
 import { type Pagination } from '@/types/shareType/Pagination';
 import { type ProductInterface } from '@/types/akhoglobal/product';
+import MediaManager from './components/blocks/MediaManager';
 
 
 const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: Pagination }> = ({ products }) => {
@@ -84,6 +85,8 @@ const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: P
             </datalist>
 
             <Link className='btn bg-green-400 text-white p-2 rounded-xl' href={akho.register.url()}>create product</Link>
+
+            <MediaManager></MediaManager>
         </div>
     )
 }
