@@ -10,4 +10,5 @@ export enum FormFieldType {
     FILE = 'file',
     CHOOSE_FILE = 'choose-file',
     MULTIFILE = 'multifile',
+    PICK_FILE = 'pick-file',
 }

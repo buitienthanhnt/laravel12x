@@ -1,9 +1,11 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults, validateParameters } from './../../wayfinder'
+import category from './category'
+import product from './product'
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
 export const manage = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: manage.url(args, options),
     method: 'get',
@@ -16,30 +18,29 @@ manage.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
 manage.url = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { id: args }
     }
 
-    
     if (Array.isArray(args)) {
         args = {
-                    id: args[0],
-                }
+            id: args[0],
+        }
     }
 
     args = applyUrlDefaults(args)
 
     validateParameters(args, [
-            "id",
-        ])
+        "id",
+    ])
 
     const parsedArgs = {
-                        id: args?.id,
-                }
+        id: args?.id,
+    }
 
     return manage.definition.url
             .replace('{id?}', parsedArgs.id?.toString() ?? '')
@@ -48,63 +49,66 @@ manage.url = (args?: { id?: string | number } | [id: string | number ] | string 
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
 manage.get = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: manage.url(args, options),
     method: 'get',
 })
+
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
 manage.head = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: manage.url(args, options),
     method: 'head',
 })
 
-    /**
+/**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
-    const manageForm = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-        action: manage.url(args, options),
-        method: 'get',
-    })
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
+const manageForm = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: manage.url(args, options),
+    method: 'get',
+})
 
-            /**
+/**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
-        manageForm.get = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-            action: manage.url(args, options),
-            method: 'get',
-        })
-            /**
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
+manageForm.get = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: manage.url(args, options),
+    method: 'get',
+})
+
+/**
 * @see \App\Http\Controllers\Akho\Manage::manage
- * @see app/Http/Controllers/Akho/Manage.php:27
- * @route '/akho/manage/{id?}'
- */
-        manageForm.head = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-            action: manage.url(args, {
-                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
-                            _method: 'HEAD',
-                            ...(options?.query ?? options?.mergeQuery ?? {}),
-                        }
-                    }),
-            method: 'get',
-        })
-    
-    manage.form = manageForm
+* @see app/Http/Controllers/Akho/Manage.php:32
+* @route '/akho/manage/{id?}'
+*/
+manageForm.head = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: manage.url(args, {
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+manage.form = manageForm
+
 /**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
 export const register = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: register.url(options),
     method: 'get',
@@ -117,72 +121,75 @@ register.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
 register.url = (options?: RouteQueryOptions) => {
     return register.definition.url + queryParams(options)
 }
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
 register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: register.url(options),
     method: 'get',
 })
+
 /**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
 register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: register.url(options),
     method: 'head',
 })
 
-    /**
+/**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
-    const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-        action: register.url(options),
-        method: 'get',
-    })
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
+const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: register.url(options),
+    method: 'get',
+})
 
-            /**
+/**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
-        registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-            action: register.url(options),
-            method: 'get',
-        })
-            /**
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
+registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: register.url(options),
+    method: 'get',
+})
+
+/**
 * @see \App\Http\Controllers\Akho\Manage::register
- * @see app/Http/Controllers/Akho/Manage.php:35
- * @route '/akho/register'
- */
-        registerForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-            action: register.url({
-                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
-                            _method: 'HEAD',
-                            ...(options?.query ?? options?.mergeQuery ?? {}),
-                        }
-                    }),
-            method: 'get',
-        })
-    
-    register.form = registerForm
+* @see app/Http/Controllers/Akho/Manage.php:40
+* @route '/akho/register'
+*/
+registerForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: register.url({
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+register.form = registerForm
+
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
- * @see app/Http/Controllers/Akho/Manage.php:47
- * @route '/akho/store'
- */
+* @see app/Http/Controllers/Akho/Manage.php:79
+* @route '/akho/store'
+*/
 export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: store.url(options),
     method: 'post',
@@ -195,48 +202,51 @@ store.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
- * @see app/Http/Controllers/Akho/Manage.php:47
- * @route '/akho/store'
- */
+* @see app/Http/Controllers/Akho/Manage.php:79
+* @route '/akho/store'
+*/
 store.url = (options?: RouteQueryOptions) => {
     return store.definition.url + queryParams(options)
 }
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
- * @see app/Http/Controllers/Akho/Manage.php:47
- * @route '/akho/store'
- */
+* @see app/Http/Controllers/Akho/Manage.php:79
+* @route '/akho/store'
+*/
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: store.url(options),
     method: 'post',
 })
 
-    /**
+/**
 * @see \App\Http\Controllers\Akho\Manage::store
- * @see app/Http/Controllers/Akho/Manage.php:47
- * @route '/akho/store'
- */
-    const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
-        action: store.url(options),
-        method: 'post',
-    })
+* @see app/Http/Controllers/Akho/Manage.php:79
+* @route '/akho/store'
+*/
+const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+    action: store.url(options),
+    method: 'post',
+})
 
-            /**
+/**
 * @see \App\Http\Controllers\Akho\Manage::store
- * @see app/Http/Controllers/Akho/Manage.php:47
- * @route '/akho/store'
- */
-        storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
-            action: store.url(options),
-            method: 'post',
-        })
-    
-    store.form = storeForm
+* @see app/Http/Controllers/Akho/Manage.php:79
+* @route '/akho/store'
+*/
+storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+    action: store.url(options),
+    method: 'post',
+})
+
+store.form = storeForm
+
 const akho = {
     manage: Object.assign(manage, manage),
-register: Object.assign(register, register),
-store: Object.assign(store, store),
+    register: Object.assign(register, register),
+    category: Object.assign(category, category),
+    store: Object.assign(store, store),
+    product: Object.assign(product, product),
 }
 
 export default akho

@@ -23,6 +23,7 @@ interface GalleryInterface
     const TYPE_ROOM = 'room';
     const TYPE_BOOK = 'book';
     const TYPE_PRODUCT = 'product';
+		const TYPE_CATEGORY = 'category';
 
     /**
      * not use timestamp

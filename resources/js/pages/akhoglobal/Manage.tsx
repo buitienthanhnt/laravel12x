@@ -1,58 +1,46 @@
-
 import { type InertiaConfig } from '@inertiajs/core';
-import React, { useCallback, type FunctionComponent } from "react";
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Link } from '@inertiajs/react';
-import akho from '@/routes/akho';
+import React, { useCallback, type FunctionComponent } from "react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
-import { type Pagination } from '@/types/shareType/Pagination';
+import akho from '@/routes/akho';
 import { type ProductInterface } from '@/types/akhoglobal/product';
-import MediaManager from './components/blocks/MediaManager';
+import { type Pagination } from '@/types/shareType/Pagination';
 
 
 const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: Pagination }> = ({ products }) => {
-    const listData: { label: string; value: string }[] = [
-        { label: 'option1', value: '1' },
-        { label: 'option2', value: '2' },
-        { label: 'option3', value: '3' },
-        { label: 'option4', value: '4' },
-    ];
-    const [value, setValue] = React.useState<string | null>(null);
+  const listData: { label: string; value: string }[] = [
+    { label: 'option1', value: '1' },
+    { label: 'option2', value: '2' },
+    { label: 'option3', value: '3' },
+    { label: 'option4', value: '4' },
+  ];
+  const [value, setValue] = React.useState<string | null>(null);
 
-    const handleSelect = useCallback((value: string | null) => {
-        setValue(value);
-    }, []);
+  const handleSelect = useCallback((value: string | null) => {
+    setValue(value);
+  }, []);
 
-    return (
-        <div className='p-4 space-y-2'>
-            <h3>the page of manage</h3>
-            {products.data && <div className='space-y-1'>
-                {products.data.map((item: ProductInterface) => <div className='flex gap-2 bg-gray-200 p-1 rounded-md' key={item.id}>
-                    <img src={item.image_path} className='size-28 object-cover rounded-md' alt="" />
-                    <p className='font-semibold'>{item.name}</p>
-                </div>)}
-            </div>}
-
-            <DropdownMenu>
-                <DropdownMenuTrigger >
-                    <DropdownMenuLabel>{listData.find((item) => item.value === value)?.label || 'Select an option'}</DropdownMenuLabel>
-                </DropdownMenuTrigger>
-                <DropdownMenuPortal>
-                    <DropdownMenuContent sideOffset={5}>
-                        {/* <DropdownMenuItem onSelect={() => {
+  return (
+    <div className='p-1 sm:p-2 md:p-4 space-y-2'>
+      <DropdownMenu>
+        <DropdownMenuTrigger >
+          <DropdownMenuLabel>{listData.find((item) => item.value === value)?.label || 'Select an option'}</DropdownMenuLabel>
+        </DropdownMenuTrigger>
+        <DropdownMenuPortal>
+          <DropdownMenuContent sideOffset={5}>
+            {/* <DropdownMenuItem onSelect={() => {
               handleSelect(null);
             }}>...</DropdownMenuItem> */}
-                        {listData.map((item) => <DropdownMenuItem key={item.value} onSelect={() => {
-                            handleSelect(item.value)
-                        }} textValue={item.value}>{item.label}</DropdownMenuItem>
-                        )}
-                    </DropdownMenuContent>
-                </DropdownMenuPortal>
-            </DropdownMenu>
+            {listData.map((item) => <DropdownMenuItem key={item.value} onSelect={() => {
+              handleSelect(item.value)
+            }} textValue={item.value}>{item.label}</DropdownMenuItem>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenuPortal>
+      </DropdownMenu>
 
-            {/* Trong HTML, để tạo danh sách gợi ý cho một trường nhập liệu (form field), bạn sử dụng thẻ <datalist> kết hợp với thuộc tính list của thẻ <input>.
+      {/* Trong HTML, để tạo danh sách gợi ý cho một trường nhập liệu (form field), bạn sử dụng thẻ <datalist> kết hợp với thuộc tính list của thẻ <input>.
         Cách thức hoạt động:
 
         Thẻ <datalist>: Chứa các thẻ <option> định nghĩa những giá trị gợi ý.
@@ -71,24 +59,31 @@ const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: P
 
         Dùng cho nhiều trường: Bạn có thể dùng một <datalist> duy nhất cho nhiều thẻ <input> khác nhau bằng cách gán cùng một id vào thuộc tính list của chúng.
       */}
-            <Input className='mt-2'
-                placeholder={'Gõ để tìm kiếm...'}
-                list="browserx"
-            >
-            </Input>
-            <datalist id="browserx">
-                <option value="Chrome" />
-                <option value="Firefox" />
-                <option value="Safari" />
-                <option value="Edge" />
-                <option value="Opera" />
-            </datalist>
+      <Input className='mt-2'
+        placeholder={'Gõ để tìm kiếm...'}
+        list="browserx"
+      >
+      </Input>
+      <datalist id="browserx">
+        <option value="Chrome" />
+        <option value="Firefox" />
+        <option value="Safari" />
+        <option value="Edge" />
+        <option value="Opera" />
+      </datalist>
 
-            <Link className='btn bg-green-400 text-white p-2 rounded-xl' href={akho.register.url()}>create product</Link>
+      <Link className='btn bg-green-400 text-white p-2 rounded-xl my-2' href={akho.register.url()}>create product</Link>
 
-            <MediaManager></MediaManager>
-        </div>
-    )
+       <Link className='btn bg-blue-400 text-white p-2 rounded-xl my-2' href={akho.category.create.url()}>create category</Link>
+
+      {products.data && <div className='space-y-1 my-2'>
+        {products.data.map((item: ProductInterface) => <Link href={akho.product.show.url(item.alias)} className='flex gap-2 bg-gray-200 p-1 rounded-md' key={item.id}>
+          <img src={item.image_path} className='size-28 object-cover rounded-md' alt="" />
+          <p className='font-semibold'>{item.name}</p>
+        </Link>)}
+      </div>}
+    </div>
+  )
 }
 
 export default Manage;

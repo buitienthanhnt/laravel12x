@@ -50,7 +50,7 @@ Khi sử dụng Laravel làm Backend (API) và React làm Frontend, việc chọ
 Cả 3 cái tên ở lượt trước (UniSharp, Alexusmai, Livewire) đều có những giới hạn hoặc đặc thù riêng khi đưa vào hệ sinh thái React. Dưới đây là phân tích chi tiết và các giải 
 
 pháp tối ưu nhất cho React:
-# 1. 🥇 Giải pháp Tốt nhất: Flmngr (Chuyên nghiệp & Native React)
+# 1. 🥇 Giải pháp Tốt nhất: Flmngr (Chuyên nghiệp & Native React ***************************)
 Nếu bạn cần một giải pháp cực kỳ mượt mà, hỗ trợ React trực tiếp từ nhà phát triển và kết nối hoàn hảo với Laravel, hãy chọn Flmngr.
 Cách hoạt động: Phần hiển thị UI là một npm package chuẩn cho React. Phần xử lý file phía sau sẽ gọi về API của Laravel (họ cung cấp sẵn file xử lý PHP/Laravel).
 Ưu điểm: Có component <Flmngr ... /> viết riêng cho React; giao diện hiện đại; tích hợp rất tốt nếu bạn dùng TinyMCE hoặc CKEditor trong React.
@@ -93,7 +93,7 @@ Laravel sẽ đóng vai trò là "máy chủ file" để nhận lệnh tải lê
 # 1. Cài đặt package qua Composer
 Mở terminal tại thư mục dự án Laravel và chạy lệnh:
 bash
-composer require edsdk/flmngr-server-php
+<!-- composer require edsdk/flmngr-server-php -->
 Hãy thận trọng khi sử dụng mã.
 
 # 2. Tạo Route để xử lý API

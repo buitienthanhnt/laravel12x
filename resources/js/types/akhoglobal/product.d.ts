@@ -1,4 +1,4 @@
-import { Pagination } from "../shareType/Pagination";
+import {type Pagination } from "../shareType/Pagination";
 
 export interface ProductInterface {
     id: number;
@@ -10,7 +10,7 @@ export interface ProductInterface {
 
 export interface ProductDetailInterface extends ProductInterface {
     attributes: unknown;
-    galleries: unknown;
+    galleries: {path: string}[];
 }
 
 export interface ProductPaginationInterface extends Omit<Pagination, 'data'> {

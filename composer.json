@@ -20,8 +20,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "alexusmai/laravel-file-manager": "^3.3",
-        "edsdk/flmngr-server-php": "^1.5",
+        "edsdk/flmngr-server-php": "^1.6",
         "inertiajs/inertia-laravel": "^2.0",
         "laravel/fortify": "^1.30",
         "laravel/framework": "^12.0",

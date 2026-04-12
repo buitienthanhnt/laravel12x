@@ -36,6 +36,6 @@ interface ProductInterface
         ['key' => self::_ACTIVE, 'type' => FormFieldInterface::TYPE_CHECKBOX, 'label' => 'Kích hoạt'],
         ['key' => self::_DESCRIPTION, 'type' => FormFieldInterface::TYPE_TEXTAREA, 'label' => 'Miêu tả...'],
         ['key' => self::_IMAGE_PATH, 'type' => FormFieldInterface::TYPE_FILE, 'label' => 'Ảnh đại diện'],
-        ['key' => self::R_GALLERIES, 'type' => FormFieldInterface::TYPE_MULTIFILE, 'label' => 'Ảnh chi tiết'],
+        ['key' => self::R_GALLERIES, 'type' => FormFieldInterface::PICK_FILE, 'label' => 'Ảnh chi tiết'],
     ];
 }
