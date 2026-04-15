@@ -10,6 +10,8 @@ type Props = {
 } & InertiaConfig['sharedPageProps'];
 
 export default function Create({ form_fields, }: Props) {
+  console.log(form_fields);
+  
 
   return (
     <>

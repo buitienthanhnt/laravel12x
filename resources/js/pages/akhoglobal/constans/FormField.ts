@@ -6,6 +6,7 @@ export enum FormFieldType {
     CHECKBOX = 'checkbox',
     RADIO = 'radio',
     SELECT = 'select',
+    SELECT_CHECKBOX = 'select_checkbox',
     TEXTAREA = 'textarea',
     FILE = 'file',
     CHOOSE_FILE = 'choose-file',

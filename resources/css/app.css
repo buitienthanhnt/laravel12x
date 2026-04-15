@@ -141,3 +141,27 @@
         @apply bg-background text-foreground;
     }
 }
+
+@layer utilities {
+  /* Tùy chỉnh toàn bộ thanh cuộn */
+  ::-webkit-scrollbar {
+    width: 8px; /* Độ rộng */
+  }
+
+  /* Màu nền của thanh cuộn */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Phần thanh trượt (nút kéo) */
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Màu blue-500 của Tailwind */
+    border-radius: 10px;
+  }
+
+  /* Màu khi di chuột vào nút kéo */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Màu blue-600 */
+  }
+}

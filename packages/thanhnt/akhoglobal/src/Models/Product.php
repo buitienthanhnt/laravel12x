@@ -2,8 +2,7 @@
 
 namespace Thanhnt\Akhoglobal\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\{SoftDeletes, Model, Relations\HasMany};
 use Thanhnt\Akhoglobal\Models\ShareAction\{ActiveAttr, AliasAttr, ImagePath};
 use Thanhnt\Akhoglobal\Models\Types\{AttributeInterface, GalleryInterface, ProductInterface};
 
@@ -12,6 +11,7 @@ final class Product extends Model implements ProductInterface
 	use AliasAttr;
 	use ActiveAttr;
 	use ImagePath;
+	use SoftDeletes;
 
 	/**
 	 * define for table of the Model

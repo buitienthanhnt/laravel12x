@@ -32,13 +32,29 @@ Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->
 
 Route::get('akho/product/{alias}.html', [\App\Http\Controllers\Akho\Manage::class, 'show'])->name('akho.product.show');
 
+Route::prefix('test')->group(function () {
+
+	Route::get('resize-div', function () {
+		return Inertia::render('test/StockPosition');
+	});
+
+	Route::post('upload', function (\Illuminate\Http\Request $request) {
+		$request->validate([
+			'file' => 'required|file|max:10240', // Giới hạn kích thước file (10MB)
+		]);
+
+		if ($request->file('file')->isValid()) {
+			$path = $request->file('file')->store('uploads', 'public'); // Lưu file vào thư mục public/uploads
+			return response()->json(['message' => 'File uploaded successfully', 'path' => $path]);
+		}
+
+		return response()->json(['message' => 'File upload failed'], 400);
+	});
+});
+
 /**
  * phai co name thi moi generate sang js source gom router
  */
-Route::get('demo-inertia', function () {
-	return Inertia::render('demo-inertia');
-})->name('demo-inertia');
-
 require __DIR__ . '/settings.php';
 // Đảm bảo thư mục public/uploads đã tồn tại trên host của bạn
 Route::post('/flmngr', function () {

@@ -15,4 +15,5 @@ export type FormFieldDefine = {
   label: string;
   required?: boolean;
   options?: { value: string; label: string }[];
+  placeholder?: string;
 } 

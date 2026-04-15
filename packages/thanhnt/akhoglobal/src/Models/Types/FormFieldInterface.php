@@ -13,6 +13,7 @@ interface FormFieldInterface
     const TYPE_BOOL = 'boolean';
     const TYPE_SELECT = 'select';
     const TYPE_MULTISELECT = 'multiselect';
+		const TYPE_SELECT_CHECKBOX = 'select_checkbox';
     const TYPE_DROPDOWN = 'dropdown';
     const TYPE_CHECKBOX = 'checkbox';
     const TYPE_RADIO = 'radio';

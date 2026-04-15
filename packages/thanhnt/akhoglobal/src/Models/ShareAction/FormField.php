@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\ShareAction;
+namespace Thanhnt\Akhoglobal\Models\ShareAction;
 
 /**
  * all of model use the trait must be defined variable: $formFields = self::FORM_FIELDS;
@@ -22,6 +22,22 @@ trait FormField
 			}
 		}
 		return array_values($formData);
+	}
+
+	public function formatFormFields(array $formFields = []): array
+	{
+		foreach ($formFields as &$field) {
+			if (!empty($field['options_source'])) {
+				$field['options'] = $this->getOptions($field['options_source'], $field['key']);
+				unset($field['options_source']);
+			}
+		}
+		return $formFields;
+	}
+
+	protected function getOptions(string $optionInstance, string $key)
+	{
+		return call_user_func_array([$optionInstance, $key . 'Options'], []);
 	}
 
 	/**

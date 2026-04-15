@@ -1,11 +1,13 @@
 import { type InertiaConfig } from '@inertiajs/core';
-import { Form } from "@inertiajs/react";
+import { Form, useForm } from "@inertiajs/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {type FormFieldDefine, } from '@/types/shareType/FormField';
+import { type FormFieldDefine, } from '@/types/shareType/FormField';
 import { type RouteFormDefinition } from '@/wayfinder';
 import { FormFieldType } from "../../constans/FormField";
 import { ChooseFile, PickFile, SelectOption, Textarea, Checkbox } from "../form-fields";
+
+import SelectMultiCheckbox from '../form-fields/multi-select';
 
 
 type Method = "get" | "post" | "put" | "delete" | "patch" | "head" | "options";
@@ -16,14 +18,44 @@ type Props = {
 } & InertiaConfig['sharedPageProps'];
 
 export default function FormRender({ form_info, form_fields }: Props) {
+  const _form_fields: { [key: string]: string | string[] } = {};
+  form_fields.map((field) => {
+    _form_fields[field.key] = '';
+  });
+
+  console.log(_form_fields);
+
+
+  /**
+   * Xây dựng mảng dành cho MultiSelect
+   * @see https://react-select.com/home
+   * khi dùng hành động gán giá trị thủ công cho form thì vẫn phải thông qua hook useForm để bắt và gán giá trị
+   * @see https://react-hook-form.com/get-started
+   * bởi vì các thành phần tùy chỉnh không tự tham chiếu giá trị vào phần tử form được
+   * do đó các giá trị là mảng hay kiểu tuỳ ý nào thì cứ áp dụng quy tắc của JsonObject để truyền giá trị lên server
+   * vd: 
+   *   const { data, setData, errors } = useForm({
+   *     title: '',
+   *     skills: [], // Mảng dành cho MultiSelect
+   *   });
+   * chúng ta truyền mảng string: 
+   *   setData('skills', ['React', 'Vue']) cho skill.
+   */
+
+  const { data: form_data, setData, } = useForm(_form_fields);
 
   return (
-    // @ts-ignore
     <Form
       {...(form_info) as unknown as RouteFormDefinition<Method>}
       className="space-y-2"
       disableWhileProcessing
       showProgress={true}
+      transform={(data) => {
+        const cleaned = Object.fromEntries(
+          Object.entries(form_data).filter(([_, value]) => value !== null && value !== undefined && value !== "")
+        );
+        return {...data, ...cleaned};
+      }}
     >
       {({
         errors,
@@ -68,11 +100,26 @@ export default function FormRender({ form_info, form_fields }: Props) {
                 return (
                   <SelectOption name={field.key}
                     key={index}
-                    placeholder={field.label}
+                    placeholder={field.placeholder}
                     label={field.label}
                     required={field.required}
                     options={field.options}
                   ></SelectOption>
+                );
+              case FormFieldType.SELECT_CHECKBOX:
+                return (
+                  <SelectMultiCheckbox
+                    name={field.key}
+                    key={index}
+                    label={field.label}
+                    onSelect={(val) => {
+                      setData(field.key, val)
+                    }}
+                    placeholder={field.placeholder}
+
+                    required={field.required}
+                    options={field.options}>
+                  </SelectMultiCheckbox>
                 );
               case FormFieldType.TEXTAREA:
                 return (
@@ -104,3 +151,17 @@ export default function FormRender({ form_info, form_fields }: Props) {
     </Form>
   )
 }
+
+//  <div className="mt-4">
+//         <label>Chọn kỹ năng:</label>
+//         <MultiSelect
+//           options={[
+//             { value: 'php', label: 'PHP' },
+//             { value: 'react', label: 'React' }
+//           ]}
+//           selected={data.skills}
+//           // Cập nhật state của useForm, component <Form /> sẽ tự lấy data mới nhất
+//           onChange={(values) => setData('skills', values)}
+//         />
+//         {errors.skills && <div className="text-red-500">{errors.skills}</div>}
+//       </div>

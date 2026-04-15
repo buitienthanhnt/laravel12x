@@ -1,6 +1,6 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
 /**
-* @see routes/web.php:44
+* @see routes/web.php:60
 * @route '/flmngr'
 */
 export const api = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -14,7 +14,7 @@ api.definition = {
 } satisfies RouteDefinition<["post"]>
 
 /**
-* @see routes/web.php:44
+* @see routes/web.php:60
 * @route '/flmngr'
 */
 api.url = (options?: RouteQueryOptions) => {
@@ -22,7 +22,7 @@ api.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see routes/web.php:44
+* @see routes/web.php:60
 * @route '/flmngr'
 */
 api.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -31,7 +31,7 @@ api.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 })
 
 /**
-* @see routes/web.php:44
+* @see routes/web.php:60
 * @route '/flmngr'
 */
 const apiForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -40,7 +40,7 @@ const apiForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
 })
 
 /**
-* @see routes/web.php:44
+* @see routes/web.php:60
 * @route '/flmngr'
 */
 apiForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

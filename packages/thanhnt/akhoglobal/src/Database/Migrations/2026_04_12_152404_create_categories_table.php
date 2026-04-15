@@ -19,7 +19,7 @@ return new class extends Migration
 						$table->text(CategoryInterface::_DESCRIPTION)->nullable();
 						$table->string(CategoryInterface::_IMAGE_PATH)->nullable();
 						$table->boolean(CategoryInterface::_ACTIVE)->default(true);
-						$table->json(CategoryInterface::_PARENT_ID)->nullable();
+						$table->json(CategoryInterface::_PARENT)->nullable();
 						$table->softDeletes();
             $table->timestamps();
         });
