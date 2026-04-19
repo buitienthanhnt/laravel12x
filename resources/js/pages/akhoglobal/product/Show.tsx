@@ -5,7 +5,7 @@ export default function Show({ product }: { product: ProductDetailInterface }) {
   
 
   return (
-    <div className="container mx-auto min-h-screen px-1 sm:px-2 md:px-4">
+    <div className="container mx-auto min-h-screen p-1 sm:px-2 md:px-4">
       <div className="space-y-2">
         <div className="flex gap-2">
           {product.image_path && <img src={product.image_path} alt={product.name} className="size-28 rounded-md" />}

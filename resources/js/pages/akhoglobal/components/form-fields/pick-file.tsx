@@ -34,12 +34,12 @@ export default function PickFile({ name, label, ...props }: FormField) {
       // ĐÂY LÀ ĐIỂM QUAN TRỌNG: Kết nối tới Laravel của bạn
       urlFileManager: env.VITE_URL_FILE_MANAGER, // Route POST vừa tạo ở Bước 1
       urlFiles: env.VITE_URL_FILES,     // Đường dẫn URL công khai để xem ảnh
-      isMultiple: true, // true nếu cho phép chọn nhiều file cùng lúc
+      isMultiple: false, // true nếu cho phép chọn nhiều file cùng lúc
       // Callback sau khi user chọn file và bấm "Insert"
       onFinish: (files) => {
         if (files && files.length > 0) {
           // files sẽ là một mảng chứa thông tin các file được chọn
-          setSelectedFiles(files); // Lưu lại danh sách file đã chọn vào state
+          setSelectedFiles([...selectedFiles, ...files]); // Lưu lại danh sách file đã chọn vào state(giải phóng các file đã chọn trước đó vì bản miễn phí chỉ cho phép chọn 1 file)
         }
       },
       // (Tùy chọn) Thêm callback khi người dùng bấm nút Cancel mà không chọn gì
@@ -47,7 +47,7 @@ export default function PickFile({ name, label, ...props }: FormField) {
         console.log("Người dùng đã đóng trình quản lý file mà không chọn gì.");
       },
     });
-  }, []);
+  }, [selectedFiles]);
 
   const handleRemoveFile = useCallback((index: number) => {
     setSelectedFiles((prevFiles) => [...prevFiles.filter((_, i) => i !== index)]);

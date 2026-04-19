@@ -14,6 +14,7 @@ interface ProductInterface
 	 */
 	const _ID = 'id';
 	const _NAME = 'name';
+	const _SKU = 'sku';
 	const _ACTIVE = 'active';
 	const _ALIAS = 'alias';
 	const _DESCRIPTION = 'description';
@@ -35,12 +36,13 @@ interface ProductInterface
 	 */
 	const USE_TIMESTAMP = true;
 
-	const FILLED_FILEDS = [self::_NAME, self::_DESCRIPTION, self::_IMAGE_PATH, self::_ALIAS, self::_ACTIVE];
+	const FILLED_FILEDS = [self::_NAME, self::_SKU, self::_DESCRIPTION, self::_IMAGE_PATH, self::_ALIAS, self::_ACTIVE];
 	const HIDDEN_FIELDS = ['created_at', 'updated_at', 'deleted_at'];
 
 	const FORM_FIELDS = [
-		['key' => self::_NAME, 'type' => FormFieldInterface::TYPE_TEXT, 'required' => true, 'label' => 'Tên sản phẩm'],
-		['key' => self::_ALIAS, 'type' => FormFieldInterface::TYPE_TEXT, 'label' => 'Bí danh'],
+		['key' => self::_NAME, 'type' => FormFieldInterface::TYPE_TEXT, 'required' => true, 'label' => 'Tên sản phẩm'],
+		['key' => self::_SKU, 'type' => FormFieldInterface::TYPE_TEXT, 'label' => 'Mã sản phẩm'],
+		['key' => self::_ALIAS, 'type' => FormFieldInterface::TYPE_TEXT, 'label' => 'Bí danh'],
 		['key' => self::_ACTIVE, 'type' => FormFieldInterface::TYPE_CHECKBOX, 'label' => 'Kích hoạt'],
 		['key' => self::_DESCRIPTION, 'type' => FormFieldInterface::TYPE_TEXTAREA, 'label' => 'Miêu tả...'],
 		['key' => self::_IMAGE_PATH, 'type' => FormFieldInterface::TYPE_FILE, 'label' => 'Ảnh đại diện'],

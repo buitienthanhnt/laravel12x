@@ -1,11 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { Settings } from 'lucide-react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+
 type Props = {
   width: number;
   height: number;
   x: number;
   y: number;
+  name?: string;
+  blockKey?: string;
+  onSelected?: (param: any) => void;
+  selected: boolean;
 };
-const PanelBlock = ({ width, height, x, y }: Props) => {
+
+const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected }: Props) => {
   // 1. State lưu vị trí hiện tại của thẻ Div (mặc định cách góc trên trái 100px)
   const [position, setPosition] = useState({ x, y });
   // State quản lý kích thước
@@ -54,7 +61,7 @@ const PanelBlock = ({ width, height, x, y }: Props) => {
      * Thông tin này rất hữu ích để xác định vị trí và kích thước của phần tử trên trang, đặc biệt khi bạn cần thực hiện các thao tác liên quan đến vị trí hoặc kích thước của phần tử đó.
      * 
      */
-    console.log(target.getBoundingClientRect());
+    // console.log(target.getBoundingClientRect());
     ;
   };
 
@@ -100,9 +107,15 @@ const PanelBlock = ({ width, height, x, y }: Props) => {
     };
   }, []);
 
+  const onSaveBlock = useCallback(() => {
+    // console.log('save block: ', { position, dims, name, blockKey });
+    console.log({ ...position, ...dims, name, blockKey });
+    
+    onSelected?.({ ...position, ...dims, name, blockKey });
+  }, [position, dims, name, blockKey, onSelected]);
+
   return (
     <div
-      onClick={showPosition}
       ref={divRef}
       style={{
         // Các thuộc tính CSS bắt buộc để di chuyển tự do
@@ -114,36 +127,39 @@ const PanelBlock = ({ width, height, x, y }: Props) => {
         // height: '100px',
         width: `${dims.width}px`,
         height: `${dims.height}px`,
-        background: '#4caf50',
         color: 'white',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         userSelect: 'none', // Ngăn bôi đen chữ khi đang kéo
-        borderRadius: '8px',
+        borderRadius: '4px',
         boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
       }}
+      className={selected ? 'bg-blue-400' : 'bg-gray-200'}
     >
       <div
         onMouseDown={handleMouseDown}
         style={{
-          width: '12px',
-          height: '12px',
+          width: '8px',
+          height: '8px',
           background: 'violet',
           position: 'absolute',
           left: 0,
           top: 0,
           cursor: 'move', // Đổi con trỏ chuột thành dạng bàn tay 4 hướng
+          zIndex: 100
         }}
       />
-      <div>Rộng: <b>{dims.width}px</b></div>
-      <div>Cao: <b>{dims.height}px</b></div>
+      <div className='flex justify-center py-2 w-full h-full relative'>
+        {name && <b >{name}</b>}
+        <Settings className='absolute top-2 right-2' onClick={onSaveBlock} size={24} color='black'></Settings>
+      </div>
       {/* Nút nắm hình vuông nhỏ ở góc dưới bên phải */}
       <div
         onMouseDown={handleMouseResizeDown}
         style={{
-          width: '12px',
-          height: '12px',
+          width: '8px',
+          height: '8px',
           background: '#1565c0',
           position: 'absolute',
           right: '0',

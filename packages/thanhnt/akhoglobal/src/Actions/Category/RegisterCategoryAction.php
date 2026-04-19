@@ -18,7 +18,7 @@ final class RegisterCategoryAction
 		 * handle file upload and update category after create success
 		 */
 		if ($photo = $request->file(\Thanhnt\Akhoglobal\Models\Types\CategoryInterface::_IMAGE_PATH)) {
-			$category->updateImagePath($photo, 'categories');
+			$category->updateImagePath($photo, 'category');
 		}
 
 		/**

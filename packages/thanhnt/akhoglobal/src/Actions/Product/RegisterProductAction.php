@@ -25,7 +25,7 @@ class RegisterProductAction
 		 * handle file upload and update product after create success
 		 */
 		if ($photo = $request->file(ProductInterface::_IMAGE_PATH)) {
-			$image_path = $photo->storePublicly('products', ['disk' => 'public']);
+			$image_path = $photo->storePublicly('product', ['disk' => 'public']);
 			$product->update([
 				ProductInterface::_IMAGE_PATH => $image_path,
 			]);

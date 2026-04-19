@@ -16,7 +16,7 @@ export default function Create({ form_fields, }: Props) {
   return (
     <>
       <Head>
-        <title>product create</title>
+        <title>product category</title>
       </Head>
       <div className="container mx-auto min-h-screen">
         <div className="p-4 bg-gray-100">

@@ -34,14 +34,12 @@ export default function ChooseFile({ name, label, className, comStyle, imageStyl
           if (files && files.length > 0) {
             const selectedFile = files[0];
             setTargetFile(selectedFile);
-            // const url = URL.createObjectURL(selectedFile); // Tạo URL tạm
-            // console.log("Tên file:", selectedFile.name, "Kích thước:", selectedFile.size);
           }
         }}
       />
       {targetFile &&
         <div className="flex space-x-2 relative">
-          <div className="absolute top-1 left-1 p-1 opacity-40 hover:opacity-90 bg-white rounded-full flex" onClick={clearFileInput}>
+          <div className="absolute top-1 left-1 p-1 opacity-40 hover:opacity-90 bg-white rounded-full flex z-20" onClick={clearFileInput}>
             <Trash className="size-8 text-black"></Trash>
           </div>
           <img src={targetFile && URL.createObjectURL(targetFile)} alt="avatar" className={cn('w-40 h-40 rounded-md object-cover', imageStyle)} />

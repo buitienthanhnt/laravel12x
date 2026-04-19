@@ -2,7 +2,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import { CheckIcon } from "lucide-react"
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { FormField } from "@/types/shareType/FormField"
+import {type FormField } from "@/types/shareType/FormField"
 
 function Checkbox({
     className,
