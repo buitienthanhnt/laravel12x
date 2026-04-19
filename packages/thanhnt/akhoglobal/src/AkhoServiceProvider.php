@@ -13,7 +13,7 @@ final class AkhoServiceProvider extends ServiceProvider
         /**
          * load the package config
          */
-        $this->mergeConfigFrom(__DIR__ . '/config/Config.php', 'akhoglobal');
+        $this->mergeConfigFrom(__DIR__ . '/Config/config.php', 'akhoglobal');
 
         /**
          * load for event service provider.
@@ -66,7 +66,7 @@ final class AkhoServiceProvider extends ServiceProvider
          * php artisan vendor:publish --provider="Thanhnt\Akhoglobal\AkhoglobalProvider"
          */
         $this->publishes([
-            __DIR__ . '/config/config.php' => config_path('akhoglobal.php'),
+            __DIR__ . '/Config/config.php' => config_path('akhoglobal.php'),
         ], 'akhoglobal-config');
 
         /**
