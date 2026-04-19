@@ -40,6 +40,8 @@ final class AkhoServiceProvider extends ServiceProvider
          * php artisan make:migration create_products_table --path=packages/thanhnt/akhoglobal/src/Database/Migrations
          * php artisan make:migration create_galleries_table --path=packages/thanhnt/akhoglobal/src/Database/Migrations
          * php artisan make:migration create_attributes_table --path=packages/thanhnt/akhoglobal/src/Database/Migrations
+				 * 
+				 * php artisan make:migration create_category_parent_table --path=packages/thanhnt/akhoglobal/src/Database/Migrations
          */
         $this->loadMigrationsFrom(__DIR__ . '/Database/Migrations');
 
@@ -66,7 +68,7 @@ final class AkhoServiceProvider extends ServiceProvider
          * php artisan vendor:publish --provider="Thanhnt\Akhoglobal\AkhoglobalProvider"
          */
         $this->publishes([
-            __DIR__ . '/config/config.php' => config_path('akhoglobal.php'),
+            __DIR__ . '/Config/Config.php' => config_path('akhoglobal.php'),
         ], 'akhoglobal-config');
 
         /**

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97ad360c5548023663f395a7a8c16219",
+    "content-hash": "ee1843ca7ea0377e03ac2a1f1103229a",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -545,6 +545,59 @@
                 }
             ],
             "time": "2025-10-31T18:51:33+00:00"
+        },
+        {
+            "name": "edsdk/flmngr-server-php",
+            "version": "1.6.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edsdk/flmngr-server-php.git",
+                "reference": "ef5397671251c213fe319fbf83f9a82fe513ab3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edsdk/flmngr-server-php/zipball/ef5397671251c213fe319fbf83f9a82fe513ab3b",
+                "reference": "ef5397671251c213fe319fbf83f9a82fe513ab3b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "ext-json": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EdSDK\\FlmngrServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "EdSDK team (the authors of N1ED and Flmngr)",
+                    "email": "support@helpdesk.edsdk.com"
+                }
+            ],
+            "description": "Flmngr file manager PHP backend",
+            "homepage": "https://flmngr.com",
+            "keywords": [
+                "file",
+                "finder",
+                "image",
+                "imgpen",
+                "manager",
+                "server",
+                "upload"
+            ],
+            "support": {
+                "issues": "https://github.com/edsdk/flmngr-server-php/issues",
+                "source": "https://github.com/edsdk/flmngr-server-php/tree/1.6.7"
+            },
+            "time": "2026-01-14T17:16:16+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -6270,7 +6323,7 @@
         },
         {
             "name": "thanhnt/agameglobal",
-            "version": "dev-dev",
+            "version": "dev-dev-filemanager",
             "dist": {
                 "type": "path",
                 "url": "packages/thanhnt/agameglobal",
@@ -6298,7 +6351,7 @@
         },
         {
             "name": "thanhnt/akhoglobal",
-            "version": "dev-dev",
+            "version": "dev-dev-filemanager",
             "dist": {
                 "type": "path",
                 "url": "packages/thanhnt/akhoglobal",

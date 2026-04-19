@@ -20,13 +20,14 @@
     ],
     "require": {
         "php": "^8.2",
+        "edsdk/flmngr-server-php": "^1.6",
         "inertiajs/inertia-laravel": "^2.0",
         "laravel/fortify": "^1.30",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "laravel/wayfinder": "^0.1.9",
         "thanhnt/agameglobal": "@dev",
-        "thanhnt/akhoglobal": "@dev",
-        "laravel/wayfinder": "^0.1.9"
+        "thanhnt/akhoglobal": "@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

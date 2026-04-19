@@ -5,8 +5,6 @@ import { manage } from '@/routes/akho';
 
 export default function Home(props: InertiaConfig['sharedPageProps']) {
 
-  console.log(props);
-  
   return (
     <div>
       <h2>demo home page</h2>
