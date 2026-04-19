@@ -23,35 +23,29 @@ export default function PickFile({ name, label, ...props }: FormField) {
   }, [selectedFiles]);
 
   const openFileManager = useCallback(() => {
-    const appUrl = import.meta.env.VITE_APP_URL;
-    if (!appUrl) {
+    const env = import.meta.env;
+    if (!env.VITE_APP_URL) {
       console.error("APP_URL is not defined");
       return;
     }
 
     Flmngr.open({
-      apiKey: "wewO9YKsKxuwgz4Omr2Mcmbp", // API key mặc định miễn phí (có thể thay nếu mua bản quyền)
+      apiKey: env.VITE_FLMNGR_KEY, // API key mặc định miễn phí (có thể thay nếu mua bản quyền)
       // ĐÂY LÀ ĐIỂM QUAN TRỌNG: Kết nối tới Laravel của bạn
-      urlFileManager: `${appUrl}/flmngr`, // Route POST vừa tạo ở Bước 1
-      urlFiles: `${appUrl}/storage/uploads`,     // Đường dẫn URL công khai để xem ảnh
+      urlFileManager: env.VITE_URL_FILE_MANAGER, // Route POST vừa tạo ở Bước 1
+      urlFiles: env.VITE_URL_FILES,     // Đường dẫn URL công khai để xem ảnh
       isMultiple: true, // true nếu cho phép chọn nhiều file cùng lúc
       // Callback sau khi user chọn file và bấm "Insert"
       onFinish: (files) => {
         if (files && files.length > 0) {
           // files sẽ là một mảng chứa thông tin các file được chọn
-          console.log("Danh sách file đã chọn:", files);
-
-          // Ví dụ lấy ra URL của file đầu tiên
-          const fileUrl = files[0].url;
-          console.log("Đường dẫn file:", fileUrl);
           setSelectedFiles(files); // Lưu lại danh sách file đã chọn vào state
-          // Bạn có thể set state hoặc làm gì đó với URL này tại đây
         }
       },
       // (Tùy chọn) Thêm callback khi người dùng bấm nút Cancel mà không chọn gì
       onCancel: () => {
         console.log("Người dùng đã đóng trình quản lý file mà không chọn gì.");
-      }
+      },
     });
   }, []);
 
