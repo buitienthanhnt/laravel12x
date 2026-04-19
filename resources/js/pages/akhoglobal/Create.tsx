@@ -1,125 +1,42 @@
 import { type InertiaConfig } from "@inertiajs/core";
-import { Form, Head } from "@inertiajs/react"
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Head } from "@inertiajs/react";
+import { type FormFieldDefine } from "@/types/shareType/FormField";
 import { type RouteFormDefinition } from "@/wayfinder";
-import { SelectOption, ChooseFile, Textarea, Checkbox, PickFile } from "./components/form-fields";
-import { FormFieldType } from "./constans/FormField";
+import FormRender from "./components/blocks/FormRender";
+
 
 type Props = {
-  form_fields: {
-    key: string;
-    type: string;
-    label: string;
-    required?: boolean;
-    options?: { value: string; label: string }[];
-  }[] & InertiaConfig['sharedPageProps'];
+  custom_fields: {
+    	price_fields: FormFieldDefine[]; 
+  },
+  form_fields: FormFieldDefine[] & InertiaConfig['sharedPageProps'];
 };
 
-export default function Create({ form_fields, }: Props) {
-  // const [formFields, setFormFields] = useState<{ [key: string]: string }>();
-
-  // useEffect(() => {
-  //     let form_fields: { [key: string]: string } = {};
-  //     product_fields.map((field) => {
-  //         form_fields[field.key] = '';
-  //     });
-  //     setFormFields({ ...form_fields });
-  // }, [])
+export default function Create({ form_fields, custom_fields: { price_fields } }: Props) {
 
   return (
     <>
       <Head>
         <title>product create</title>
       </Head>
-      <div className="container mx-auto min-h-screen">
-        {/* <div>
-                    {JSON.stringify(product_fields)}
-                    {JSON.stringify(formFields)}
-                </div> */}
-        <div className="p-4 bg-gray-100">
-          <Form {...{ method: 'post', action: '/akho/store' } as RouteFormDefinition<'post'>}
-            className="space-y-2"
-            disableWhileProcessing
-            showProgress={true}
-          >
-            {({
-              errors,
-              hasErrors,
-              processing,
-              progress,
-              wasSuccessful,
-              recentlySuccessful,
-              setError,
-              clearErrors,
-              resetAndClearErrors,
-              defaults,
-              isDirty,
-              reset,
-              submit,
-            }) => (
-              <>
-                {form_fields.map((field, index) => {
-                  switch (field.type) {
-                    case FormFieldType.TEXT:
-                      return (
-                        <Input
-                          name={field.key}
-                          placeholder={field.label}
-                          key={index}
-                          type='text'
-                          required={field.required}
-                        ></Input>
-                      );
-                    case FormFieldType.CHOOSE_FILE:
-                      return (
-                        <ChooseFile
-                          key={index}
-                          name={field.key}
-                          placeholder={field.label}
-                          label={field.label}
-                          required={field.required}
-                          error={errors[field.key]}
-                        ></ChooseFile>
-                      );
-                    case FormFieldType.SELECT:
-                      return (
-                        <SelectOption name={field.key}
-                          key={index}
-                          placeholder={field.label}
-                          label={field.label}
-                          required={field.required}
-                          options={field.options}
-                        ></SelectOption>
-                      );
-                    case FormFieldType.TEXTAREA:
-                      return (
-                        <Textarea key={index} placeholder={field.label}></Textarea>
-                      );
-                    case FormFieldType.CHECKBOX:
-                      return (
-                        <Checkbox key={index} name={field.key} label={field.label} required={field.required} value={'on'}></Checkbox>
-                      )
-                    case FormFieldType.PICK_FILE:
-                      return (
-                        <PickFile key={index} name={field.key} label={field.label} required={field.required}></PickFile>
-                      )
-                    default:
-                      break;
-                  }
-                })}
-                <Button
-                  type="submit"
-                  // type="button"
-                  className="mt-2 w-full"
-                  tabIndex={5}
-                  data-test="register-user-button"
-                >
-                  Create product
-                </Button>
-              </>
-            )}
-          </Form>
+      <div className="mx-auto min-h-screen">
+        <div className="p-2 bg-gray-100 grid grid-cols-1 md:grid-cols-2 gap-2">
+          {/* @ts-expect-error */}
+          <FormRender
+            form_info={{ method: 'post', action: '/akho/store' } as RouteFormDefinition<'post'>}
+            form_fields={[...form_fields, ...price_fields]}
+          />
+          <div className="bg-blue-200 min-h-10">
+            <div>
+              price setting
+            </div>
+            <div>
+              stock setting
+            </div>
+            <div>
+              category setting
+            </div>
+          </div>
         </div>
       </div >
     </>

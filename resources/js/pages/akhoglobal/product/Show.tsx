@@ -1,6 +1,8 @@
 import { type ProductDetailInterface } from "@/types/akhoglobal/product";
 
 export default function Show({ product }: { product: ProductDetailInterface }) {
+  console.log(product);
+  
 
   return (
     <div className="container mx-auto min-h-screen px-1 sm:px-2 md:px-4">

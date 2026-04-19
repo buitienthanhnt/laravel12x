@@ -16,4 +16,5 @@ export type FormFieldDefine = {
   required?: boolean;
   options?: { value: string; label: string }[];
   placeholder?: string;
+  field_rules?: { [key: string]: unknown };
 } 

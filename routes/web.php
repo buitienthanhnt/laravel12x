@@ -26,6 +26,8 @@ Route::get('akho/register', [\App\Http\Controllers\Akho\Manage::class, 'create']
 
 Route::get('akho/cate/create', [\App\Http\Controllers\Akho\Manage::class, 'createCategory'])->name('akho.category.create');
 
+Route::get('akho/cate/{id}.htm', [\App\Http\Controllers\Akho\Manage::class, 'detailCategory']);
+
 Route::post('akho/cate/store', [\App\Http\Controllers\Akho\Manage::class, 'storeCategory']);
 
 Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->name('akho.store');

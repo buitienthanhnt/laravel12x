@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults, validateParameters } from './../../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 export const manage = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ manage.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 manage.url = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -47,7 +47,7 @@ manage.url = (args?: { id?: string | number } | [id: string | number ] | string 
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 manage.get = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -57,7 +57,7 @@ manage.get = (args?: { id?: string | number } | [id: string | number ] | string 
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 manage.head = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -67,7 +67,7 @@ manage.head = (args?: { id?: string | number } | [id: string | number ] | string
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 const manageForm = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -77,7 +77,7 @@ const manageForm = (args?: { id?: string | number } | [id: string | number ] | s
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 manageForm.get = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -87,7 +87,7 @@ manageForm.get = (args?: { id?: string | number } | [id: string | number ] | str
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::manage
-* @see app/Http/Controllers/Akho/Manage.php:35
+* @see app/Http/Controllers/Akho/Manage.php:37
 * @route '/akho/manage/{id?}'
 */
 manageForm.head = (args?: { id?: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -104,7 +104,7 @@ manage.form = manageForm
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 export const create = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -119,7 +119,7 @@ create.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 create.url = (options?: RouteQueryOptions) => {
@@ -128,7 +128,7 @@ create.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -138,7 +138,7 @@ create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -148,7 +148,7 @@ create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -158,7 +158,7 @@ const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -168,7 +168,7 @@ createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:43
+* @see app/Http/Controllers/Akho/Manage.php:46
 * @route '/akho/register'
 */
 createForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -185,7 +185,7 @@ create.form = createForm
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 export const createCategory = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -200,7 +200,7 @@ createCategory.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 createCategory.url = (options?: RouteQueryOptions) => {
@@ -209,7 +209,7 @@ createCategory.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 createCategory.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -219,7 +219,7 @@ createCategory.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 createCategory.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -229,7 +229,7 @@ createCategory.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => 
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 const createCategoryForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -239,7 +239,7 @@ const createCategoryForm = (options?: RouteQueryOptions): RouteFormDefinition<'g
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 createCategoryForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -249,7 +249,7 @@ createCategoryForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::createCategory
-* @see app/Http/Controllers/Akho/Manage.php:50
+* @see app/Http/Controllers/Akho/Manage.php:56
 * @route '/akho/cate/create'
 */
 createCategoryForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -265,8 +265,107 @@ createCategoryForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'ge
 createCategory.form = createCategoryForm
 
 /**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+export const detailCategory = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: detailCategory.url(args, options),
+    method: 'get',
+})
+
+detailCategory.definition = {
+    methods: ["get","head"],
+    url: '/akho/cate/{id}.htm',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+detailCategory.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
+    if (typeof args === 'string' || typeof args === 'number') {
+        args = { id: args }
+    }
+
+    if (Array.isArray(args)) {
+        args = {
+            id: args[0],
+        }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+        id: args.id,
+    }
+
+    return detailCategory.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+detailCategory.get = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: detailCategory.url(args, options),
+    method: 'get',
+})
+
+/**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+detailCategory.head = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: detailCategory.url(args, options),
+    method: 'head',
+})
+
+/**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+const detailCategoryForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: detailCategory.url(args, options),
+    method: 'get',
+})
+
+/**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+detailCategoryForm.get = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: detailCategory.url(args, options),
+    method: 'get',
+})
+
+/**
+* @see \App\Http\Controllers\Akho\Manage::detailCategory
+* @see app/Http/Controllers/Akho/Manage.php:63
+* @route '/akho/cate/{id}.htm'
+*/
+detailCategoryForm.head = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: detailCategory.url(args, {
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+detailCategory.form = detailCategoryForm
+
+/**
 * @see \App\Http\Controllers\Akho\Manage::storeCategory
-* @see app/Http/Controllers/Akho/Manage.php:57
+* @see app/Http/Controllers/Akho/Manage.php:73
 * @route '/akho/cate/store'
 */
 export const storeCategory = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -281,7 +380,7 @@ storeCategory.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::storeCategory
-* @see app/Http/Controllers/Akho/Manage.php:57
+* @see app/Http/Controllers/Akho/Manage.php:73
 * @route '/akho/cate/store'
 */
 storeCategory.url = (options?: RouteQueryOptions) => {
@@ -290,7 +389,7 @@ storeCategory.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::storeCategory
-* @see app/Http/Controllers/Akho/Manage.php:57
+* @see app/Http/Controllers/Akho/Manage.php:73
 * @route '/akho/cate/store'
 */
 storeCategory.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -300,7 +399,7 @@ storeCategory.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::storeCategory
-* @see app/Http/Controllers/Akho/Manage.php:57
+* @see app/Http/Controllers/Akho/Manage.php:73
 * @route '/akho/cate/store'
 */
 const storeCategoryForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -310,7 +409,7 @@ const storeCategoryForm = (options?: RouteQueryOptions): RouteFormDefinition<'po
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::storeCategory
-* @see app/Http/Controllers/Akho/Manage.php:57
+* @see app/Http/Controllers/Akho/Manage.php:73
 * @route '/akho/cate/store'
 */
 storeCategoryForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -322,7 +421,7 @@ storeCategory.form = storeCategoryForm
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:82
+* @see app/Http/Controllers/Akho/Manage.php:98
 * @route '/akho/store'
 */
 export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -337,7 +436,7 @@ store.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:82
+* @see app/Http/Controllers/Akho/Manage.php:98
 * @route '/akho/store'
 */
 store.url = (options?: RouteQueryOptions) => {
@@ -346,7 +445,7 @@ store.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:82
+* @see app/Http/Controllers/Akho/Manage.php:98
 * @route '/akho/store'
 */
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -356,7 +455,7 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:82
+* @see app/Http/Controllers/Akho/Manage.php:98
 * @route '/akho/store'
 */
 const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -366,7 +465,7 @@ const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => 
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:82
+* @see app/Http/Controllers/Akho/Manage.php:98
 * @route '/akho/store'
 */
 storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -378,7 +477,7 @@ store.form = storeForm
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 export const show = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -393,7 +492,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 show.url = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -420,7 +519,7 @@ show.url = (args: { alias: string | number } | [alias: string | number ] | strin
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 show.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -430,7 +529,7 @@ show.get = (args: { alias: string | number } | [alias: string | number ] | strin
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 show.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -440,7 +539,7 @@ show.head = (args: { alias: string | number } | [alias: string | number ] | stri
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 const showForm = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -450,7 +549,7 @@ const showForm = (args: { alias: string | number } | [alias: string | number ] |
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 showForm.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -460,7 +559,7 @@ showForm.get = (args: { alias: string | number } | [alias: string | number ] | s
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 showForm.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -475,6 +574,6 @@ showForm.head = (args: { alias: string | number } | [alias: string | number ] | 
 
 show.form = showForm
 
-const Manage = { manage, create, createCategory, storeCategory, store, show }
+const Manage = { manage, create, createCategory, detailCategory, storeCategory, store, show }
 
 export default Manage

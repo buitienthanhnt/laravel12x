@@ -23,8 +23,6 @@ export default function FormRender({ form_info, form_fields }: Props) {
     _form_fields[field.key] = '';
   });
 
-  console.log(_form_fields);
-
 
   /**
    * Xây dựng mảng dành cho MultiSelect
@@ -82,6 +80,16 @@ export default function FormRender({ form_info, form_fields }: Props) {
                     placeholder={field.label}
                     key={index}
                     type='text'
+                    required={field.required}
+                  ></Input>
+                );
+              case FormFieldType.NUMBER:
+                return (
+                  <Input
+                    name={field.key}
+                    placeholder={field.label}
+                    key={index}
+                    type='number'
                     required={field.required}
                   ></Input>
                 );

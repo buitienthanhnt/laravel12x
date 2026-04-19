@@ -8,13 +8,15 @@ import { type ProductInterface } from '@/types/akhoglobal/product';
 import { type Pagination } from '@/types/shareType/Pagination';
 
 
-const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: Pagination }> = ({ products }) => {
+const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: Pagination, categories: Pagination }> = ({ products, categories }) => {
   const listData: { label: string; value: string }[] = [
     { label: 'option1', value: '1' },
     { label: 'option2', value: '2' },
     { label: 'option3', value: '3' },
     { label: 'option4', value: '4' },
   ];
+  // console.log(categories.data);
+
   const [value, setValue] = React.useState<string | null>(null);
 
   const handleSelect = useCallback((value: string | null) => {
@@ -73,12 +75,11 @@ const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: P
       </datalist>
 
       <Link className='btn bg-green-400 text-white p-2 rounded-xl my-2' href={akho.register.url()}>create product</Link>
+      <Link className='btn bg-blue-400 text-white p-2 rounded-xl my-2' href={akho.category.create.url()}>create category</Link>
 
-       <Link className='btn bg-blue-400 text-white p-2 rounded-xl my-2' href={akho.category.create.url()}>create category</Link>
-
-      {products.data && <div className='space-y-1 my-2'>
+      {products.data && <div className='space-y-1 my-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1'>
         {products.data.map((item: ProductInterface) => <Link href={akho.product.show.url(item.alias)} className='flex gap-2 bg-gray-200 p-1 rounded-md' key={item.id}>
-          <img src={item.image_path} className='size-28 object-cover rounded-md' alt="" />
+          <img src={item.image_path} className='size-28 object-cover rounded-md' alt={item.name} loading='lazy' />
           <p className='font-semibold'>{item.name}</p>
         </Link>)}
       </div>}

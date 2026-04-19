@@ -22,6 +22,13 @@ final class RegisterCategoryAction
 		}
 
 		/**
+		 * sync parent categories with pivot table category_parent
+		 */
+		// if ($parentCategories = $request->array(CategoryInterface::R_PARENT)) {
+		// 	$category->parents()->sync($parentCategories);
+		// }
+
+		/**
 		 * call event category register after create category success
 		 * @var \Thanhnt\Akhoglobal\Events\CategoryRegisterEvent
 		 */

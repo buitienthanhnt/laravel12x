@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 export const show = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 show.url = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -43,7 +43,7 @@ show.url = (args: { alias: string | number } | [alias: string | number ] | strin
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 show.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -53,7 +53,7 @@ show.get = (args: { alias: string | number } | [alias: string | number ] | strin
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 show.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -63,7 +63,7 @@ show.head = (args: { alias: string | number } | [alias: string | number ] | stri
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 const showForm = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -73,7 +73,7 @@ const showForm = (args: { alias: string | number } | [alias: string | number ] |
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 showForm.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -83,7 +83,7 @@ showForm.get = (args: { alias: string | number } | [alias: string | number ] | s
 
 /**
 * @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:70
+* @see app/Http/Controllers/Akho/Manage.php:86
 * @route '/akho/product/{alias}.html'
 */
 showForm.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
