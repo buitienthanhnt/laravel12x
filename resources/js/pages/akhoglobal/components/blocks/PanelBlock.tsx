@@ -1,18 +1,13 @@
+import { Block } from '@/pages/test/StockPosition';
 import { Settings } from 'lucide-react';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 
-type Props = {
-  width: number;
-  height: number;
-  x: number;
-  y: number;
-  name?: string;
-  blockKey?: string;
+type Props = Block &{
   onSelected?: (param: any) => void;
   selected: boolean;
 };
 
-const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected }: Props) => {
+const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, items, style }: Props) => {
   // 1. State lưu vị trí hiện tại của thẻ Div (mặc định cách góc trên trái 100px)
   const [position, setPosition] = useState({ x, y });
   // State quản lý kích thước
@@ -107,12 +102,12 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected 
     };
   }, []);
 
-  const onSaveBlock = useCallback(() => {
-    // console.log('save block: ', { position, dims, name, blockKey });
-    console.log({ ...position, ...dims, name, blockKey });
-    
-    onSelected?.({ ...position, ...dims, name, blockKey });
-  }, [position, dims, name, blockKey, onSelected]);
+  /**
+   * Khi bấm nút nắm hình vuông
+   */
+  const onSetSelectedBlock = useCallback(() => {
+    onSelected?.({name, blockKey, items, ...position, ...dims, style});
+  }, [position, dims, name, blockKey, onSelected, items, style]);
 
   return (
     <div
@@ -134,8 +129,10 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected 
         userSelect: 'none', // Ngăn bôi đen chữ khi đang kéo
         borderRadius: '4px',
         boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
+        backgroundColor: style?.color,
+        zIndex: style?.zIndex,
       }}
-      className={selected ? 'bg-blue-400' : 'bg-gray-200'}
+      className={selected ? 'bg-blue-400' : style?.color ? `bg-[${style.color}]` : 'bg-gray-200'}
     >
       <div
         onMouseDown={handleMouseDown}
@@ -147,12 +144,12 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected 
           left: 0,
           top: 0,
           cursor: 'move', // Đổi con trỏ chuột thành dạng bàn tay 4 hướng
-          zIndex: 100
+          zIndex: 50
         }}
       />
       <div className='flex justify-center py-2 w-full h-full relative'>
         {name && <b className='text-yellow-700'>{name}</b>}
-        <Settings className='absolute top-2 right-2 cursor-pointer opacity-30 hover:opacity-100 ' onClick={onSaveBlock} size={24} color='black'></Settings>
+        <Settings className='absolute top-2 right-2 cursor-pointer opacity-30 hover:opacity-100 ' onClick={onSetSelectedBlock} size={24} color='black'></Settings>
       </div>
       {/* Nút nắm hình vuông nhỏ ở góc dưới bên phải */}
       <div
