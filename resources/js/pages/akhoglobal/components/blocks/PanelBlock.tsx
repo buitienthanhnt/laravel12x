@@ -151,8 +151,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected 
         }}
       />
       <div className='flex justify-center py-2 w-full h-full relative'>
-        {name && <b >{name}</b>}
-        <Settings className='absolute top-2 right-2' onClick={onSaveBlock} size={24} color='black'></Settings>
+        {name && <b className='text-yellow-700'>{name}</b>}
+        <Settings className='absolute top-2 right-2 cursor-pointer opacity-30 hover:opacity-100 ' onClick={onSaveBlock} size={24} color='black'></Settings>
       </div>
       {/* Nút nắm hình vuông nhỏ ở góc dưới bên phải */}
       <div
