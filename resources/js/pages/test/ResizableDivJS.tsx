@@ -13,7 +13,7 @@ const ResizableBothJS = () => {
     // Tính toán kích thước mới (giới hạn min 150px, max 800px)
     // const newWidth = Math.max(150, Math.min(800, e.clientX));
     // const newHeight = Math.max(100, Math.min(600, e.clientY));
-     const newWidth = e.clientX;
+    const newWidth = e.clientX;
     const newHeight = e.clientY;
 
     setDims({ width: newWidth, height: newHeight });

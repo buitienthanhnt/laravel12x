@@ -16,7 +16,7 @@ return new class extends Migration
 			$table->id();
 			$table->integer(StockInterface::_IMPORT_QTY)->default(0);
 			$table->integer(StockInterface::_CURRENT_QTY)->default(0);
-			$table->float(StockInterface::_COST_PRICE, 10, 2)->default(0);
+			$table->float(StockInterface::_COST_PRICE, 2)->default(0);
 			$table->date(StockInterface::_IMPORT_DATE)->nullable();
 			$table->char(StockInterface::_DESCRIPTION, 255)->nullable();
 			$table->integer(StockInterface::_SOURCE_ID);

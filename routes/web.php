@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 use EdSDK\FlmngrServer\FlmngrServer;
+use Thanhnt\Akhoglobal\Models\Block;
 
 Route::get('/', function () {
 	return Inertia::render('home', [
@@ -36,9 +37,17 @@ Route::get('akho/product/{alias}.html', [\App\Http\Controllers\Akho\Manage::clas
 
 Route::prefix('test')->group(function () {
 
-	Route::get('resize-div', function () {
-		return Inertia::render('test/StockPosition');
-	});
+	Route::get('resize-div', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'blockList']);
+
+	Route::post('add-block', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'addBlock']);
+
+	Route::delete('delete-block/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'deleteBlock']);
+
+	Route::put('update-block', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'updateBlock']);
+
+	Route::post('add-block-item', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'addBlockItem']);
+
+	Route::delete('delete-block-item/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'deleteBlockItem']);
 
 	Route::post('upload', function (\Illuminate\Http\Request $request) {
 		$request->validate([
