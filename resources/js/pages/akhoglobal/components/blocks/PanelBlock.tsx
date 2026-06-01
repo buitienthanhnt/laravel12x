@@ -13,7 +13,7 @@ type Props = Omit<Block, 'key'> & {
   blockKey: string;
 };
 
-const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style }: Props) => {
+const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type }: Props) => {
   // 1. State lưu vị trí hiện tại của thẻ Div (mặc định cách góc trên trái 100px)
   const [position, setPosition] = useState({ x, y });
   // State quản lý kích thước
@@ -148,10 +148,11 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
         userSelect: 'none', // Ngăn bôi đen chữ khi đang kéo
         borderRadius: '4px',
         boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-        backgroundColor: selected === 2 || selected === 1 ? undefined : style?.color,
+        border: type === 'area' ? `2px dashed ${style?.color}` : 'none',
+        backgroundColor: type === 'block' ? (selected === 2 || selected === 1 ? undefined : style?.color) : undefined,
         zIndex: selected === 2 || selected === 1 ? undefined : style?.zIndex,
       }}
-      className={selected === 1 ? 'bg-green-400' : 'bg-gray-400'}
+      className={selected === 1 ? 'bg-green-400' : ''}
     >
       <div
         onMouseDown={handleMouseDown}

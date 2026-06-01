@@ -6,22 +6,17 @@ use Laravel\Fortify\Features;
 use EdSDK\FlmngrServer\FlmngrServer;
 use Thanhnt\Akhoglobal\Models\Block;
 
-Route::get('/', function () {
-	return Inertia::render('home', [
-		'canRegister' => Features::enabled(Features::registration()),
-	]);
-})->name('home');
+// Route::get('/', function () {
+// 	return Inertia::render('home', [
+// 		'canRegister' => Features::enabled(Features::registration()),
+// 	]);
+// })->name('home');
 
 Route::get('dashboard', function () {
 	return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('home', function () {
-	return Inertia::render('home');
-});
-
-
-Route::get('akho/manage/{id?}', [\App\Http\Controllers\Akho\Manage::class, 'manage'])->name('akho.manage');
+// Route::get('akho/manage/{id?}', [\App\Http\Controllers\Akho\Manage::class, 'manage'])->name('akho.manage');
 
 Route::get('akho/register', [\App\Http\Controllers\Akho\Manage::class, 'create'])->name('akho.register');
 
@@ -35,9 +30,9 @@ Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->
 
 Route::get('akho/product/{alias}.html', [\App\Http\Controllers\Akho\Manage::class, 'show'])->name('akho.product.show');
 
-Route::prefix('test')->group(function () {
+Route::get('/', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'blockList'])->name('akhoglobal.manage');
 
-	Route::get('resize-div', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'blockList']);
+Route::prefix('test')->group(function () {
 
 	Route::post('add-block', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'addBlock']);
 

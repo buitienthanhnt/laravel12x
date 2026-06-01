@@ -21,6 +21,7 @@ return new class extends Migration
 			$table->float(BlockInterface::_WIDTH, 2);
 			$table->float(BlockInterface::_HEIGHT, 2);
 			$table->json(BlockInterface::_STYLE)->nullable();
+			$table->char(BlockInterface::_TYPE, 255)->nullable()->default('block');
 			$table->timestamps();
 		});
 	}

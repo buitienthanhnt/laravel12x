@@ -25,6 +25,7 @@ interface BlockInterface
 	const _WIDTH = 'width';
 	const _HEIGHT = 'height';
 	const _STYLE = 'style';
+	const _TYPE = 'type';
 
 	const FILLED_FIELDS = [
 		self::_NAME,
@@ -34,5 +35,6 @@ interface BlockInterface
 		self::_WIDTH,
 		self::_HEIGHT,
 		self::_STYLE,
+		self::_TYPE,
 	];
 }

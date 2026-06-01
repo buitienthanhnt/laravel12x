@@ -40,13 +40,13 @@ final class BlockAdminController extends Controller
 		// 	'items.*' => 'string'
 		// ]);
 		$this->blockAction->addBlock($request->only(BlockInterface::FILLED_FIELDS));
-		return redirect('test/resize-div')->with('message', 'Block added successfully');
+		return redirect(route('akhoglobal.manage'))->with('message', 'Block added successfully');
 	}
 
 	public function deleteBlock(string $id)
 	{
 		$this->blockAction->deleteBlock($id);
-		return redirect('test/resize-div')->with('message', 'Block deleted successfully');
+		return redirect(route('akhoglobal.manage'))->with('message', 'Block deleted successfully');
 	}
 
 	public function updateBlock(Request $request)
@@ -64,7 +64,7 @@ final class BlockAdminController extends Controller
 		]);
 
 		$this->blockAction->updateBlock($request->only(BlockInterface::FILLED_FIELDS));
-		return redirect('test/resize-div')->with('message', 'Block updated successfully');
+		return redirect(route('akhoglobal.manage'))->with('message', 'Block updated successfully');
 	}
 
 	public function addBlockItem(Request $request)
@@ -74,7 +74,7 @@ final class BlockAdminController extends Controller
 			'item' => 'required|string'
 		]);
 		$this->blockAction->addBlockItem($request->input('key'), $request->input('item'));
-		return redirect('test/resize-div')->with('message', 'Block item added successfully');
+		return redirect(route('akhoglobal.manage'))->with('message', 'Block item added successfully');
 	}
 
 	public function deleteBlockItem(int $id, Request $request)
@@ -82,6 +82,6 @@ final class BlockAdminController extends Controller
 		$blockItem = \Thanhnt\Akhoglobal\Models\BlockItem::findOrFail($id);
 		$blockItem->delete();
 
-		return redirect('test/resize-div')->with('message', 'Block item deleted successfully');
+		return redirect(route('akhoglobal.manage'))->with('message', 'Block item deleted successfully');
 	}
 }

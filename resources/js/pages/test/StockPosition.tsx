@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import PanelBlock from "../akhoglobal/components/blocks/PanelBlock";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export type Block = {
   id: number;
@@ -23,6 +24,7 @@ export type Block = {
     }
   ];
   style?: React.CSSProperties;
+  type?: 'block' | 'area';
 };
 
 const StockPosition = ({ blockList }: { blockList: Block[] }) => {
@@ -30,6 +32,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
   const modelRef = useRef<HTMLInputElement>(null);
   const blockNameRef = useRef<HTMLInputElement>(null);
   const blockColorRef = useRef<HTMLInputElement>(null);
+  const blockTypeRef = useRef<HTMLInputElement>(null);
   const [search, setSearch] = useState<string>('');
 
   const searchResult = useMemo(() => {
@@ -68,6 +71,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
   }, [updateSelected]);
 
   const onAddBlock = () => {
+
     const newBlock: Block = {
       x: 100,
       y: 100,
@@ -76,7 +80,8 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       name: blockNameRef.current?.value || ('b_' + blocks.length),
       key: 'block_' + new Date().getTime(),
       items: [],
-      style: { color: blockColorRef?.current?.value, zIndex: _.maxBy(blocks, 'id').id + 1 }
+      style: { color: blockColorRef?.current?.value, zIndex: (_.maxBy(blocks, 'id')?.id || 0) + 1 },
+      type: blockTypeRef.current?.getAttribute('data-state') === 'checked' ? 'block' : 'area',
     };
 
     router.post('/test/add-block', newBlock,);
@@ -139,7 +144,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         backgroundColor: '#e5e5f7',
         opacity: 0.8,
         backgroundSize: '20px 20px',
-        backgroundImage: 'linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px)'
+        backgroundImage: `${search.length >= 3 ? 'none' : 'linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px)'}`
       }}
     >
       <div className="absolute right-5 bottom-5 z-50">
@@ -219,17 +224,22 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
           </DialogTitle>
         </DialogTrigger>
         <DialogContent>
-          <DialogHeader>setup stock block</DialogHeader>
+          <DialogHeader className="text-lg font-semibold">Tạo mới khu vực</DialogHeader>
           <div>
-            <p>block name:</p>
+            <b className="text-md">Block name:</b>
             <Input className="w-full border-blue-400 rounded-md" type="text" ref={blockNameRef} />
           </div>
 
-          <div>
-            <p>block color:</p>
+          <div className="flex gap-4">
+            <b className="text-md">Is block type?</b>
+            <Checkbox id="block-type" className="size-6" ref={blockTypeRef} />
+          </div>
+
+          <div className="items-center gap-4 flex">
+            <b className="text-md">Block color:</b>
             <input type='color' defaultValue="#7296d4" className="size-15" ref={blockColorRef}></input>
           </div>
-          <Button onClick={onAddBlock}>save</Button>
+          <Button onClick={onAddBlock}>Lưu</Button>
         </DialogContent>
       </Dialog>
     </div>
