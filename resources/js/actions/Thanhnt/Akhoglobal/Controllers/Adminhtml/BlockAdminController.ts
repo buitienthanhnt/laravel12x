@@ -2,7 +2,7 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFo
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 export const blockList = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: blockList.url(options),
@@ -11,13 +11,13 @@ export const blockList = (options?: RouteQueryOptions): RouteDefinition<'get'> =
 
 blockList.definition = {
     methods: ["get","head"],
-    url: '/test/resize-div',
+    url: '/',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 blockList.url = (options?: RouteQueryOptions) => {
     return blockList.definition.url + queryParams(options)
@@ -26,7 +26,7 @@ blockList.url = (options?: RouteQueryOptions) => {
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 blockList.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: blockList.url(options),
@@ -36,7 +36,7 @@ blockList.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 blockList.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: blockList.url(options),
@@ -46,7 +46,7 @@ blockList.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 const blockListForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: blockList.url(options),
@@ -56,7 +56,7 @@ const blockListForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 blockListForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: blockList.url(options),
@@ -66,7 +66,7 @@ blockListForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =>
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @route '/'
 */
 blockListForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: blockList.url({
