@@ -1,4 +1,4 @@
-import { router } from '@inertiajs/react';
+import { router, usePage } from '@inertiajs/react';
 import { debounce } from 'lodash';
 import { Settings } from 'lucide-react';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
@@ -14,8 +14,9 @@ type Props = Omit<Block, 'key'> & {
 };
 
 const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type }: Props) => {
-  const defaultDim = { width: window.innerWidth, height: window.innerHeight }; // inset root init screen dim, now set auto current screen for scale = 1
-  // const { width: cWidth, height: cHeight } = window.screen;
+  const { init_screen } = usePage().props as unknown as { init_screen?: { width: number; height: number } };
+
+  const defaultDim = { width: init_screen?.width || window.innerWidth, height: init_screen?.height || window.innerHeight }; // inset root init screen dim, now set auto current screen for scale = 1
   const cWidth = window.innerWidth;
   const cHeight = window.innerHeight;
   const xScale = cWidth / defaultDim.width;
@@ -50,8 +51,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
   const handleResizeDown = (e: MouseEvent) => {
     if (!isResizing.current) return;
 
-    const newWidth = (e.clientX - position.x*xScale)/xScale;
-    const newHeight = (e.clientY - position.y*yScale)/yScale;
+    const newWidth = (e.clientX - position.x * xScale) / xScale;
+    const newHeight = (e.clientY - position.y * yScale) / yScale;
     // console.log('sự kiện kích hoạt khi kéo chuột thay đổi kích thước khối', { width: newWidth, height: newHeight });
     setDims({ width: newWidth, height: newHeight });
     updateBlockPosition({ width: newWidth, height: newHeight });
@@ -106,8 +107,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
       if (!isDragging.current) return;
 
       // Tính toán tọa độ X, Y mới của thẻ div
-      const newX = (e.clientX - offset.current.x)/xScale;
-      const newY = (e.clientY - offset.current.y)/yScale;
+      const newX = (e.clientX - offset.current.x) / xScale;
+      const newY = (e.clientY - offset.current.y) / yScale;
       // console.log('kích hoạt khi di chuyển vị trí khối');
       updateBlockPosition({ x: newX, y: newY });
       setPosition({ x: newX, y: newY });

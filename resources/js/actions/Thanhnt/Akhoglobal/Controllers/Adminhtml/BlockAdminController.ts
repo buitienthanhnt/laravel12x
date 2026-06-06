@@ -82,7 +82,7 @@ blockList.form = blockListForm
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:33
 * @route '/test/add-block'
 */
 export const addBlock = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -97,7 +97,7 @@ addBlock.definition = {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:33
 * @route '/test/add-block'
 */
 addBlock.url = (options?: RouteQueryOptions) => {
@@ -106,7 +106,7 @@ addBlock.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:33
 * @route '/test/add-block'
 */
 addBlock.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -116,7 +116,7 @@ addBlock.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:33
 * @route '/test/add-block'
 */
 const addBlockForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -126,7 +126,7 @@ const addBlockForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> 
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:33
 * @route '/test/add-block'
 */
 addBlockForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
