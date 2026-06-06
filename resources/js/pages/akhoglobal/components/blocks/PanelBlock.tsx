@@ -14,6 +14,13 @@ type Props = Omit<Block, 'key'> & {
 };
 
 const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type }: Props) => {
+  const defaultDim = { width: window.innerWidth, height: window.innerHeight }; // inset root init screen dim, now set auto current screen for scale = 1
+  // const { width: cWidth, height: cHeight } = window.screen;
+  const cWidth = window.innerWidth;
+  const cHeight = window.innerHeight;
+  const xScale = cWidth / defaultDim.width;
+  const yScale = cHeight / defaultDim.height;
+
   // 1. State lưu vị trí hiện tại của thẻ Div (mặc định cách góc trên trái 100px)
   const [position, setPosition] = useState({ x, y });
   // State quản lý kích thước
@@ -43,11 +50,11 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
   const handleResizeDown = (e: MouseEvent) => {
     if (!isResizing.current) return;
 
-    const newWidth = e.clientX - position.x;
-    const newHeight = e.clientY - position.y;
+    const newWidth = (e.clientX - position.x*xScale)/xScale;
+    const newHeight = (e.clientY - position.y*yScale)/yScale;
     // console.log('sự kiện kích hoạt khi kéo chuột thay đổi kích thước khối', { width: newWidth, height: newHeight });
-    updateBlockPosition({ width: newWidth, height: newHeight });
     setDims({ width: newWidth, height: newHeight });
+    updateBlockPosition({ width: newWidth, height: newHeight });
   };
 
   // Hàm xử lý khi di chuyển chuotine trên TOÀN MÀN HÌNH
@@ -71,7 +78,7 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
    * - right: Khoảng cách từ cạnh phải của phần tử đến cạnh trái của cửa sổ trình duyệt.
    * - bottom: Khoảng cách từ cạnh dưới của phần tử đến cạnh trên của cửa sổ trình duyệt.
    * Thông tin này rất hữu ích để xác định vị trí và kích thước của phần tử trên trang, đặc biệt khi bạn cần thực hiện các thao tác liên quan đến vị trí hoặc kích thước của phần tử đó.
-   * 
+   *
    */
   // console.log(target.getBoundingClientRect());
   // };
@@ -99,8 +106,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
       if (!isDragging.current) return;
 
       // Tính toán tọa độ X, Y mới của thẻ div
-      const newX = e.clientX - offset.current.x;
-      const newY = e.clientY - offset.current.y;
+      const newX = (e.clientX - offset.current.x)/xScale;
+      const newY = (e.clientY - offset.current.y)/yScale;
       // console.log('kích hoạt khi di chuyển vị trí khối');
       updateBlockPosition({ x: newX, y: newY });
       setPosition({ x: newX, y: newY });
@@ -134,13 +141,13 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
       style={{
         // Các thuộc tính CSS bắt buộc để di chuyển tự do
         position: 'absolute',
-        left: `${position.x}px`,
-        top: `${position.y}px`,
+        left: `${position.x * xScale}px`,
+        top: `${position.y * yScale}px`,
         // CSS làm đẹp giao diện
         // width: '200px',
         // height: '100px',
-        width: `${dims.width}px`,
-        height: `${dims.height}px`,
+        width: `${dims.width * xScale}px`,
+        height: `${dims.height * yScale}px`,
         color: 'white',
         display: 'flex',
         alignItems: 'center',
