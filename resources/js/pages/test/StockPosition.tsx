@@ -82,6 +82,10 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       items: [],
       style: { color: blockColorRef?.current?.value, zIndex: (_.maxBy(blocks, 'id')?.id || 0) + 1 },
       type: blockTypeRef.current?.getAttribute('data-state') === 'checked' ? 'block' : 'area',
+      init_screen: {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      },
     };
 
     router.post('/test/add-block', newBlock,);

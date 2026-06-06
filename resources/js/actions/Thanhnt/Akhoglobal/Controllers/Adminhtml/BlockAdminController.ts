@@ -1,8 +1,8 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../../../wayfinder'
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 export const blockList = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: blockList.url(options),
@@ -11,13 +11,13 @@ export const blockList = (options?: RouteQueryOptions): RouteDefinition<'get'> =
 
 blockList.definition = {
     methods: ["get","head"],
-    url: '/test/resize-div',
+    url: '/',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 blockList.url = (options?: RouteQueryOptions) => {
     return blockList.definition.url + queryParams(options)
@@ -25,8 +25,8 @@ blockList.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 blockList.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: blockList.url(options),
@@ -35,8 +35,8 @@ blockList.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 blockList.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: blockList.url(options),
@@ -45,8 +45,8 @@ blockList.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 const blockListForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: blockList.url(options),
@@ -55,8 +55,8 @@ const blockListForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> 
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 blockListForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: blockList.url(options),
@@ -65,8 +65,8 @@ blockListForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =>
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::blockList
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:20
-* @route '/test/resize-div'
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:22
+* @route '/'
 */
 blockListForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: blockList.url({
@@ -82,7 +82,7 @@ blockList.form = blockListForm
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:30
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
 * @route '/test/add-block'
 */
 export const addBlock = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -97,7 +97,7 @@ addBlock.definition = {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:30
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
 * @route '/test/add-block'
 */
 addBlock.url = (options?: RouteQueryOptions) => {
@@ -106,7 +106,7 @@ addBlock.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:30
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
 * @route '/test/add-block'
 */
 addBlock.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -116,7 +116,7 @@ addBlock.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:30
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
 * @route '/test/add-block'
 */
 const addBlockForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -126,7 +126,7 @@ const addBlockForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> 
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:30
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:32
 * @route '/test/add-block'
 */
 addBlockForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -138,7 +138,7 @@ addBlock.form = addBlockForm
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:46
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:60
 * @route '/test/delete-block/{id}'
 */
 export const deleteBlock = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -153,7 +153,7 @@ deleteBlock.definition = {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:46
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:60
 * @route '/test/delete-block/{id}'
 */
 deleteBlock.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -180,7 +180,7 @@ deleteBlock.url = (args: { id: string | number } | [id: string | number ] | stri
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:46
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:60
 * @route '/test/delete-block/{id}'
 */
 deleteBlock.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -190,7 +190,7 @@ deleteBlock.delete = (args: { id: string | number } | [id: string | number ] | s
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:46
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:60
 * @route '/test/delete-block/{id}'
 */
 const deleteBlockForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -205,7 +205,7 @@ const deleteBlockForm = (args: { id: string | number } | [id: string | number ] 
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:46
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:60
 * @route '/test/delete-block/{id}'
 */
 deleteBlockForm.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -222,7 +222,7 @@ deleteBlock.form = deleteBlockForm
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::updateBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:52
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:66
 * @route '/test/update-block'
 */
 export const updateBlock = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -237,7 +237,7 @@ updateBlock.definition = {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::updateBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:52
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:66
 * @route '/test/update-block'
 */
 updateBlock.url = (options?: RouteQueryOptions) => {
@@ -246,7 +246,7 @@ updateBlock.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::updateBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:52
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:66
 * @route '/test/update-block'
 */
 updateBlock.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -256,7 +256,7 @@ updateBlock.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::updateBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:52
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:66
 * @route '/test/update-block'
 */
 const updateBlockForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -271,7 +271,7 @@ const updateBlockForm = (options?: RouteQueryOptions): RouteFormDefinition<'post
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::updateBlock
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:52
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:66
 * @route '/test/update-block'
 */
 updateBlockForm.put = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -288,7 +288,7 @@ updateBlock.form = updateBlockForm
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:70
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:84
 * @route '/test/add-block-item'
 */
 export const addBlockItem = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -303,7 +303,7 @@ addBlockItem.definition = {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:70
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:84
 * @route '/test/add-block-item'
 */
 addBlockItem.url = (options?: RouteQueryOptions) => {
@@ -312,7 +312,7 @@ addBlockItem.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:70
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:84
 * @route '/test/add-block-item'
 */
 addBlockItem.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -322,7 +322,7 @@ addBlockItem.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:70
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:84
 * @route '/test/add-block-item'
 */
 const addBlockItemForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -332,7 +332,7 @@ const addBlockItemForm = (options?: RouteQueryOptions): RouteFormDefinition<'pos
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::addBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:70
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:84
 * @route '/test/add-block-item'
 */
 addBlockItemForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -344,7 +344,7 @@ addBlockItem.form = addBlockItemForm
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:80
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:94
 * @route '/test/delete-block-item/{id}'
 */
 export const deleteBlockItem = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -359,7 +359,7 @@ deleteBlockItem.definition = {
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:80
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:94
 * @route '/test/delete-block-item/{id}'
 */
 deleteBlockItem.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -386,7 +386,7 @@ deleteBlockItem.url = (args: { id: string | number } | [id: string | number ] | 
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:80
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:94
 * @route '/test/delete-block-item/{id}'
 */
 deleteBlockItem.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -396,7 +396,7 @@ deleteBlockItem.delete = (args: { id: string | number } | [id: string | number ]
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:80
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:94
 * @route '/test/delete-block-item/{id}'
 */
 const deleteBlockItemForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -411,7 +411,7 @@ const deleteBlockItemForm = (args: { id: string | number } | [id: string | numbe
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::deleteBlockItem
-* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:80
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:94
 * @route '/test/delete-block-item/{id}'
 */
 deleteBlockItemForm.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
