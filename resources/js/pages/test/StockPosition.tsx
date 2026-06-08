@@ -4,10 +4,11 @@ import { PlusIcon, Trash2Icon, XCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState, } from "react";
 import { useImmer } from "use-immer";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import PanelBlock from "../akhoglobal/components/blocks/PanelBlock";
-import { Checkbox } from "@/components/ui/checkbox";
+import { type BlockItemType } from "../akhoglobal/type/blockitem";
 
 export type Block = {
   id: number;
@@ -17,12 +18,7 @@ export type Block = {
   height: number;
   name: string;
   key: string;
-  items: [
-    {
-      item_model: string;
-      quantity: number;
-    }
-  ];
+  items: BlockItemType[];
   style?: React.CSSProperties;
   type?: 'block' | 'area';
 };
@@ -30,6 +26,7 @@ export type Block = {
 const StockPosition = ({ blockList }: { blockList: Block[] }) => {
   const [selected, updateSelected] = useImmer<string | null>(null);
   const modelRef = useRef<HTMLInputElement>(null);
+  const modelDescRef = useRef<HTMLInputElement>(null);
   const blockNameRef = useRef<HTMLInputElement>(null);
   const blockColorRef = useRef<HTMLInputElement>(null);
   const blockTypeRef = useRef<HTMLInputElement>(null);
@@ -110,7 +107,11 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    */
   const onAddBlockItem = useCallback(() => {
     if (!modelRef.current) { return; }
-    router.post('/test/add-block-item', { key: selected, item: modelRef.current.value });
+    router.post('/test/add-block-item', {
+      key: selected,
+      item_model: modelRef.current.value,
+      item_desc: modelDescRef.current?.value
+    });
   }, [selected]);
 
   /**
@@ -199,13 +200,17 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         <div className="space-x-1 justify-center items-center">
           <span className="text-md+ font-semibold">Model:</span>
           <div className="space-y-1">
-            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelRef} />
+            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelRef} placeholder="Khóa" />
+            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelDescRef} placeholder="Thông tin mô tả" />
             <Button className="w-full" onClick={onAddBlockItem}>save model</Button>
           </div>
         </div>
         <div className="mt-2 space-y-1 flex-1 overflow-scroll">
-          {seletedBlock?.items?.map((item: any) => <div key={item.id} className="flex w-full bg-gray-500 p-1 rounded-sm justify-between">
-            <p className="font-semibold text-base">{item.item_model}</p>
+          {seletedBlock?.items?.map((item: BlockItemType) => <div key={item.id} className="flex w-full bg-gray-400 p-1 rounded-sm justify-between">
+            <div className="flex items-end gap-1">
+              <p className="font-semibold text-base">{item.item_model}</p>
+              {item.item_desc && <p className="text-sm italic text-purple-600 font-semibold">({item.item_desc})</p>}
+            </div>
             <Trash2Icon size={26} className="text-yellow-600 hover:text-red-600 font-semibold" onClick={() => {
               onRemoveBlockItem(item);
             }}>remove</Trash2Icon>

@@ -3,6 +3,7 @@
 namespace Thanhnt\Akhoglobal\Actions\Block;
 
 use Thanhnt\Akhoglobal\Models\Block;
+use Thanhnt\Akhoglobal\Models\BlockItem;
 use Thanhnt\Akhoglobal\Models\Types\BlockInterface;
 use Thanhnt\Akhoglobal\Models\Types\BlockItemInterface;
 
@@ -43,11 +44,19 @@ final class BlockAction
 		return Block::create($data);
 	}
 
-	public function addBlockItem(string $blockKey, string $item)
+	/**
+	 * Add a new item to a block
+	 * @param string $blockKey The key of the block to which the item will be added
+	 * @param array $itemData The data of the item to be added, must include
+	 * - BlockItemInterface::_ITEM_MODEL: The model or content of the block item
+	 * - BlockItemInterface::_DESCRIPTION: (optional) A description for the block item
+	 * @return BlockItem The created block item
+	 * @throws \Illuminate\Database\Eloquent\ModelNotFoundException if the block with the given key does not exist
+	 */
+	public function addBlockItem(string $blockKey, array $itemData)
 	{
 		$block = Block::where(BlockInterface::_KEY, $blockKey)->firstOrFail();
-		$block_items = $block->items()->create([BlockItemInterface::_ITEM_MODEL => $item, BlockItemInterface::_ITEM_TYPE => 'text']);
-
+		$block_items = $block->items()->create($itemData + [BlockItemInterface::_ITEM_TYPE => 'text']);
 		return $block_items;
 	}
 }

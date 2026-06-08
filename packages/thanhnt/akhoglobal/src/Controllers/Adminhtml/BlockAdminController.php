@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Thanhnt\Akhoglobal\Models\Block;
 use Thanhnt\Akhoglobal\Models\Types\BlockInterface;
+use Thanhnt\Akhoglobal\Models\Types\BlockItemInterface;
 use Thanhnt\Akhoglobal\Models\Types\ConfigInterface;
 
 final class BlockAdminController extends Controller
@@ -85,9 +86,9 @@ final class BlockAdminController extends Controller
 	{
 		$request->validate([
 			'key' => 'required|string',
-			'item' => 'required|string'
+			BlockItemInterface::_ITEM_MODEL => 'required|string'
 		]);
-		$this->blockAction->addBlockItem($request->input('key'), $request->input('item'));
+		$this->blockAction->addBlockItem($request->input('key'), $request->only([BlockItemInterface::_ITEM_MODEL, BlockItemInterface::_DESCRIPTION]));
 		return redirect(route('akhoglobal.manage'))->with('message', 'Block item added successfully');
 	}
 
