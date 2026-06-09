@@ -1,14 +1,15 @@
 import { router, useForm } from "@inertiajs/react";
 import _ from "lodash";
-import { PlusIcon, Trash2Icon, XCircleIcon } from "lucide-react";
+import { PlusIcon, XCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState, } from "react";
 import { useImmer } from "use-immer";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import PanelBlock from "../akhoglobal/components/blocks/PanelBlock";
+import { ModelItem, PanelBlock } from "../akhoglobal/components/blocks";
 import { type BlockItemType } from "../akhoglobal/type/blockitem";
+
 
 export type Block = {
   id: number;
@@ -29,7 +30,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
   const modelDescRef = useRef<HTMLInputElement>(null);
   const blockNameRef = useRef<HTMLInputElement>(null);
   const blockColorRef = useRef<HTMLInputElement>(null);
-  const blockTypeRef = useRef<HTMLInputElement>(null);
+  const blockTypeRef = useRef<HTMLButtonElement>(null);
   const [search, setSearch] = useState<string>('');
 
   const searchResult = useMemo(() => {
@@ -69,7 +70,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
 
   const onAddBlock = () => {
 
-    const newBlock: Block = {
+    const newBlock: Omit<Block, 'id'> & { init_screen?: { width: number, height: number } } = {
       x: 100,
       y: 100,
       width: 100,
@@ -85,7 +86,10 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       },
     };
 
-    router.post('/test/add-block', newBlock,);
+    /**
+     * Call api add block, default  response redirect to the page list
+     */
+    router.post('/test/add-block', newBlock as any);
   }
 
   useEffect(() => {
@@ -118,7 +122,9 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    * remove item model in block items
    */
   const onRemoveBlockItem = useCallback((item: { id: number }) => {
-    router.delete('/test/delete-block-item/' + item.id);
+    router.delete('/test/delete-block-item/' + item.id, {
+      onBefore: () => confirm('Are you sure you want to delete this item?'),
+    });
   }, []);
 
   /**
@@ -206,17 +212,8 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
           </div>
         </div>
         <div className="mt-2 space-y-1 flex-1 overflow-scroll">
-          {seletedBlock?.items?.map((item: BlockItemType) => <div key={item.id} className="flex w-full bg-gray-400 p-1 rounded-sm justify-between">
-            <div className="flex items-end gap-1">
-              <p className="font-semibold text-base">{item.item_model}</p>
-              {item.item_desc && <p className="text-sm italic text-purple-600 font-semibold">({item.item_desc})</p>}
-            </div>
-            <Trash2Icon size={26} className="text-yellow-600 hover:text-red-600 font-semibold" onClick={() => {
-              onRemoveBlockItem(item);
-            }}>remove</Trash2Icon>
-          </div>)}
+          {seletedBlock?.items?.map((item: BlockItemType) => <ModelItem key={item.id} item={item} onRemoveBlockItem={onRemoveBlockItem}></ModelItem>)}
         </div>
-
         <div className="flex justify-end items-end gap-1">
           <Button className="w-full" onClick={onSaveBlock}>Save</Button>
           <Button className="w-full bg-red-400 hover:bg-red-600" color="red" onClick={onRemoveBlock}>Delete</Button>
