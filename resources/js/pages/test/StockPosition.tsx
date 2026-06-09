@@ -1,15 +1,13 @@
 import { router, useForm } from "@inertiajs/react";
 import _ from "lodash";
-import { PlusIcon, XCircleIcon } from "lucide-react";
+import { PlusIcon, Trash2Icon, XCircle, XCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState, } from "react";
 import { useImmer } from "use-immer";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { ModelItem, PanelBlock } from "../akhoglobal/components/blocks";
-import { type BlockItemType } from "../akhoglobal/type/blockitem";
-
+import PanelBlock from "../akhoglobal/components/blocks/PanelBlock";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export type Block = {
   id: number;
@@ -19,7 +17,12 @@ export type Block = {
   height: number;
   name: string;
   key: string;
-  items: BlockItemType[];
+  items: [
+    {
+      item_model: string;
+      quantity: number;
+    }
+  ];
   style?: React.CSSProperties;
   type?: 'block' | 'area';
 };
@@ -27,10 +30,9 @@ export type Block = {
 const StockPosition = ({ blockList }: { blockList: Block[] }) => {
   const [selected, updateSelected] = useImmer<string | null>(null);
   const modelRef = useRef<HTMLInputElement>(null);
-  const modelDescRef = useRef<HTMLInputElement>(null);
   const blockNameRef = useRef<HTMLInputElement>(null);
   const blockColorRef = useRef<HTMLInputElement>(null);
-  const blockTypeRef = useRef<HTMLButtonElement>(null);
+  const blockTypeRef = useRef<HTMLInputElement>(null);
   const [search, setSearch] = useState<string>('');
 
   const searchResult = useMemo(() => {
@@ -70,7 +72,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
 
   const onAddBlock = () => {
 
-    const newBlock: Omit<Block, 'id'> & { init_screen?: { width: number, height: number } } = {
+    const newBlock: Block = {
       x: 100,
       y: 100,
       width: 100,
@@ -80,16 +82,9 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       items: [],
       style: { color: blockColorRef?.current?.value, zIndex: (_.maxBy(blocks, 'id')?.id || 0) + 1 },
       type: blockTypeRef.current?.getAttribute('data-state') === 'checked' ? 'block' : 'area',
-      init_screen: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      },
     };
 
-    /**
-     * Call api add block, default  response redirect to the page list
-     */
-    router.post('/test/add-block', newBlock as any);
+    router.post('/test/add-block', newBlock,);
   }
 
   useEffect(() => {
@@ -111,20 +106,14 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    */
   const onAddBlockItem = useCallback(() => {
     if (!modelRef.current) { return; }
-    router.post('/test/add-block-item', {
-      key: selected,
-      item_model: modelRef.current.value,
-      item_desc: modelDescRef.current?.value
-    });
+    router.post('/test/add-block-item', { key: selected, item: modelRef.current.value });
   }, [selected]);
 
   /**
    * remove item model in block items
    */
   const onRemoveBlockItem = useCallback((item: { id: number }) => {
-    router.delete('/test/delete-block-item/' + item.id, {
-      onBefore: () => confirm('Are you sure you want to delete this item?'),
-    });
+    router.delete('/test/delete-block-item/' + item.id);
   }, []);
 
   /**
@@ -158,7 +147,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         backgroundImage: `${search.length >= 3 ? 'none' : 'linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px)'}`
       }}
     >
-      <div className="absolute right-5 bottom-5 z-50">
+      <div className="absolute right-5 flex gap-2 items-center bottom-5 z-50">
         <input
           className="w-full border-blue-500 border rounded-md p-2 z-50 text-lg font-semibold bg-white"
           type="text" value={search}
@@ -166,6 +155,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
           onChange={(e) => {
             setSearch(e.target.value);
           }} />
+          {search && <XCircle size={24} className="hover:text-red-700" onClick={()=> setSearch('')}></XCircle>}
       </div>
       {blocks.map(({ key, ...block }) => (
         <PanelBlock
@@ -206,14 +196,19 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         <div className="space-x-1 justify-center items-center">
           <span className="text-md+ font-semibold">Model:</span>
           <div className="space-y-1">
-            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelRef} placeholder="Khóa" />
-            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelDescRef} placeholder="Thông tin mô tả" />
+            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelRef} />
             <Button className="w-full" onClick={onAddBlockItem}>save model</Button>
           </div>
         </div>
         <div className="mt-2 space-y-1 flex-1 overflow-scroll">
-          {seletedBlock?.items?.map((item: BlockItemType) => <ModelItem key={item.id} item={item} onRemoveBlockItem={onRemoveBlockItem}></ModelItem>)}
+          {seletedBlock?.items?.map((item: any) => <div key={item.id} className="flex w-full bg-gray-500 p-1 rounded-sm justify-between">
+            <p className="font-semibold text-base">{item.item_model}</p>
+            <Trash2Icon size={26} className="text-yellow-600 hover:text-red-600 font-semibold" onClick={() => {
+              onRemoveBlockItem(item);
+            }}>remove</Trash2Icon>
+          </div>)}
         </div>
+
         <div className="flex justify-end items-end gap-1">
           <Button className="w-full" onClick={onSaveBlock}>Save</Button>
           <Button className="w-full bg-red-400 hover:bg-red-600" color="red" onClick={onRemoveBlock}>Delete</Button>

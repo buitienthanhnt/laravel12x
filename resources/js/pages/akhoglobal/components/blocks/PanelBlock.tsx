@@ -13,7 +13,9 @@ type Props = Omit<Block, 'key'> & {
   blockKey: string;
 };
 
-const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type }: Props) => {
+const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type, items }: Props) => {
+    const itemsString = items.map((item) => item.item_model).join(' \n ');
+
   const { init_screen } = usePage().props as unknown as { init_screen?: { width: number; height: number } };
 
   const defaultDim = { width: init_screen?.width || window.innerWidth, height: init_screen?.height || window.innerHeight }; // inset root init screen dim, now set auto current screen for scale = 1
@@ -160,7 +162,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
         backgroundColor: type === 'block' ? (selected === 2 || selected === 1 ? undefined : style?.color) : undefined,
         zIndex: selected === 2 || selected === 1 ? undefined : style?.zIndex,
       }}
-      className={selected === 1 ? 'bg-green-400' : ''}
+      className={selected === 1 ? 'bg-green-400 blocktype' : 'blocktype'}
+      title={itemsString}
     >
       <div
         onMouseDown={handleMouseDown}
