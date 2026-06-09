@@ -1,6 +1,6 @@
 import { router, useForm } from "@inertiajs/react";
 import _ from "lodash";
-import { PlusIcon, Trash2Icon, XCircleIcon } from "lucide-react";
+import { PlusIcon, Trash2Icon, XCircle, XCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState, } from "react";
 import { useImmer } from "use-immer";
 import { Button } from "@/components/ui/button";
@@ -147,7 +147,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         backgroundImage: `${search.length >= 3 ? 'none' : 'linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px)'}`
       }}
     >
-      <div className="absolute right-5 bottom-5 z-50">
+      <div className="absolute right-5 flex gap-2 items-center bottom-5 z-50">
         <input
           className="w-full border-blue-500 border rounded-md p-2 z-50 text-lg font-semibold bg-white"
           type="text" value={search}
@@ -155,6 +155,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
           onChange={(e) => {
             setSearch(e.target.value);
           }} />
+          {search && <XCircle size={24} className="hover:text-red-700" onClick={()=> setSearch('')}></XCircle>}
       </div>
       {blocks.map(({ key, ...block }) => (
         <PanelBlock

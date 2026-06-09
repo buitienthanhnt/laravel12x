@@ -13,7 +13,9 @@ type Props = Omit<Block, 'key'> & {
   blockKey: string;
 };
 
-const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type }: Props) => {
+const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type, items }: Props) => {
+    const itemsString = items.map((item) => item.item_model).join(' \n ');
+
   // 1. State lưu vị trí hiện tại của thẻ Div (mặc định cách góc trên trái 100px)
   const [position, setPosition] = useState({ x, y });
   // State quản lý kích thước
@@ -71,7 +73,7 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
    * - right: Khoảng cách từ cạnh phải của phần tử đến cạnh trái của cửa sổ trình duyệt.
    * - bottom: Khoảng cách từ cạnh dưới của phần tử đến cạnh trên của cửa sổ trình duyệt.
    * Thông tin này rất hữu ích để xác định vị trí và kích thước của phần tử trên trang, đặc biệt khi bạn cần thực hiện các thao tác liên quan đến vị trí hoặc kích thước của phần tử đó.
-   * 
+   *
    */
   // console.log(target.getBoundingClientRect());
   // };
@@ -152,7 +154,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
         backgroundColor: type === 'block' ? (selected === 2 || selected === 1 ? undefined : style?.color) : undefined,
         zIndex: selected === 2 || selected === 1 ? undefined : style?.zIndex,
       }}
-      className={selected === 1 ? 'bg-green-400' : ''}
+      className={selected === 1 ? 'bg-green-400 blocktype' : 'blocktype'}
+      title={itemsString}
     >
       <div
         onMouseDown={handleMouseDown}
