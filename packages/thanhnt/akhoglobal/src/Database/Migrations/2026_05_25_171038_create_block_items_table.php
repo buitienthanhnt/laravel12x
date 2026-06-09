@@ -17,6 +17,7 @@ return new class extends Migration
 			$table->unsignedBigInteger(BlockItemInterface::_BLOCK_ID);
 			$table->char(BlockItemInterface::_ITEM_MODEL, 255);
 			$table->char(BlockItemInterface::_ITEM_TYPE, 255);
+			$table->text(BlockItemInterface::_DESCRIPTION)->nullable();
 			$table->timestamps();
 		});
 	}
