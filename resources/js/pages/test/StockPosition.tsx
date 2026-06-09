@@ -6,8 +6,9 @@ import { useImmer } from "use-immer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import PanelBlock from "../akhoglobal/components/blocks/PanelBlock";
+import { ModelItem, PanelBlock } from "../akhoglobal/components/blocks";
 import { Checkbox } from "@/components/ui/checkbox";
+import { type BlockItemType } from "../akhoglobal/type/blockitem";
 
 export type Block = {
   id: number;
@@ -30,6 +31,7 @@ export type Block = {
 const StockPosition = ({ blockList }: { blockList: Block[] }) => {
   const [selected, updateSelected] = useImmer<string | null>(null);
   const modelRef = useRef<HTMLInputElement>(null);
+  const modelDescRef = useRef<HTMLInputElement>(null);
   const blockNameRef = useRef<HTMLInputElement>(null);
   const blockColorRef = useRef<HTMLInputElement>(null);
   const blockTypeRef = useRef<HTMLInputElement>(null);
@@ -105,15 +107,21 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    * add item model in block items
    */
   const onAddBlockItem = useCallback(() => {
-    if (!modelRef.current) { return; }
-    router.post('/test/add-block-item', { key: selected, item: modelRef.current.value });
+      if (!modelRef.current) { return; }
+      router.post('/test/add-block-item', {
+          key: selected,
+          item_model: modelRef.current.value,
+          item_desc: modelDescRef.current?.value
+      });
   }, [selected]);
 
   /**
    * remove item model in block items
    */
   const onRemoveBlockItem = useCallback((item: { id: number }) => {
-    router.delete('/test/delete-block-item/' + item.id);
+      router.delete('/test/delete-block-item/' + item.id, {
+          onBefore: () => confirm('Are you sure you want to delete this item?'),
+      });
   }, []);
 
   /**
@@ -192,22 +200,17 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
             setData('style.zindex', parseInt(e.target.value));
           }} />
         </div>
-
-        <div className="space-x-1 justify-center items-center">
-          <span className="text-md+ font-semibold">Model:</span>
-          <div className="space-y-1">
-            <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelRef} />
-            <Button className="w-full" onClick={onAddBlockItem}>save model</Button>
+          <div className="space-x-1 justify-center items-center">
+              <span className="text-md+ font-semibold">Model:</span>
+              <div className="space-y-1">
+                  <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelRef} placeholder="Khóa" />
+                  <Input className="w-full border-blue-400 rounded-md" type="text" ref={modelDescRef} placeholder="Thông tin mô tả" />
+                  <Button className="w-full" onClick={onAddBlockItem}>save model</Button>
+              </div>
           </div>
-        </div>
-        <div className="mt-2 space-y-1 flex-1 overflow-scroll">
-          {seletedBlock?.items?.map((item: any) => <div key={item.id} className="flex w-full bg-gray-500 p-1 rounded-sm justify-between">
-            <p className="font-semibold text-base">{item.item_model}</p>
-            <Trash2Icon size={26} className="text-yellow-600 hover:text-red-600 font-semibold" onClick={() => {
-              onRemoveBlockItem(item);
-            }}>remove</Trash2Icon>
-          </div>)}
-        </div>
+          <div className="mt-2 space-y-1 flex-1 overflow-scroll">
+              {seletedBlock?.items?.map((item: BlockItemType) => <ModelItem key={item.id} item={item} onRemoveBlockItem={onRemoveBlockItem}></ModelItem>)}
+          </div>
 
         <div className="flex justify-end items-end gap-1">
           <Button className="w-full" onClick={onSaveBlock}>Save</Button>
