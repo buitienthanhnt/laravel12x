@@ -1,9 +1,9 @@
-import ProductAdminController from './ProductAdminController'
 import BlockAdminController from './BlockAdminController'
+import ProductAdminController from './ProductAdminController'
 
 const Adminhtml = {
-    ProductAdminController: Object.assign(ProductAdminController, ProductAdminController),
     BlockAdminController: Object.assign(BlockAdminController, BlockAdminController),
+    ProductAdminController: Object.assign(ProductAdminController, ProductAdminController),
 }
 
 export default Adminhtml

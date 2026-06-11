@@ -8,7 +8,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { ModelItem, PanelBlock } from "../akhoglobal/components/blocks";
+import AkhoUrl from "../akhoglobal/network/Url";
 import { type BlockItemType } from "../akhoglobal/type/blockitem";
+
 
 export type Block = {
   id: number;
@@ -18,12 +20,7 @@ export type Block = {
   height: number;
   name: string;
   key: string;
-  items: [
-    {
-      item_model: string;
-      quantity: number;
-    }
-  ];
+  items: BlockItemType[];
   style?: React.CSSProperties;
   type?: 'block' | 'area';
 };
@@ -72,9 +69,12 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
     updateSelected(blockKey);
   }, [updateSelected]);
 
+  /**
+   * add block into block list, default position is (100, 100) and size is (100, 100)
+   */
   const onAddBlock = () => {
 
-    const newBlock: Block = {
+    const newBlock: Omit<Block, 'id'> & { init_screen?: { width: number, height: number } } = {
       x: 100,
       y: 100,
       width: 100,
@@ -84,19 +84,30 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       items: [],
       style: { color: blockColorRef?.current?.value, zIndex: (_.maxBy(blocks, 'id')?.id || 0) + 1 },
       type: blockTypeRef.current?.getAttribute('data-state') === 'checked' ? 'block' : 'area',
+      init_screen: {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      },
     };
 
-    router.post('/test/add-block', newBlock as any);
+    /**
+     * Call api add block, default  response redirect to the page list
+     */
+    router.post(AkhoUrl.block.create, newBlock as any);
   }
 
   useEffect(() => {
     updateBlocks(blockList);
   }, [blockList, updateBlocks]);
 
+  /**
+   * remove block
+   */
   const onRemoveBlock = () => {
-    router.delete('/test/delete-block/' + selected, {
-      onSuccess: () => {
+    if (!selected) { return; }
 
+    router.delete(AkhoUrl.block.delete(selected), {
+      onSuccess: () => {
       },
       onBefore: () => confirm('Are you sure you want to delete this block?'),
     });
@@ -108,7 +119,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    */
   const onAddBlockItem = useCallback(() => {
     if (!modelRef.current) { return; }
-    router.post('/test/add-block-item', {
+    router.post(AkhoUrl.block.addItem, {
       key: selected,
       item_model: modelRef.current.value,
       item_desc: modelDescRef.current?.value
@@ -119,7 +130,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    * remove item model in block items
    */
   const onRemoveBlockItem = useCallback((item: { id: number }) => {
-    router.delete('/test/delete-block-item/' + item.id, {
+    router.delete(AkhoUrl.block.deleteItem(item.id), {
       onBefore: () => confirm('Are you sure you want to delete this item?'),
     });
   }, []);
@@ -131,7 +142,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
     /**
      * Update block by useImmer
      */
-    router.put('/test/update-block', { key: selected, ...data });
+    router.put(AkhoUrl.block.update, { key: selected, ...data });
 
     // updateBlocks((draft) => {
     //   /**
@@ -200,6 +211,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
             setData('style.zindex', parseInt(e.target.value));
           }} />
         </div>
+
         <div className="space-x-1 justify-center items-center">
           <span className="text-md+ font-semibold">Model:</span>
           <div className="space-y-1">
@@ -211,7 +223,6 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         <div className="mt-2 space-y-1 flex-1 overflow-scroll">
           {seletedBlock?.items?.map((item: BlockItemType) => <ModelItem key={item.id} item={item} onRemoveBlockItem={onRemoveBlockItem}></ModelItem>)}
         </div>
-
         <div className="flex justify-end items-end gap-1">
           <Button className="w-full" onClick={onSaveBlock}>Save</Button>
           <Button className="w-full bg-red-400 hover:bg-red-600" color="red" onClick={onRemoveBlock}>Delete</Button>
