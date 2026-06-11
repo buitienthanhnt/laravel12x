@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use Laravel\Fortify\Features;
 use EdSDK\FlmngrServer\FlmngrServer;
-use Thanhnt\Akhoglobal\Models\Block;
 
 // Route::get('/', function () {
 // 	return Inertia::render('home', [
@@ -15,8 +13,6 @@ use Thanhnt\Akhoglobal\Models\Block;
 Route::get('dashboard', function () {
 	return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::get('akho/manage/{id?}', [\App\Http\Controllers\Akho\Manage::class, 'manage'])->name('akho.manage');
 
 Route::get('akho/register', [\App\Http\Controllers\Akho\Manage::class, 'create'])->name('akho.register');
 
@@ -30,19 +26,7 @@ Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->
 
 Route::get('akho/product/{alias}.html', [\App\Http\Controllers\Akho\Manage::class, 'show'])->name('akho.product.show');
 
-Route::get('/', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'blockList'])->name('akhoglobal.manage');
-
 Route::prefix('test')->group(function () {
-
-	Route::post('add-block', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'addBlock']);
-
-	Route::delete('delete-block/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'deleteBlock']);
-
-	Route::put('update-block', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'updateBlock']);
-
-	Route::post('add-block-item', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'addBlockItem']);
-
-	Route::delete('delete-block-item/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'deleteBlockItem']);
 
 	Route::post('upload', function (\Illuminate\Http\Request $request) {
 		$request->validate([

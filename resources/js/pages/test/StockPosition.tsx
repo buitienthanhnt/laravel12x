@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { ModelItem, PanelBlock } from "../akhoglobal/components/blocks";
+import AkhoUrl from "../akhoglobal/network/Url";
 import { type BlockItemType } from "../akhoglobal/type/blockitem";
 
 
@@ -68,6 +69,9 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
     updateSelected(blockKey);
   }, [updateSelected]);
 
+  /**
+   * add block into block list, default position is (100, 100) and size is (100, 100)
+   */
   const onAddBlock = () => {
 
     const newBlock: Omit<Block, 'id'> & { init_screen?: { width: number, height: number } } = {
@@ -89,17 +93,21 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
     /**
      * Call api add block, default  response redirect to the page list
      */
-    router.post('/test/add-block', newBlock as any);
+    router.post(AkhoUrl.block.create, newBlock as any);
   }
 
   useEffect(() => {
     updateBlocks(blockList);
   }, [blockList, updateBlocks]);
 
+  /**
+   * remove block
+   */
   const onRemoveBlock = () => {
-    router.delete('/test/delete-block/' + selected, {
-      onSuccess: () => {
+    if (!selected) { return; }
 
+    router.delete(AkhoUrl.block.delete(selected), {
+      onSuccess: () => {
       },
       onBefore: () => confirm('Are you sure you want to delete this block?'),
     });
@@ -111,7 +119,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    */
   const onAddBlockItem = useCallback(() => {
     if (!modelRef.current) { return; }
-    router.post('/test/add-block-item', {
+    router.post(AkhoUrl.block.addItem, {
       key: selected,
       item_model: modelRef.current.value,
       item_desc: modelDescRef.current?.value
@@ -122,7 +130,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    * remove item model in block items
    */
   const onRemoveBlockItem = useCallback((item: { id: number }) => {
-    router.delete('/test/delete-block-item/' + item.id, {
+    router.delete(AkhoUrl.block.deleteItem(item.id), {
       onBefore: () => confirm('Are you sure you want to delete this item?'),
     });
   }, []);
@@ -134,7 +142,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
     /**
      * Update block by useImmer
      */
-    router.put('/test/update-block', { key: selected, ...data });
+    router.put(AkhoUrl.block.update, { key: selected, ...data });
 
     // updateBlocks((draft) => {
     //   /**

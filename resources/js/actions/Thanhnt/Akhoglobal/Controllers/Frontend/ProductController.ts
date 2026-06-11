@@ -2,7 +2,7 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFo
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 export const manage = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: manage.url(options),
@@ -11,13 +11,13 @@ export const manage = (options?: RouteQueryOptions): RouteDefinition<'get'> => (
 
 manage.definition = {
     methods: ["get","head"],
-    url: '/akhoglobal',
+    url: '/akho',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 manage.url = (options?: RouteQueryOptions) => {
     return manage.definition.url + queryParams(options)
@@ -26,7 +26,7 @@ manage.url = (options?: RouteQueryOptions) => {
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 manage.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: manage.url(options),
@@ -36,7 +36,7 @@ manage.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 manage.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: manage.url(options),
@@ -46,7 +46,7 @@ manage.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 const manageForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: manage.url(options),
@@ -56,7 +56,7 @@ const manageForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 manageForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: manage.url(options),
@@ -66,7 +66,7 @@ manageForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:15
-* @route '/akhoglobal'
+* @route '/akho'
 */
 manageForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: manage.url({
@@ -83,7 +83,7 @@ manage.form = manageForm
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 export const create = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: create.url(options),
@@ -92,13 +92,13 @@ export const create = (options?: RouteQueryOptions): RouteDefinition<'get'> => (
 
 create.definition = {
     methods: ["get","head"],
-    url: '/akhoglobal/create',
+    url: '/akho/create',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 create.url = (options?: RouteQueryOptions) => {
     return create.definition.url + queryParams(options)
@@ -107,7 +107,7 @@ create.url = (options?: RouteQueryOptions) => {
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: create.url(options),
@@ -117,7 +117,7 @@ create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: create.url(options),
@@ -127,7 +127,7 @@ create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: create.url(options),
@@ -137,7 +137,7 @@ const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: create.url(options),
@@ -147,7 +147,7 @@ createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::create
 * @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:20
-* @route '/akhoglobal/create'
+* @route '/akho/create'
 */
 createForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: create.url({

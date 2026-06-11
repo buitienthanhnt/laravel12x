@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Thanhnt\Akhoglobal\Controllers\Frontend\ProductController;
 
-Route::prefix('akhoglobal')->group(function (): void {
+Route::prefix('akho')->group(function (): void {
 
     Route::get('/', [ProductController::class, 'manage']);
 

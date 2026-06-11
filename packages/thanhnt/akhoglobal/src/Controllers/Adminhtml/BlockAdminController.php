@@ -55,13 +55,13 @@ final class BlockAdminController extends Controller
 			ConfigInterface::_DESCRIPTION => 'Initial screen configuration for blocks',
 		]);
 
-		return redirect(route('akhoglobal.manage'))->with('message', 'Block added successfully');
+		return redirect(route('akho.block'))->with('message', 'Block added successfully');
 	}
 
 	public function deleteBlock(string $id)
 	{
 		$this->blockAction->deleteBlock($id);
-		return redirect(route('akhoglobal.manage'))->with('message', 'Block deleted successfully');
+		return redirect(route('akho.block'))->with('message', 'Block deleted successfully');
 	}
 
 	public function updateBlock(Request $request)
@@ -79,7 +79,7 @@ final class BlockAdminController extends Controller
 		]);
 
 		$this->blockAction->updateBlock($request->only(BlockInterface::FILLED_FIELDS));
-		return redirect(route('akhoglobal.manage'))->with('message', 'Block updated successfully');
+		return redirect(route('akho.block'))->with('message', 'Block updated successfully');
 	}
 
 	public function addBlockItem(Request $request)
@@ -89,7 +89,7 @@ final class BlockAdminController extends Controller
 			BlockItemInterface::_ITEM_MODEL => 'required|string'
 		]);
 		$this->blockAction->addBlockItem($request->input('key'), $request->only([BlockItemInterface::_ITEM_MODEL, BlockItemInterface::_DESCRIPTION]));
-		return redirect(route('akhoglobal.manage'))->with('message', 'Block item added successfully');
+		return redirect(route('akho.block'))->with('message', 'Block item added successfully');
 	}
 
 	public function deleteBlockItem(int $id, Request $request)
@@ -97,6 +97,6 @@ final class BlockAdminController extends Controller
 		$blockItem = \Thanhnt\Akhoglobal\Models\BlockItem::findOrFail($id);
 		$blockItem->delete();
 
-		return redirect(route('akhoglobal.manage'))->with('message', 'Block item deleted successfully');
+		return redirect(route('akho.block'))->with('message', 'Block item deleted successfully');
 	}
 }

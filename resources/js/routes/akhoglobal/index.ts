@@ -2,7 +2,7 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFo
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 export const manage = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: manage.url(options),
@@ -11,13 +11,13 @@ export const manage = (options?: RouteQueryOptions): RouteDefinition<'get'> => (
 
 manage.definition = {
     methods: ["get","head"],
-    url: '/',
+    url: '/adminhtml/block',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 manage.url = (options?: RouteQueryOptions) => {
     return manage.definition.url + queryParams(options)
@@ -26,7 +26,7 @@ manage.url = (options?: RouteQueryOptions) => {
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 manage.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: manage.url(options),
@@ -36,7 +36,7 @@ manage.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 manage.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: manage.url(options),
@@ -46,7 +46,7 @@ manage.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 const manageForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: manage.url(options),
@@ -56,7 +56,7 @@ const manageForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 manageForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: manage.url(options),
@@ -66,7 +66,7 @@ manageForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 /**
 * @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::manage
 * @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
-* @route '/'
+* @route '/adminhtml/block'
 */
 manageForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: manage.url({

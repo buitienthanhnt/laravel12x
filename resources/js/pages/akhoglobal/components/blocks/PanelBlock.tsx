@@ -3,6 +3,7 @@ import { debounce } from 'lodash';
 import { Settings } from 'lucide-react';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { type Block } from '@/pages/test/StockPosition';
+import AkhoUrl from '../../network/Url';
 
 
 
@@ -62,7 +63,7 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
   const updateBlockPosition = useCallback(
     debounce((newPosition: { width?: number; height?: number, x?: number, y?: number }) => {
       // console.log({ blockKey, ...newPosition });
-      router.put('/test/update-block', { key: blockKey, ...newPosition });
+      router.put(AkhoUrl.block.update, { key: blockKey, ...newPosition });
     }, 500),
     [blockKey]
   );
@@ -127,7 +128,7 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [blockKey, updateBlockPosition]);
+  }, [blockKey, updateBlockPosition, xScale, yScale]);
 
   /**
    * Khi bấm nút nắm hình vuông
