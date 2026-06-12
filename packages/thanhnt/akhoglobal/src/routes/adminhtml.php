@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController;
 
 Route::prefix('adminhtml')->group(function (): void {
 
@@ -22,12 +21,18 @@ Route::prefix('adminhtml')->group(function (): void {
 		Route::delete('delete-item/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'deleteBlockItem']);
 	});
 
-	/**
-	 * define route for product
-	 */
-	Route::prefix('product')->group(function (): void {
-		Route::get('register', [ProductAdminController::class, 'registerProduct']);
+	Route::prefix('product')->group(function () {
 
-		Route::get('create', [ProductAdminController::class, 'createProduct']);
+		Route::get('/', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::class, 'manage'])->name('akho.product.list');
+
+		Route::get('create', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::class, 'create'])->name('akho.register');
+
+		Route::post('store', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::class, 'store'])->name('akho.store');
+	});
+
+	Route::prefix('category')->group(function () {
+		Route::get('create', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::class, 'createCategory'])->name('akho.category.create');
+
+		Route::post('store', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::class, 'storeCategory']);
 	});
 });

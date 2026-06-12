@@ -3,28 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use EdSDK\FlmngrServer\FlmngrServer;
+use Laravel\Fortify\Features;
 
-// Route::get('/', function () {
-// 	return Inertia::render('home', [
-// 		'canRegister' => Features::enabled(Features::registration()),
-// 	]);
-// })->name('home');
+Route::get('/', function () {
+	return Inertia::render('home', [
+		'canRegister' => Features::enabled(Features::registration()),
+	]);
+})->name('home');
 
 Route::get('dashboard', function () {
 	return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('akho/register', [\App\Http\Controllers\Akho\Manage::class, 'create'])->name('akho.register');
-
-Route::get('akho/cate/create', [\App\Http\Controllers\Akho\Manage::class, 'createCategory'])->name('akho.category.create');
-
-Route::get('akho/cate/{id}.htm', [\App\Http\Controllers\Akho\Manage::class, 'detailCategory']);
-
-Route::post('akho/cate/store', [\App\Http\Controllers\Akho\Manage::class, 'storeCategory']);
-
-Route::post('akho/store', [\App\Http\Controllers\Akho\Manage::class, 'store'])->name('akho.store');
-
-Route::get('akho/product/{alias}.html', [\App\Http\Controllers\Akho\Manage::class, 'show'])->name('akho.product.show');
 
 Route::prefix('test')->group(function () {
 
@@ -46,6 +35,7 @@ Route::prefix('test')->group(function () {
  * phai co name thi moi generate sang js source gom router
  */
 require __DIR__ . '/settings.php';
+
 // Đảm bảo thư mục public/uploads đã tồn tại trên host của bạn
 Route::post('/flmngr', function () {
 	FlmngrServer::flmngrRequest([

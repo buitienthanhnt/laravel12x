@@ -1,8 +1,8 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../../wayfinder'
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 export const create = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: create.url(options),
@@ -11,22 +11,22 @@ export const create = (options?: RouteQueryOptions): RouteDefinition<'get'> => (
 
 create.definition = {
     methods: ["get","head"],
-    url: '/akho/cate/create',
+    url: '/adminhtml/category/create',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 create.url = (options?: RouteQueryOptions) => {
     return create.definition.url + queryParams(options)
 }
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: create.url(options),
@@ -34,9 +34,9 @@ create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: create.url(options),
@@ -44,9 +44,9 @@ create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: create.url(options),
@@ -54,9 +54,9 @@ const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: create.url(options),
@@ -64,9 +64,9 @@ createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::create
-* @see app/Http/Controllers/Akho/Manage.php:56
-* @route '/akho/cate/create'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\CategoryAdminController::create
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/CategoryAdminController.php:21
+* @route '/adminhtml/category/create'
 */
 createForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: create.url({

@@ -1,25 +1,25 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-export const show = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
-    url: show.url(args, options),
+export const detail = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: detail.url(args, options),
     method: 'get',
 })
 
-show.definition = {
+detail.definition = {
     methods: ["get","head"],
     url: '/akho/product/{alias}.html',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-show.url = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions) => {
+detail.url = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { alias: args }
     }
@@ -36,58 +36,58 @@ show.url = (args: { alias: string | number } | [alias: string | number ] | strin
         alias: args.alias,
     }
 
-    return show.definition.url
+    return detail.definition.url
             .replace('{alias}', parsedArgs.alias.toString())
             .replace(/\/+$/, '') + queryParams(options)
 }
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-show.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
-    url: show.url(args, options),
+detail.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: detail.url(args, options),
     method: 'get',
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-show.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
-    url: show.url(args, options),
+detail.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: detail.url(args, options),
     method: 'head',
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-const showForm = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-    action: show.url(args, options),
+const detailForm = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: detail.url(args, options),
     method: 'get',
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-showForm.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-    action: show.url(args, options),
+detailForm.get = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: detail.url(args, options),
     method: 'get',
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::show
-* @see app/Http/Controllers/Akho/Manage.php:86
+* @see \Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::detail
+* @see packages/thanhnt/akhoglobal/src/Controllers/Frontend/ProductController.php:21
 * @route '/akho/product/{alias}.html'
 */
-showForm.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
-    action: show.url(args, {
+detailForm.head = (args: { alias: string | number } | [alias: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: detail.url(args, {
         [options?.mergeQuery ? 'mergeQuery' : 'query']: {
             _method: 'HEAD',
             ...(options?.query ?? options?.mergeQuery ?? {}),
@@ -96,10 +96,10 @@ showForm.head = (args: { alias: string | number } | [alias: string | number ] | 
     method: 'get',
 })
 
-show.form = showForm
+detail.form = detailForm
 
 const product = {
-    show: Object.assign(show, show),
+    detail: Object.assign(detail, detail),
 }
 
 export default product

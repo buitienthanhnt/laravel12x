@@ -1,11 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Thanhnt\Akhoglobal\Controllers\Frontend\ProductController;
 
 Route::prefix('akho')->group(function (): void {
 
-    Route::get('/', [ProductController::class, 'manage']);
+	/**
+	 * product detail route
+	 */
+	Route::get('{id}.htm', [\Thanhnt\Akhoglobal\Controllers\Frontend\CategoryController::class, 'detailCategory']);
 
-    Route::get('create', [ProductController::class, 'create']);
+	/**
+	 * category detail route
+	 */
+	Route::get('product/{alias}.html', [\Thanhnt\Akhoglobal\Controllers\Frontend\ProductController::class, 'detail'])->name('akho.product.detail');
 });

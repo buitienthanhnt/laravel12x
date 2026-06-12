@@ -1,10 +1,91 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
-import category from './category'
 import product from './product'
+import category from './category'
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+export const block = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: block.url(options),
+    method: 'get',
+})
+
+block.definition = {
+    methods: ["get","head"],
+    url: '/adminhtml/block',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+block.url = (options?: RouteQueryOptions) => {
+    return block.definition.url + queryParams(options)
+}
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+block.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: block.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+block.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: block.url(options),
+    method: 'head',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+const blockForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: block.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+blockForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: block.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::block
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/BlockAdminController.php:23
+* @route '/adminhtml/block'
+*/
+blockForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: block.url({
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+block.form = blockForm
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 export const register = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: register.url(options),
@@ -13,22 +94,22 @@ export const register = (options?: RouteQueryOptions): RouteDefinition<'get'> =>
 
 register.definition = {
     methods: ["get","head"],
-    url: '/akho/register',
+    url: '/adminhtml/product/create',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 register.url = (options?: RouteQueryOptions) => {
     return register.definition.url + queryParams(options)
 }
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: register.url(options),
@@ -36,9 +117,9 @@ register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: register.url(options),
@@ -46,9 +127,9 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: register.url(options),
@@ -56,9 +137,9 @@ const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: register.url(options),
@@ -66,9 +147,9 @@ registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::register
-* @see app/Http/Controllers/Akho/Manage.php:46
-* @route '/akho/register'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::register
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:47
+* @route '/adminhtml/product/create'
 */
 registerForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: register.url({
@@ -83,9 +164,9 @@ registerForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =>
 register.form = registerForm
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:98
-* @route '/akho/store'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::store
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:62
+* @route '/adminhtml/product/store'
 */
 export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: store.url(options),
@@ -94,22 +175,22 @@ export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
 
 store.definition = {
     methods: ["post"],
-    url: '/akho/store',
+    url: '/adminhtml/product/store',
 } satisfies RouteDefinition<["post"]>
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:98
-* @route '/akho/store'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::store
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:62
+* @route '/adminhtml/product/store'
 */
 store.url = (options?: RouteQueryOptions) => {
     return store.definition.url + queryParams(options)
 }
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:98
-* @route '/akho/store'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::store
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:62
+* @route '/adminhtml/product/store'
 */
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: store.url(options),
@@ -117,9 +198,9 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:98
-* @route '/akho/store'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::store
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:62
+* @route '/adminhtml/product/store'
 */
 const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
     action: store.url(options),
@@ -127,9 +208,9 @@ const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => 
 })
 
 /**
-* @see \App\Http\Controllers\Akho\Manage::store
-* @see app/Http/Controllers/Akho/Manage.php:98
-* @route '/akho/store'
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::store
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:62
+* @route '/adminhtml/product/store'
 */
 storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
     action: store.url(options),
@@ -139,10 +220,11 @@ storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => (
 store.form = storeForm
 
 const akho = {
-    register: Object.assign(register, register),
-    category: Object.assign(category, category),
-    store: Object.assign(store, store),
     product: Object.assign(product, product),
+    block: Object.assign(block, block),
+    register: Object.assign(register, register),
+    store: Object.assign(store, store),
+    category: Object.assign(category, category),
 }
 
 export default akho
