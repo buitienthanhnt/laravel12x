@@ -75,10 +75,10 @@ homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 
 home.form = homeForm
 
-const agameglobal = {
+const agame = {
     home: Object.assign(home, home),
     bam: Object.assign(bam, bam),
     dem: Object.assign(dem, dem),
 }
 
-export default agameglobal
+export default agame

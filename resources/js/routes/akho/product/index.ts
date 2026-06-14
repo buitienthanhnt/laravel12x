@@ -98,8 +98,90 @@ detailForm.head = (args: { alias: string | number } | [alias: string | number ] 
 
 detail.form = detailForm
 
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+export const list = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: list.url(options),
+    method: 'get',
+})
+
+list.definition = {
+    methods: ["get","head"],
+    url: '/adminhtml/product',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+list.url = (options?: RouteQueryOptions) => {
+    return list.definition.url + queryParams(options)
+}
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+list.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: list.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+list.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: list.url(options),
+    method: 'head',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+const listForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: list.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+listForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: list.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Akhoglobal\Controllers\Adminhtml\ProductAdminController::list
+* @see packages/thanhnt/akhoglobal/src/Controllers/Adminhtml/ProductAdminController.php:35
+* @route '/adminhtml/product'
+*/
+listForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: list.url({
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+list.form = listForm
+
 const product = {
     detail: Object.assign(detail, detail),
+    list: Object.assign(list, list),
 }
 
 export default product
