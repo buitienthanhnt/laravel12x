@@ -62,7 +62,7 @@ final class ProductAdminController extends Controller
 	public function store(RegisterProduct $request)
 	{
 		$this->registerProductAction->execute($request);
-		return redirect()->route('akho.manage');
+		return redirect()->route('akho.product.list');
 	}
 
 	/**
