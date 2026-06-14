@@ -5,7 +5,7 @@ const categoryPrefix = '/adminhtml/category';
 
 /**
  * define all url for akho global network module here, so that we can easily manage and change them in the future
- * the url was not define with router name so they not appear in route list action and controller auto build 
+ * the url was not define with router name so they not appear in route list action and controller auto build
  */
 const AkhoUrl = {
   block: {
