@@ -1,0 +1,20 @@
+{
+	"name": "thanhnt/abaseglobal",
+	"description": "base package for thanhnt packages laravel module",
+	"autoload": {
+		"psr-4": {
+			"Thanhnt\\Abaseglobal\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "thanhnt",
+			"email": "buitienthanhnt@gmail.com"
+		}
+	],
+	"type": "laravel-package",
+	"license": "MIT",
+	"require": {},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
