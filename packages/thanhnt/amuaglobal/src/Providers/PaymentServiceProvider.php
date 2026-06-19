@@ -4,7 +4,7 @@ namespace Thanhnt\Amuaglobal\Providers;
 
 use App\Models\User;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Cashier\Cashier;
+// use Laravel\Cashier\Cashier;
 use Stripe\Stripe;
 
 final class PaymentServiceProvider extends ServiceProvider
@@ -14,12 +14,13 @@ final class PaymentServiceProvider extends ServiceProvider
 		/**
 		 * define for cashier stripe
 		 */
-		Cashier::useCustomerModel(User::class);
-		// Cashier::calculateTaxes();
+		// Cashier::useCustomerModel(User::class);
+
+		// Cashier::calculateTaxes(); // not use
 
 		/**
 		 * config api key for stripe library
 		 */
-		Stripe::setApiKey(env('STRIPE_SECRET'));
+		// Stripe::setApiKey(env('STRIPE_SECRET'));
 	}
 }

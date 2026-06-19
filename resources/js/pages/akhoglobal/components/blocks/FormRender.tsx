@@ -6,7 +6,6 @@ import { type FormFieldDefine, } from '@/types/shareType/FormField';
 import { type RouteFormDefinition } from '@/wayfinder';
 import { FormFieldType } from "../../constans/FormField";
 import { ChooseFile, PickFile, SelectOption, Textarea, Checkbox } from "../form-fields";
-
 import SelectMultiCheckbox from '../form-fields/multi-select';
 
 
@@ -15,7 +14,7 @@ type Method = "get" | "post" | "put" | "delete" | "patch" | "head" | "options";
 type Props = {
   form_info: RouteFormDefinition<Method>,
   form_fields: FormFieldDefine[];
-} & InertiaConfig['sharedPageProps'];
+} & Omit<InertiaConfig['sharedPageProps'], 'form_fields'>;
 
 export default function FormRender({ form_info, form_fields }: Props) {
   const _form_fields: { [key: string]: string | string[] } = {};
@@ -52,7 +51,7 @@ export default function FormRender({ form_info, form_fields }: Props) {
         const cleaned = Object.fromEntries(
           Object.entries(form_data).filter(([_, value]) => value !== null && value !== undefined && value !== "")
         );
-        return {...data, ...cleaned};
+        return { ...data, ...cleaned };
       }}
     >
       {({
