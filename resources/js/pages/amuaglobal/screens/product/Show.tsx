@@ -1,0 +1,26 @@
+import { ContentLayout } from "../../layout";
+import { type ProductDetailType } from "../../types/ProductType";
+
+function Show({ product }: { product: ProductDetailType }) {
+
+  return (
+    <div className="container mx-auto min-h-screen p-1 sm:px-2 md:px-4">
+      <div className="space-y-2">
+        <div className="flex gap-2">
+          {product.image_path && <img src={product.image_path} alt={product.name} className="size-28 rounded-md" />}
+          <>
+            <p className="font-semibold text-blue-500 text-2xl">{product.name}</p>
+            <p className="font-medium">{product.description}</p>
+          </>
+        </div>
+        <div className="grid grid-cols-4 gap-2">
+          {product.galleries && product.galleries.map((gallery, index: number) => <img src={gallery.path} alt={product.name} key={index} className="w-full object-contain rounded-md" />)}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+Show.layout = page => <ContentLayout>{page}</ContentLayout>
+
+export default Show;

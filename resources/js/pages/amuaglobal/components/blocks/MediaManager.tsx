@@ -1,0 +1,96 @@
+import Flmngr from 'flmngr'; // Thư viện lõi để gọi hàm open
+import { Trash } from 'lucide-react';
+import { useCallback, useMemo, useState } from 'react';
+
+interface MediaFileProps {
+  url: string; // Đường dẫn URL của file đã chọn,
+  format: string; // Định dạng file (ví dụ: 'jpg', 'png', 'pdf', v.v.),
+  isServerFile: boolean; // Cho biết file này có phải là file đã lưu trên server hay không
+  metadata: { url: string, },
+  formats: unknown[], // Thông tin về các định dạng khác nhau của file (nếu có)
+}
+
+export default function MediaManager() {
+  const [selectedFiles, setSelectedFiles] = useState<MediaFileProps[]>([]);
+
+  const inputFileValue = useMemo(() => {
+    if (selectedFiles.length > 0) {
+      return selectedFiles.map((file) => file.url).join('|'); // Nếu muốn lưu nhiều URL, có thể nối chúng lại bằng dấu phẩy
+    }
+    return '';
+  }, [selectedFiles]);
+
+  const openFileManager = useCallback(() => {
+    const appUrl = import.meta.env.VITE_APP_URL || 'http://localhost:8000'; // 
+    if (!appUrl) {
+      console.error("APP_URL is not defined");
+      return;
+    }
+
+    Flmngr.open({
+      apiKey: "wewO9YKsKxuwgz4Omr2Mcmbp", // API key mặc định miễn phí (có thể thay nếu mua bản quyền)
+      // ĐÂY LÀ ĐIỂM QUAN TRỌNG: Kết nối tới Laravel của bạn
+      urlFileManager: `${appUrl}/flmngr`, // Route POST vừa tạo ở Bước 1
+      urlFiles: `${appUrl}/storage/uploads`,     // Đường dẫn URL công khai để xem ảnh
+      isMultiple: true, // true nếu cho phép chọn nhiều file cùng lúc
+      // Callback sau khi user chọn file và bấm "Insert"
+      onFinish: (files) => {
+        if (files && files.length > 0) {
+          // files sẽ là một mảng chứa thông tin các file được chọn
+          console.log("Danh sách file đã chọn:", files);
+
+          // Ví dụ lấy ra URL của file đầu tiên
+          const fileUrl = files[0].url;
+          console.log("Đường dẫn file:", fileUrl);
+          setSelectedFiles(files); // Lưu lại danh sách file đã chọn vào state
+          // Bạn có thể set state hoặc làm gì đó với URL này tại đây
+        }
+      },
+      // (Tùy chọn) Thêm callback khi người dùng bấm nút Cancel mà không chọn gì
+      onCancel: () => {
+        console.log("Người dùng đã đóng trình quản lý file mà không chọn gì.");
+      }
+    });
+  }, []);
+
+  const handleRemoveFile = useCallback((index: number) => {
+    setSelectedFiles((prevFiles) => [...prevFiles.filter((_, i) => i !== index)]);
+  }, []);
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <h2>Quản lý thư viện Media</h2>
+
+      <button
+        type="button"
+        className='p-2 px-4 bg-gray-600 rounded-2xl text-white font-semibold'
+        onClick={openFileManager}
+        style={{ padding: '10px 20px', cursor: 'pointer' }}
+      >
+        Mở Trình Quản Lý File
+      </button>
+      <input
+        type="text"
+        name="uploads"
+        placeholder='updaload file...'
+        className={`border border-gray-400 p-2 rounded-md`}
+        value={inputFileValue}
+        readOnly
+        title={inputFileValue} // Hiển thị tooltip khi hover nếu có nhiều URL
+      />
+      {selectedFiles.length > 0 && (
+        <>
+          <h3>File đã chọn:</h3>
+          <div className='grid grid-cols-4 gap-1 bg-gray-200 p-1 rounded-md'>
+            {selectedFiles.map((file, index) => (
+            <div key={index} className='relative'>
+              <img src={file.url} style={{ maxWidth: '100%', height: 'auto', borderRadius: '5px', objectFit: 'cover' }} />
+              <Trash className="size-8 text-black absolute top-2 right-2 bg-white rounded-full p-1" onClick={() => handleRemoveFile(index)}></Trash>
+            </div>
+          ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}

@@ -7,7 +7,7 @@ use Thanhnt\Akhoglobal\Models\Types\ProductInterface;
 
 final class ProductApi
 {
-	public function getProductDetail(string $type = 'id', string|int $value)
+	public function getProductDetail(string|int $value, string $type = 'id', bool $with = true)
 	{
 		return Product::where($type, $value)->with([
 			ProductInterface::R_CATEGORY,

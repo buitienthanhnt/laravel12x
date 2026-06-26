@@ -12,7 +12,7 @@ return new class extends Migration
 	 */
 	public function up(): void
 	{
-		Schema::create(ConfigInterface::_TABLE_NAME, function (Blueprint $table) {
+		Schema::create(ConfigInterface::TABLE_NAME, function (Blueprint $table) {
 			$table->string(ConfigInterface::_PATH)->unique();
 			$table->text(ConfigInterface::_VALUE);
 			$table->string(ConfigInterface::_TYPE)->default('string');
@@ -25,6 +25,6 @@ return new class extends Migration
 	 */
 	public function down(): void
 	{
-		Schema::dropIfExists(ConfigInterface::_TABLE_NAME);
+		Schema::dropIfExists(ConfigInterface::TABLE_NAME);
 	}
 };

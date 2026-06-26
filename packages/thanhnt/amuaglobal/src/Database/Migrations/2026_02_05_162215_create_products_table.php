@@ -7,27 +7,29 @@ use Thanhnt\Amuaglobal\Models\Types\ProductInterface;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create(ProductInterface::TABLE_NAME, function (Blueprint $table) {
-            $table->id();
-            $table->string(ProductInterface::NAME);
-            $table->string(ProductInterface::DESCRIPTION)->nullable();
-            $table->string(ProductInterface::IMAGE_PATH)->nullable();
-            $table->string(ProductInterface::ALIAS);
-            $table->timestamps();
-            $table->softDeletes();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 */
+	public function up(): void
+	{
+		Schema::create(ProductInterface::TABLE_NAME, function (Blueprint $table) {
+			$table->id(ProductInterface::_ID);
+			$table->char(ProductInterface::_NAME);
+			$table->char(ProductInterface::_SKU)->unique()->default('');
+			$table->boolean(ProductInterface::_ACTIVE)->default(true);
+			$table->char(ProductInterface::_ALIAS)->unique();
+			$table->text(ProductInterface::_DESCRIPTION)->nullable();
+			$table->char(ProductInterface::_IMAGE_PATH)->nullable();
+			$table->softDeletes();
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists(ProductInterface::TABLE_NAME);
-    }
+	/**
+	 * Reverse the migrations.
+	 */
+	public function down(): void
+	{
+		Schema::dropIfExists(ProductInterface::TABLE_NAME);
+	}
 };

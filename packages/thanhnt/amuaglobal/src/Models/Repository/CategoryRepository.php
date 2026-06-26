@@ -2,7 +2,7 @@
 
 namespace Thanhnt\Amuaglobal\Models\Repository;
 
-use Thanhnt\Akhoglobal\Models\Category;
+use Thanhnt\Amuaglobal\Models\Category;
 
 final class CategoryRepository
 {

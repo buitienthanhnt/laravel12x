@@ -1,17 +1,41 @@
 export const adminPrefix = '/adminhtml';
 export const amuaAdminPrefix = '/adminhtml/amua';
+export const productPrefix = `${adminPrefix}/product`;
+export const categoryPrefix = `${adminPrefix}/category`;
 
 const AmuaUrl = {
-  category: {
+  product: {
+    manage: {
+      method: 'get',
+      action: productPrefix,
+    },
     create: {
       method: 'get',
-      action: `${adminPrefix}/category/create`,
+      action: productPrefix + '/create',
     },
     store: {
       method: 'post',
-      action: `${adminPrefix}/category/store`,
+      action: productPrefix + '/store',
+    }
+  },
+  category: {
+    manage: {
+      method: 'get',
+      action: categoryPrefix,
     },
-  }
+    create: {
+      method: 'get',
+      action: categoryPrefix + '/create',
+    },
+    store: {
+      method: 'post',
+      action: categoryPrefix + '/store',
+    },
+    detail: {
+      method: 'get',
+      action: (id: number | string) => `${categoryPrefix}/${id}.htm`,
+    },
+  },
 }
 
 export default AmuaUrl;

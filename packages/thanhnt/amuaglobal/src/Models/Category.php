@@ -4,8 +4,8 @@ namespace Thanhnt\Amuaglobal\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Thanhnt\Akhoglobal\Models\ShareAction\{AliasAttr, ImagePath};
-use Thanhnt\Akhoglobal\Models\Types\ProductInterface;
+use Thanhnt\Amuaglobal\Models\ShareAction\{AliasAttr, ImagePath};
+use Thanhnt\Amuaglobal\Models\Types\ProductInterface;
 
 class Category extends Model implements Types\CategoryInterface
 {

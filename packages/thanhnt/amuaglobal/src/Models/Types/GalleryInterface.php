@@ -4,11 +4,17 @@ namespace Thanhnt\Amuaglobal\Models\Types;
 
 interface GalleryInterface
 {
+	/**
+	 * table name
+	 */
 	const TABLE_NAME = 'amua_galleries';
-	
-	const SOURCE_ID = 'source_id';
-	const TYPE = 'type';
-	const PATH = 'path';
+
+	/**
+	 * field name of the model attributes start with _
+	 */
+	const _SOURCE_ID = 'source_id';
+	const _TYPE = 'type';
+	const _PATH = 'path';
 
 	/**
 	 * type value in list
@@ -17,15 +23,24 @@ interface GalleryInterface
 	const TYPE_ROOM = 'room';
 	const TYPE_BOOK = 'book';
 	const TYPE_PRODUCT = 'product';
+	const TYPE_CATEGORY = 'category';
+
+	/**
+	 * not use timestamp
+	 */
+	const USE_TIMESTAMP = false;
 
 	/**
 	 * define for mass assignment
 	 */
 	const FILLED_FILEDS = [
-		self::SOURCE_ID,
-		self::TYPE,
-		self::PATH,
+		self::_SOURCE_ID,
+		self::_TYPE,
+		self::_PATH,
 	];
 
-	const HIDDEN_FIELDS = [self::TYPE, self::SOURCE_ID];
+	/**
+	 * define hidden fields(not return in json)
+	 */
+	const HIDDEN_FIELDS = [self::_TYPE, self::_SOURCE_ID];
 }

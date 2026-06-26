@@ -4,8 +4,10 @@ namespace Thanhnt\Amuaglobal\Controllers\Adminhtml;
 
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;
-use Thanhnt\Akhoglobal\Models\ShareAction\FormField;
+use Thanhnt\Amuaglobal\Action\CategoryAction;
+use Thanhnt\Amuaglobal\Models\ShareAction\FormField;
 use Thanhnt\Amuaglobal\Models\Repository\CategoryRepository;
+use Thanhnt\Amuaglobal\Requests\Category\RegisterCategory;
 
 final class CategoryAdminController extends Controller
 {
@@ -13,6 +15,7 @@ final class CategoryAdminController extends Controller
 
 	public function __construct(
 		protected CategoryRepository $categoryRepository,
+		protected CategoryAction $categoryAction,
 	) {
 		// throw new \Exception('Not implemented');
 	}
@@ -27,11 +30,12 @@ final class CategoryAdminController extends Controller
 	public function createCategory()
 	{
 		return Inertia::render('amuaglobal/screens/category/Create', [
-			'form_fields' =>  $this->formatFormFields(\Thanhnt\Akhoglobal\Models\Category::FORM_FIELDS),
+			'form_fields' =>  $this->formatFormFields(\Thanhnt\Amuaglobal\Models\Category::FORM_FIELDS),
 		]);
 	}
 
-	public function storeCategory() {
-		
+	public function storeCategory(RegisterCategory $request) {
+		$this->categoryAction->excute($request->all());
+		return redirect()->route('amua.category.list');
 	}
 }

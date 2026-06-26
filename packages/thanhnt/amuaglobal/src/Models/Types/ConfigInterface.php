@@ -4,7 +4,7 @@ namespace Thanhnt\Amuaglobal\Models\Types;
 
 interface ConfigInterface
 {
-	const _TABLE_NAME = 'amua_configs';
+	const TABLE_NAME = 'amua_configs';
 	const _PATH = 'path';
 	const _VALUE = 'value';
 	const _TYPE = 'type';

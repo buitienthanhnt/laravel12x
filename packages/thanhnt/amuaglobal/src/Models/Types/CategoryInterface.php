@@ -6,7 +6,7 @@ use Thanhnt\Amuaglobal\Models\Types\FormFieldInterface;
 
 interface CategoryInterface
 {
-	const TABLE_NAME = 'akho_categories';
+	const TABLE_NAME = 'amua_categories';
 
 	const _ID = 'id';
 	const _NAME = 'name';
@@ -33,7 +33,7 @@ interface CategoryInterface
 
 	const R_PRODUCTS = 'products';
 
-	// const R_PARENT_TABLE = 'akho_category_parent';
+	// const R_PARENT_TABLE = 'amua_category_parent';
 	// const R_PARENT = 'parent';
 	// const R_CHILDREN = 'children';
 
@@ -43,6 +43,6 @@ interface CategoryInterface
 		['key' => self::_DESCRIPTION, 'label' => 'Miêu tả', 'type' => FormFieldInterface::TYPE_TEXTAREA],
 		['key' => self::_IMAGE_PATH, 'label' => 'Ảnh đại diện', 'type' => FormFieldInterface::TYPE_FILE],
 		['key' => self::_ACTIVE, 'label' => 'Kích hoạt', 'type' => FormFieldInterface::TYPE_CHECKBOX],
-		['key' => self::_PARENT_ID, 'label' => 'Danh mục cha', 'type' => FormFieldInterface::TYPE_SELECT, 'options_source' => \Thanhnt\Akhoglobal\Models\Category::class, 'placeholder' => 'Select parent category'],
+		['key' => self::_PARENT_ID, 'label' => 'Danh mục cha', 'type' => FormFieldInterface::TYPE_SELECT, 'options_source' => \Thanhnt\Amuaglobal\Models\Category::class, 'placeholder' => 'Select parent category'],
 	];
 }

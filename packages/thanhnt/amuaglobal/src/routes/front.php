@@ -25,3 +25,13 @@ use Illuminate\Support\Facades\Route;
  * test
  */
 // Route::get('create-checkout-session', [\Thanhnt\Ahomeglobal\Controllers\Frontend\CheckoutController::class, 'paymentOrderStripe']);
+
+/**
+ * product detail route
+ */
+Route::get('{id}.htm', [\Thanhnt\Amuaglobal\Controllers\Frontend\CategoryController::class, 'detailCategory']);
+
+/**
+ * category detail route
+ */
+Route::get('product/{alias}.html', [\Thanhnt\Amuaglobal\Controllers\Frontend\ProductController::class, 'detail'])->name('amua.product.detail');

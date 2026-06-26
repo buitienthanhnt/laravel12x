@@ -14,4 +14,5 @@ export type ProductDetailType = ProductType & {
   description: string;
   categories: CategoryType[];
   attributes: { [key: string]: string };
+  galleries: { path: string }[];
 };
