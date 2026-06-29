@@ -1,7 +1,7 @@
-import { type ProductDetailInterface } from "@/types/akhoglobal/product";
 import { ContentLayout } from "../../layout";
+import { type ProductDetailType } from "../../types/ProductType";
 
-export default function ProductDetail({ product }: { product: ProductDetailInterface }) {
+export default function ProductDetail({ product }: { product: ProductDetailType }) {
   // console.log(product);
 
   return (

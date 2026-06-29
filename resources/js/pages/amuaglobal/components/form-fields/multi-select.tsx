@@ -1,6 +1,6 @@
 import { XIcon } from "lucide-react";
 import { type FunctionComponent, useState } from "react";
-import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { type FormField } from "@/types/shareType/FormField";
 
@@ -56,25 +56,6 @@ const SelectMultiCheckbox: FunctionComponent<Props> = ({ placeholder, options, o
               <span>{option.label}</span>
             </DropdownMenuCheckboxItem>
           ))}
-          {/* <DropdownMenuSub>
-            <DropdownMenuSubTrigger className="px-2 py-1.5 text-sm">Submenu</DropdownMenuSubTrigger>
-            <DropdownMenuSubContent>
-              <DropdownMenuCheckboxItem textValue="Sub Option 1" checked={selected.includes("Sub Option 1")}
-                onSelect={(e) => {
-                  e.preventDefault();
-                  handleSelect("Sub Option 1");
-                }}>
-                <span>Sub Option 1</span>
-              </DropdownMenuCheckboxItem>
-              <DropdownMenuCheckboxItem textValue="Sub Option 2" checked={selected.includes("Sub Option 2")}
-                onSelect={(e) => {
-                  e.preventDefault();
-                  handleSelect("Sub Option 2");
-                }}>
-                <span>Sub Option 2</span>
-              </DropdownMenuCheckboxItem>
-            </DropdownMenuSubContent>
-          </DropdownMenuSub> */}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

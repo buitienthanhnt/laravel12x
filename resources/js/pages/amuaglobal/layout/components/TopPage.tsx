@@ -14,6 +14,10 @@ type ActivityProp = {
 
 const activities: ActivityProp[] = [
   {
+    label: 'dashboard',
+    path: adminhtmlPrefix,
+  },
+  {
     label: 'product',
     path: `${adminhtmlPrefix}/product`,
   },
@@ -25,7 +29,7 @@ const activities: ActivityProp[] = [
 
 const TopPage = ({ className }: TopPageProps) => {
   return (
-    <div className={clsx("bg-gray-300 p-2 flex gap-1", className)}>
+    <div className={clsx("bg-gray-200 py-2 p-1 flex gap-px", className)}>
       {activities.map((activity, index) => <ActivityBtn key={index} {...activity}></ActivityBtn>)}
     </div>
   )
@@ -33,7 +37,7 @@ const TopPage = ({ className }: TopPageProps) => {
 
 const ActivityBtn = ({ label, path, className }: ActivityProp & { className?: string }) => {
   return (
-    <Link href={path} className={clsx("bg-gray-700 rounded-[5px] p-2 px-4 font-semibold text-xl text-white", className)}>
+    <Link href={path} className={clsx("bg-gray-700 p-2 px-4 font-semibold text-xl text-white", className)}>
       {label}
     </Link>
   )

@@ -14,7 +14,7 @@ interface CategoryInterface
 	const _DESCRIPTION = 'description';
 	const _IMAGE_PATH = 'image_path';
 	const _ACTIVE = 'active';
-	const _PARENT_ID = 'parentid';
+	const _PARENT_ID = 'parentid'; // luu y usa lai
 
 	const STATUS_ACTIVE = 1;
 	const STATUS_INACTIVE = 0;

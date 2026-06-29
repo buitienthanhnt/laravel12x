@@ -13,7 +13,7 @@ const ContentLayout = ({ children, baseClass, contentClass }: ContentLayoutProps
    * để có thể dãn hết nội dung phần thân(cũng cần có: "flex-1" để dãn tối đa) với header, footer
    */
   return (
-    <BaseLayout className={clsx('space-y-4 flex flex-col flex-1', baseClass)}>
+    <BaseLayout className={clsx('flex flex-col flex-1', baseClass)}>
       <TopPage></TopPage>
       <div className={clsx('flex-1', contentClass)} id="page-content-id">
         {children}

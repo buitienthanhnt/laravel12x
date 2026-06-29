@@ -1,13 +1,13 @@
 
 import { type InertiaConfig } from '@inertiajs/core';
-import { Link } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import React, { type JSX, useCallback, } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import amua from '@/routes/amua';
-import { type ProductInterface } from '@/types/akhoglobal/product';
 import { type Pagination } from '@/types/shareType/Pagination';
 import { ContentLayout } from '../../layout';
+import { type ProductType } from '../../types/ProductType';
 
 type Props = {
   products: Pagination;
@@ -33,6 +33,9 @@ function List({ products }: Props) {
 
   return (
     <div className='space-y-2'>
+      <Head>
+        <title>product list</title>
+      </Head>
       <DropdownMenu>
         <DropdownMenuTrigger >
           <DropdownMenuLabel>{listData.find((item) => item.value === value)?.label || 'Select an option'}</DropdownMenuLabel>
@@ -83,10 +86,8 @@ function List({ products }: Props) {
       </datalist>
 
       <Link className='btn bg-green-400 text-white p-2 rounded-xl my-2' href={amua.register.url()}>create product</Link>
-      {/* <Link className='btn bg-blue-400 text-white p-2 rounded-xl my-2' href={akho.category.create.url()}>create category</Link> */}
-
       {products.data && <div className='space-y-1 my-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1'>
-        {products.data.map((item: ProductInterface) => <Link href={amua.product.detail.url(item.alias)} className='flex gap-2 bg-gray-200 p-1 rounded-md' key={item.id}>
+        {products.data.map((item: ProductType) => <Link href={amua.product.detail.url(item.alias)} className='flex gap-2 bg-gray-200 p-1 rounded-md' key={item.id}>
           <img src={item.image_path} className='size-28 object-cover rounded-md' alt={item.name} loading='lazy' />
           <p className='font-semibold'>{item.name}</p>
         </Link>)}

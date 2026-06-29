@@ -5,11 +5,11 @@ use Inertia\Inertia;
 use EdSDK\FlmngrServer\FlmngrServer;
 use Laravel\Fortify\Features;
 
-Route::get('/', function () {
-	return Inertia::render('home', [
-		'canRegister' => Features::enabled(Features::registration()),
-	]);
-})->name('home');
+// Route::get('/', function () {
+// 	return Inertia::render('home', [
+// 		'canRegister' => Features::enabled(Features::registration()),
+// 	]);
+// })->name('home');
 
 Route::get('dashboard', function () {
 	return Inertia::render('dashboard');

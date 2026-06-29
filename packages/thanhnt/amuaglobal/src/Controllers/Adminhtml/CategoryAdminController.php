@@ -34,7 +34,8 @@ final class CategoryAdminController extends Controller
 		]);
 	}
 
-	public function storeCategory(RegisterCategory $request) {
+	public function storeCategory(RegisterCategory $request)
+	{
 		$this->categoryAction->excute($request->all());
 		return redirect()->route('amua.category.list');
 	}

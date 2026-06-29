@@ -26,6 +26,8 @@ use Illuminate\Support\Facades\Route;
  */
 // Route::get('create-checkout-session', [\Thanhnt\Ahomeglobal\Controllers\Frontend\CheckoutController::class, 'paymentOrderStripe']);
 
+Route::get('', [\Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::class, 'index'])->name('amua.home');
+
 /**
  * product detail route
  */

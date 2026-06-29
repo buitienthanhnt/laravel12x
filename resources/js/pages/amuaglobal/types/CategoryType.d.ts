@@ -3,6 +3,8 @@ export type CategoryType = {
   name: string;
   slug: string;
   image_path?: string;
+  description?: string;
+  parent_id: number | null;
 }
 
 export type AdminCategoryType = CategoryType & {

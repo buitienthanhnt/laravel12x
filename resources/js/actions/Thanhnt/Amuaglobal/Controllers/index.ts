@@ -1,11 +1,11 @@
 import Frontend from './Frontend'
-import AmuaController from './AmuaController'
 import Adminhtml from './Adminhtml'
+import AmuaController from './AmuaController'
 
 const Controllers = {
     Frontend: Object.assign(Frontend, Frontend),
-    AmuaController: Object.assign(AmuaController, AmuaController),
     Adminhtml: Object.assign(Adminhtml, Adminhtml),
+    AmuaController: Object.assign(AmuaController, AmuaController),
 }
 
 export default Controllers

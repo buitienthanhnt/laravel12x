@@ -14,9 +14,10 @@ type Method = "get" | "post" | "put" | "delete" | "patch" | "head" | "options";
 type Props = {
   form_info: RouteFormDefinition<Method>,
   form_fields: FormFieldDefine[];
+  submitTitle?: string;
 } & Omit<InertiaConfig['sharedPageProps'], 'form_fields'>;
 
-export default function FormRender({ form_info, form_fields }: Props) {
+export default function FormRender({ form_info, form_fields, submitTitle = 'Submit' }: Props) {
   const _form_fields: { [key: string]: string | string[] } = {};
   form_fields.map((field) => {
     _form_fields[field.key] = '';
@@ -151,7 +152,7 @@ export default function FormRender({ form_info, form_fields }: Props) {
             tabIndex={5}
             data-test="register-user-button"
           >
-            Create product
+            {submitTitle}
           </Button>
         </>
       )}

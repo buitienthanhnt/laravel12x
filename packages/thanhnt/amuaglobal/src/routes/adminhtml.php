@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use Thanhnt\Amuaglobal\Controllers\AmuaController;
 
 Route::prefix('adminhtml')->group(function () {
+	/**
+	 * define dashboard controller route
+	 */
+	Route::get('/', [\Thanhnt\Amuaglobal\Controllers\Adminhtml\DashboardController::class, 'index']);
+
 	Route::get('clear-cache', [AmuaController::class, 'clearCache']);
 
 	/**
