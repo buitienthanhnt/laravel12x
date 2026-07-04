@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Http\Client\Pool;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /**
  * checkout page about 2 step order-info and order-payment
@@ -37,3 +41,34 @@ Route::get('{id}.htm', [\Thanhnt\Amuaglobal\Controllers\Frontend\CategoryControl
  * category detail route
  */
 Route::get('product/{alias}.html', [\Thanhnt\Amuaglobal\Controllers\Frontend\ProductController::class, 'detail'])->name('amua.product.detail');
+
+Route::get('sliver-chart', function (Request $request) {
+	// 1. Gọi API từ Server-to-Server (Không lo bị lỗi CORS)
+	// $response = Http::get('https://giabac.vn/SilverInfo/GetGoldPriceChartFromSQLData', [
+	// 	'type' => 'L',
+	// 	'days' => 1
+	// ]);
+
+	$responses = Http::pool(fn(Pool $pool) => [
+		$pool->as('one_day')->get('https://giabac.vn/SilverInfo/GetGoldPriceChartFromSQLData', [
+			'type' => $request->query('type', 'L'),
+			'days' => 1
+		]),
+		$pool->as('seven_days')->get('https://giabac.vn/SilverInfo/GetGoldPriceChartFromSQLData', [
+			'type' => $request->query('type', 'L'),
+			'days' => 7
+		]),
+		$pool->as('thirty_days')->get('https://giabac.vn/SilverInfo/GetGoldPriceChartFromSQLData', [
+			'type' => $request->query('type', 'L'),
+			'days' => 30
+		])
+	]);
+
+	// 2. Lấy dữ liệu dạng mảng/json (mặc định trả về mảng nếu API thành công)
+	return Inertia::render('atkeglobal/screens/SliverChart', [
+		'type' => $request->query('type', 'L'),
+		'oneDayData' => $responses['one_day']->successful() ? $responses['one_day']->json() : [],
+		'sevenDayData' => $responses['seven_days']->successful() ? $responses['seven_days']->json() : [],
+		'thirtyDayData' => $responses['thirty_days']->successful() ? $responses['thirty_days']->json() : [],
+	]);
+});

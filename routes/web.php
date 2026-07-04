@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use EdSDK\FlmngrServer\FlmngrServer;
-use Laravel\Fortify\Features;
 
 // Route::get('/', function () {
 // 	return Inertia::render('home', [

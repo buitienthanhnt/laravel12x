@@ -2,6 +2,87 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFo
 import product from './product'
 import category from './category'
 /**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: home.url(options),
+    method: 'get',
+})
+
+home.definition = {
+    methods: ["get","head"],
+    url: '/',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+home.url = (options?: RouteQueryOptions) => {
+    return home.definition.url + queryParams(options)
+}
+
+/**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: home.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: home.url(options),
+    method: 'head',
+})
+
+/**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: home.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: home.url(options),
+    method: 'get',
+})
+
+/**
+* @see \Thanhnt\Amuaglobal\Controllers\Frontend\HomeController::home
+* @see packages/thanhnt/amuaglobal/src/Controllers/Frontend/HomeController.php:19
+* @route '/'
+*/
+homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: home.url({
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+home.form = homeForm
+
+/**
 * @see \Thanhnt\Amuaglobal\Controllers\Adminhtml\ProductAdminController::register
 * @see packages/thanhnt/amuaglobal/src/Controllers/Adminhtml/ProductAdminController.php:46
 * @route '/adminhtml/product/create'
@@ -139,6 +220,7 @@ storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => (
 store.form = storeForm
 
 const amua = {
+    home: Object.assign(home, home),
     product: Object.assign(product, product),
     category: Object.assign(category, category),
     register: Object.assign(register, register),
