@@ -24,6 +24,10 @@
 		{
 			"type": "path",
 			"url": "packages/thanhnt/abaseglobal"
+		},
+		{
+			"type": "path",
+			"url": "packages/thanhnt/atkeglobal"
 		}
 	],
 	"require": {
@@ -37,7 +41,8 @@
 		"thanhnt/agameglobal": "@dev",
 		"thanhnt/akhoglobal": "@dev",
 		"thanhnt/amuaglobal": "@dev",
-		"thanhnt/abaseglobal": "@dev"
+		"thanhnt/abaseglobal": "@dev",
+		"thanhnt/atkeglobal": "@dev"
 	},
 	"require-dev": {
 		"fakerphp/faker": "^1.23",

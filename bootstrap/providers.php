@@ -7,4 +7,5 @@ return [
 	Thanhnt\Akhoglobal\AkhoServiceProvider::class,
 	Thanhnt\Abaseglobal\AbaseglobalProvider::class,
 	Thanhnt\Amuaglobal\AmuaglobalProvider::class,
+	Thanhnt\Atkeglobal\AtkeglobalProvider::class,
 ];
