@@ -187,7 +187,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       )
       )}
 
-      {seletedBlock && <div className="flex flex-col absolute w-96 bg-gray-200 h-full right-1 animate-wiggle p-1 pt-8 z-50">
+      {seletedBlock && <div className="flex flex-col absolute w-96 bg-gray-200 h-full right-1 animate-wiggle p-1 pt-8 z-999">
         <div className="absolute top-1 right-1" onClick={() => updateSelected(null)}>
           <XCircleIcon size={24} color="red"></XCircleIcon>
         </div>

@@ -24,7 +24,7 @@ final class BlockAdminController extends Controller
 	{
 		$blockList = Block::query()->with('items')->get();
 
-		return Inertia::render('akhoglobal\screens/StockPosition', [
+		return Inertia::render('akhoglobal/screens/StockPosition', [
 			'blockList' => $blockList,
 			'message' => session('message', null),
 			'init_screen' => $this->configAction->getConfig('init_screen') ? json_decode($this->configAction->getConfig('init_screen')->value, true) : null,
