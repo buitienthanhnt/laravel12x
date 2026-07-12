@@ -15,22 +15,6 @@ Route::get('dashboard', function () {
 	return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::prefix('test')->group(function () {
-
-	Route::post('upload', function (\Illuminate\Http\Request $request) {
-		$request->validate([
-			'file' => 'required|file|max:10240', // Giới hạn kích thước file (10MB)
-		]);
-
-		if ($request->file('file')->isValid()) {
-			$path = $request->file('file')->store('uploads', 'public'); // Lưu file vào thư mục public/uploads
-			return response()->json(['message' => 'File uploaded successfully', 'path' => $path]);
-		}
-
-		return response()->json(['message' => 'File upload failed'], 400);
-	});
-});
-
 /**
  * phai co name thi moi generate sang js source gom router
  */
