@@ -75,7 +75,7 @@ const Manage: FunctionComponent<InertiaConfig['sharedPageProps'] & { products: P
       </datalist>
 
       <Link className='btn bg-green-400 text-white p-2 rounded-xl my-2' href={akho.register.url()}>create product</Link>
-      <Link className='btn bg-blue-400 text-white p-2 rounded-xl my-2' href={akho.category.create.url()}>create category</Link>
+      {/* <Link className='btn bg-blue-400 text-white p-2 rounded-xl my-2' href={akho.category.create.url()}>create category</Link> */}
 
       {products.data && <div className='space-y-1 my-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1'>
         {products.data.map((item: ProductInterface) => <Link href={akho.product.detail.url(item.alias)} className='flex gap-2 bg-gray-200 p-1 rounded-md' key={item.id}>
