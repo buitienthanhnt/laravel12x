@@ -31,7 +31,7 @@ class AmuaglobalProvider extends ServiceProvider
 		 * need define web middleware for router unless the request missing session data. 
 		 */
 		Route::middleware([
-			// ...Route::getMiddlewareGroups()['web'],
+			...(Route::getMiddlewareGroups()['web'] ?? []),
 			\Thanhnt\Amuaglobal\Middleware\MergeInertiaConfig::class,
 		])->group(function () {
 			// Load views, routes, migrations, publish assets, etc.

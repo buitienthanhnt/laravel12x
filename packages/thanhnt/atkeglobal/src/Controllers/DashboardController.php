@@ -11,6 +11,12 @@ use Inertia\Inertia;
 final class DashboardController extends Controller
 {
 
+	public function __construct(
+		protected \Thanhnt\Atkeglobal\Api\ActivityApi $activityApi,
+	) {
+		// throw new \Exception('Not implemented');
+	}
+
 	public function sliverChart(Request $request): \Inertia\Response
 	{
 		$sliverApiUrl = 'https://giabac.vn/SilverInfo/GetGoldPriceChartFromSQLData';
@@ -44,5 +50,49 @@ final class DashboardController extends Controller
 			'sevenDayData' => $responses['seven_days']->successful() ? $responses['seven_days']->json() : [],
 			'thirtyDayData' => $responses['thirty_days']->successful() ? $responses['thirty_days']->json() : [],
 		]);
+	}
+
+	public function activityTrans(Request $request): \Inertia\Response
+	{
+		$activityTrans = $this->activityApi->getActivityTrans();
+		return Inertia::render('atkeglobal/screens/Transactions', [
+			'transactions' => $activityTrans,
+		]);
+	}
+
+	public function addTransaction(Request $request)
+	{
+
+		$params = $request->all();
+		$this->activityApi->createTransaction($params);
+		return redirect()->route('activity.trans');
+	}
+
+
+	/**
+	 * @return \inertia\Response
+	 */
+	public function activities()
+	{
+		$activityPaginate = $this->activityApi->getActivitiesPaginate();
+		return Inertia::render('atkeglobal/screens/Activities', [
+			'activity_paginate' => $activityPaginate,
+		]);
+	}
+
+	public function activityDetail($id)
+	{
+
+		$activity = $this->activityApi->getActivityDetail($id);
+		return Inertia::render('atkeglobal/screens/ActivityDetail', [
+			'activity' => $activity,
+		]);
+	}
+
+	public function addActivity(Request $request)
+	{
+		$params = $request->all();
+		$this->activityApi->createActivity($params);
+		return redirect()->route('activity.dashboard');
 	}
 }
