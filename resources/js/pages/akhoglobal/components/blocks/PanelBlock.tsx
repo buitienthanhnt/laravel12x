@@ -169,8 +169,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
       <div
         onMouseDown={handleMouseDown}
         style={{
-          width: '8px',
-          height: '8px',
+          width: '6px',
+          height: '6px',
           background: 'violet',
           position: 'absolute',
           left: 0,
@@ -179,16 +179,16 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
           zIndex: 50
         }}
       />
-      <div className='flex justify-center py-2 w-full h-full relative'>
-        {name && <b className='text-black'>{name}</b>}
+      <div className='flex justify-center py-1 w-full h-full relative'>
+        {name && <b className='text-black text-sm'>{name}</b>}
         <Settings className='absolute top-1 right-1 cursor-pointer opacity-30 hover:opacity-100 ' onClick={onSetSelectedBlock} size={20} color='black'></Settings>
       </div>
       {/* Nút nắm hình vuông nhỏ ở góc dưới bên phải */}
       <div
         onMouseDown={handleMouseResizeDown}
         style={{
-          width: '8px',
-          height: '8px',
+          width: '6px',
+          height: '6px',
           background: '#1565c0',
           position: 'absolute',
           right: '0',

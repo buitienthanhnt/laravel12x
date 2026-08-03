@@ -9,7 +9,7 @@ export default function ModelItem({ item, onRemoveBlockItem }: ModelItemProps) {
   return (
     <div key={item.id} className="flex w-full bg-gray-400 p-1 rounded-sm justify-between">
       <div className="flex items-end gap-1">
-        <p className="font-semibold text-base">{item.item_model}</p>
+        <p className="font-semibold text-base uppercase">{item.item_model}</p>
         {item.item_desc && <p className="text-sm italic text-purple-600 font-semibold">({item.item_desc})</p>}
       </div>
       <Trash2Icon
