@@ -27,11 +27,12 @@ final class ActivityApi
 
 	public function getActivityTrans()
 	{
-		return Activity::select('id', 'name', 'type', 'created_at')->orderBy('created_at', 'desc')->get();
+		return Transaction::orderBy('created_at', 'desc')->paginate(12);
 	}
 
 	public function createTransaction(array $params)
 	{
-		return Transaction::create($params);
+		// dd($params);
+		return Transaction::factory()->create($params);
 	}
 }

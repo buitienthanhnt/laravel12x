@@ -6,6 +6,7 @@ interface TransactionInterface
 {
 	const TABLE_NAME = 'atke_transactions';
 
+	const _ID = 'id';
 	const _LABEL = 'label';
 	const _TIME = 'time';
 	const _USER_ID = 'user_id';

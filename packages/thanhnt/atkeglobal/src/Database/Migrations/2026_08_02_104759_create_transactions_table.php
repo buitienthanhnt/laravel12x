@@ -14,7 +14,7 @@ return new class extends Migration
 	{
 		Schema::create(TransactionInterface::TABLE_NAME, function (Blueprint $table) {
 			$table->id();
-			$table->string(TransactionInterface::_LABEL);
+			$table->string(TransactionInterface::_LABEL)->nullable();
 			$table->timestamp(TransactionInterface::_TIME)->useCurrent();
 			$table->unsignedBigInteger(TransactionInterface::_USER_ID)->nullable();
 			$table->softDeletes();

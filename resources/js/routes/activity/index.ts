@@ -82,7 +82,7 @@ trans.form = transForm
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 export const dashboard = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -97,7 +97,7 @@ dashboard.definition = {
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 dashboard.url = (options?: RouteQueryOptions) => {
@@ -106,7 +106,7 @@ dashboard.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -116,7 +116,7 @@ dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -126,7 +126,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -136,7 +136,7 @@ const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> 
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -146,7 +146,7 @@ dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =>
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::dashboard
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:75
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
 * @route '/activity'
 */
 dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -163,7 +163,7 @@ dashboard.form = dashboardForm
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 export const detail = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -178,7 +178,7 @@ detail.definition = {
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 detail.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -205,7 +205,7 @@ detail.url = (args: { id: string | number } | [id: string | number ] | string | 
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 detail.get = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -215,7 +215,7 @@ detail.get = (args: { id: string | number } | [id: string | number ] | string | 
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 detail.head = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -225,7 +225,7 @@ detail.head = (args: { id: string | number } | [id: string | number ] | string |
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 const detailForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -235,7 +235,7 @@ const detailForm = (args: { id: string | number } | [id: string | number ] | str
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 detailForm.get = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -245,7 +245,7 @@ detailForm.get = (args: { id: string | number } | [id: string | number ] | strin
 
 /**
 * @see \Thanhnt\Atkeglobal\Controllers\DashboardController::detail
-* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:83
+* @see packages/thanhnt/atkeglobal/src/Controllers/DashboardController.php:91
 * @route '/activity/detail/{id}'
 */
 detailForm.head = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

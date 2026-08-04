@@ -1,12 +1,13 @@
 import { Form, Link, useForm, usePage } from "@inertiajs/react";
-import clsx from "clsx";
 import { type FunctionComponent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SelectOption } from "@/pages/akhoglobal/components/form-fields";
 import { type PageShareType } from "@/pages/amuaglobal/types/PageType";
+import ActivityItem from "../components/sliver/ActivityItem";
 import BaseLayout from "../layouts/BaseLayout";
 import { type ActivityPaginateType } from "../types/Activity";
+import {type TransactionType } from "../types/Transaction";
 
 interface Props extends PageShareType {
   activity_paginate: ActivityPaginateType;
@@ -33,26 +34,16 @@ const ActivitiesPage: FunctionComponent = () => {
   return <div className="flex flex-col gap-y-4 my-2">
     <div className="text-lg font-semibold">Danh sách giao dịch:</div>
     <div className="flex flex-col gap-y-2">
-      {activity_paginate.data.map((activity) => (
-        <Link key={activity.id} href={`/activity/detail/${activity.id}`} className="border p-4 rounded-xl space-y-2 flex justify-between">
-          <div className="font-semibold">{activity.label}</div>
-          <div>{activity.type}</div>
-          <div>Giá: {activity.price}</div>
-          <div>{activity.qty} {activity.unit}</div>
-          <div className={clsx(activity.action === 'buy' ? 'text-green-500' : 'text-red-500')}>
-            Lệnh: {activity.action === 'buy' ? 'mua' : 'bán'}
-          </div>
-          <div>{new Date(activity.created_at).toLocaleString()}</div>
-        </Link>
-      ))}
+      {activity_paginate.data.map((activity) => (<ActivityItem key={activity.id} activity={activity} />))}
     </div>
   </div>
 }
 
-const ActivityForm: FunctionComponent = () => {
+export const ActivityForm: FunctionComponent<{ transaction?: TransactionType }> = ({ transaction }) => {
   const { data, setData } = useForm({
     price: 0,
     qty: 1,
+    tran_id: transaction?.id || null,
   });
 
   return (
@@ -75,6 +66,7 @@ const ActivityForm: FunctionComponent = () => {
           { label: 'Ounce', value: 'O' },
         ]} />
       </div>
+      <Input name="tran_id" type="hidden" value={data.tran_id || ''}></Input>
       <div className="flex space-x-4">
         <Input type="number" min={0} name="price" placeholder="Giá giao dịch" onChange={(e) => setData('price', Number(e.target.value || 0))}></Input>
         <Input type="number" min={1} name="qty" placeholder="Số lượng giao dịch" onChange={(e) => setData('qty', Number(e.target.value || 1))}></Input>

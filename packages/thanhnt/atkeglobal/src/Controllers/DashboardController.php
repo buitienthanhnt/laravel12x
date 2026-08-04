@@ -55,8 +55,17 @@ final class DashboardController extends Controller
 	public function activityTrans(Request $request): \Inertia\Response
 	{
 		$activityTrans = $this->activityApi->getActivityTrans();
+		
 		return Inertia::render('atkeglobal/screens/Transactions', [
 			'transactions' => $activityTrans,
+		]);
+	}
+
+	public function transactionDetail(int $id): \Inertia\Response
+	{
+		$transactionDetail = \Thanhnt\Atkeglobal\Models\Transaction::with('activities')->find($id);
+		return Inertia::render('atkeglobal/screens/TransactionDetail', [
+			'transaction' => $transactionDetail,
 		]);
 	}
 
@@ -64,8 +73,8 @@ final class DashboardController extends Controller
 	{
 
 		$params = $request->all();
-		$this->activityApi->createTransaction($params);
-		return redirect()->route('activity.trans');
+		$newTransaction = $this->activityApi->createTransaction($params);
+		return redirect("/activity/tran-detail/$newTransaction->id");
 	}
 
 
@@ -93,6 +102,7 @@ final class DashboardController extends Controller
 	{
 		$params = $request->all();
 		$this->activityApi->createActivity($params);
-		return redirect()->route('activity.dashboard');
+		return redirect()->back();
+		// return redirect()->route('activity.dashboard');
 	}
 }
