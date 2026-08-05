@@ -5,7 +5,7 @@ import { MainCategory } from "../../components/home-page";
 export default function HomePage() {
   const {props} = usePage();
 
-  
+
   return (
     <div>
       <Button onClick={() => {
