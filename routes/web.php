@@ -6,6 +6,7 @@ use EdSDK\FlmngrServer\FlmngrServer;
 use Laravel\Fortify\Features;
 
 Route::get('/', function () {
+	return;
 	return Inertia::render('home', [
 		'canRegister' => Features::enabled(Features::registration()),
 	]);
