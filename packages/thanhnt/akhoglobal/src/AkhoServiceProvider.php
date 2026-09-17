@@ -78,5 +78,14 @@ final class AkhoServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__ . '/resources/public' => public_path('akho'),
 		], 'akhoglobal-assets');
+
+		/**
+		 * Để tải và chạy seeder từ một package trong Laravel, 
+		 * framework này không cung cấp sẵn một phương thức tự động kiểu như $this->loadSeeders() trong ServiceProvider
+		 * 
+		 * Cách 2: Gọi trực tiếp qua lệnh Artisan Command:
+		 * php artisan db:seed --class="Thanhnt\Akhoglobal\Database\Seeders\BlockGroupSeeder"
+		 * (Lưu ý: Hãy bọc tên class trong dấu ngoặc kép để tránh lỗi ký tự gạch chéo ngược \ trên một số terminal)
+		 */
 	}
 }

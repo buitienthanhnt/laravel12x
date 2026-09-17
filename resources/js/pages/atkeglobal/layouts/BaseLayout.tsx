@@ -1,9 +1,12 @@
+import clsx from "clsx";
 import React from "react";
 
-export default function BaseLayout({ children }: React.PropsWithChildren) {
+type Props = React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>
+
+export default function BaseLayout({ children, className, ...props }: Props) {
 
   return (
-    <div className="container mx-auto min-h-scree p-4">
+    <div className={clsx("container mx-auto min-h-scree p-4", className)} {...props}>
       {children}
     </div>
   )

@@ -4,22 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SelectOption } from "@/pages/akhoglobal/components/form-fields";
 import { type PageShareType } from "@/pages/amuaglobal/types/PageType";
-import ActivityItem from "../components/sliver/ActivityItem";
+import ActivityItem from "../components/activity/ActivityItem";
+import TransactionTotal from "../components/activity/TransactionTotal";
 import BaseLayout from "../layouts/BaseLayout";
 import { type ActivityPaginateType } from "../types/Activity";
-import {type TransactionType } from "../types/Transaction";
+import { type TransactionType } from "../types/Transaction";
 
 interface Props extends PageShareType {
   activity_paginate: ActivityPaginateType;
 }
 
-const Activities: FunctionComponent<Props> = () => {
+const Activities: FunctionComponent<Props> = ({ activity_paginate }) => {
 
   return (
     <BaseLayout>
-      <Link href="/activity/transactions" className="text-blue-500 underline">Xem danh sách giao dịch</Link>
+      <Link href="/transaction" className="text-blue-500 underline font-semibold uppercase text-xl">Danh sách giao dịch</Link>
+      <TransactionTotal activities={activity_paginate.data}></TransactionTotal>
       <ActivitiesPage />
-      <ActivityForm></ActivityForm>
+      {/* <ActivityForm></ActivityForm> */}
     </BaseLayout>
   );
 }
@@ -47,8 +49,18 @@ export const ActivityForm: FunctionComponent<{ transaction?: TransactionType }> 
   });
 
   return (
-    <Form action={'/activity/add-activity'} method={'post'} className="border p-4 rounded-xl space-y-2">
-      <Input type="text" name="label" placeholder="Ghi chú" ></Input>
+    <Form action={'/transaction/add-activity'} method={'post'} className="border p-4 rounded-xl space-y-2">
+      <Input type="text" name="label" placeholder="Ghi chú" list="browserx"></Input>
+      <datalist id="browserx">
+        <option value="Thỏi 1 lượng" />
+        <option value="Thỏi 5 lượng" />
+        <option value="Thỏi 1 kg" />
+        <option value="Nhẫn 1 chỉ" />
+        <option value="Nhẫn 2 chỉ" />
+        <option value="Nhẫn 1 lượng" />
+        <option value="Miếng 1 lượng" />
+        <option value="Miếng 5 lượng" />
+      </datalist>
       <SelectOption name="action" placeholder="Lệnh" required options={[
         { label: 'mua', value: 'buy' },
         { label: 'bán', value: 'sell' }

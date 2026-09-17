@@ -6,8 +6,10 @@ const TransactionItem = ({ transaction }: {
 }) => {
   return (
     <Link
-      href={`/activity/tran-detail/${transaction.id}`} className="border p-4 rounded-xl space-y-2 flex justify-between bg-blue-300">
-      {transaction.label} - {transaction.time}
+      href={`/transaction/detail/${transaction.id}`}
+      className="border p-4 rounded-xl space-y-2 flex justify-between items-center border-blue-300 font-semibold">
+      <span>Giao dịch: {transaction.label}</span>
+      <span>{transaction.time}</span>
     </Link>
   )
 }

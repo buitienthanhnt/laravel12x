@@ -9,6 +9,7 @@ export interface ActivityType {
   price: number;
   qty: number;
   target_id: number | null;
+  tran_id: number | null;
   user_id: number | null;
   created_at: string;
   updated_at: string;

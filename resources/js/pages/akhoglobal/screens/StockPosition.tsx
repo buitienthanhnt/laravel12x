@@ -1,4 +1,5 @@
 import { router, useForm } from "@inertiajs/react";
+import clsx from "clsx";
 import _ from "lodash";
 import { PlusIcon, XCircle, XCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState, } from "react";
@@ -7,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 import { ModelItem, PanelBlock } from "../components/blocks";
 import AkhoUrl from "../network/Url";
 import { type BlockItemType } from "../type/blockitem";
@@ -25,8 +28,9 @@ export type Block = {
   type?: 'block' | 'area';
 };
 
-const StockPosition = ({ blockList }: { blockList: Block[] }) => {
+const StockPosition = ({ blockList, group }: { blockList: Block[], group?: any }) => {
   const [selected, updateSelected] = useImmer<string | null>(null);
+  const isMobile = useIsMobile();
   const modelRef = useRef<HTMLInputElement>(null);
   const modelDescRef = useRef<HTMLInputElement>(null);
   const blockNameRef = useRef<HTMLInputElement>(null);
@@ -39,15 +43,16 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       return [];
     }
 
-    const result = blockList.filter(block =>
-      block.items.some(item => item.item_model.toLowerCase().includes(search?.toLowerCase()))
+    const searchArr = search.split(' ');
+    const result = blockList?.filter(block =>
+      block?.items?.some(item => searchArr.filter((word) => word.length > 2).some(search => item.item_model.toLowerCase().includes(search?.toLowerCase()) || search.toLocaleLowerCase().includes(item.item_model.toLocaleLowerCase())))
     );
     return _.map(result, 'key');
   }, [blockList, search])
 
   const [blocks, updateBlocks] = useImmer<Block[]>(blockList);
 
-  const seletedBlock = blocks.find(item => item.key === selected) || null;
+  const seletedBlock = blocks?.find(item => item.key === selected) || null;
 
   const { data, setData, } = useForm({
     name: seletedBlock?.name || '',
@@ -74,7 +79,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
    */
   const onAddBlock = () => {
 
-    const newBlock: Omit<Block, 'id'> & { init_screen?: { width: number, height: number } } = {
+    const newBlock: Omit<Block, 'id'> & { init_screen?: { width: number, height: number}, group_id?: number  } = {
       x: 100,
       y: 100,
       width: 100,
@@ -88,6 +93,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         width: window.innerWidth,
         height: window.innerHeight,
       },
+      group_id: group?.id,
     };
 
     /**
@@ -166,17 +172,17 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
         backgroundImage: `${search.length >= 3 ? 'none' : 'linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(to right, #444cf7 1px, #e5e5f7 1px)'}`
       }}
     >
-      <div className="absolute right-5 flex gap-2 items-center bottom-5 z-50">
-        {search && <XCircle size={24} className="hover:text-red-700" onClick={() => setSearch('')}></XCircle>}
+      <div className={clsx("absolute flex gap-2 items-center z-999", isMobile ? 'right-2 bottom-2' : 'right-5 bottom-5')}>
+        {search && <XCircle size={24} className="hover:text-red-700 " onClick={() => setSearch('')}></XCircle>}
         <input
-          className="w-full border-blue-500 border rounded-md p-2 z-50 text-lg font-semibold bg-white"
+          className={clsx("w-full border-blue-500 border rounded-md p-2 font-semibold bg-white", isMobile ? 'text-lg' : 'text-sm')}
           type="text" value={search}
           placeholder="Tìm kiếm"
           onChange={(e) => {
             setSearch(e.target.value);
           }} />
       </div>
-      {blocks.map(({ key, ...block }) => (
+      {blocks &&blocks.map(({ key, ...block }) => (
         <PanelBlock
           key={key}
           blockKey={key}
@@ -230,10 +236,10 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
       </div>
       }
 
-      <Dialog>
+      {!isMobile && <Dialog>
         <DialogTrigger>
           <DialogTitle>
-            <div className="absolute size-12 hover:bg-gray-800 rounded-full bottom-10 left-10 z-50 bg-gray-500 font-semibold text-base text-white flex justify-center items-center">
+            <div className="absolute size-10 hover:bg-gray-800 rounded-full bottom-8 left-8 z-999 bg-gray-500 font-semibold text-base text-white flex justify-center items-center">
               <PlusIcon size={24}></PlusIcon>
             </div>
           </DialogTitle>
@@ -256,7 +262,7 @@ const StockPosition = ({ blockList }: { blockList: Block[] }) => {
           </div>
           <Button onClick={onAddBlock}>Lưu</Button>
         </DialogContent>
-      </Dialog>
+      </Dialog>}
     </div>
   )
 }

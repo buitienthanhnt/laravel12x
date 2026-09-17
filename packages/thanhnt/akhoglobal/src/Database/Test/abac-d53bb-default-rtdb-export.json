@@ -1,0 +1,4950 @@
+{
+  "blockList": [
+    {
+      "height": 162,
+      "id": 1,
+      "key": "block_1783768085040",
+      "name": "office",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 1
+      },
+      "type": "area",
+      "width": 145,
+      "x": 17,
+      "y": 282
+    },
+    {
+      "height": 165,
+      "id": 2,
+      "key": "block_1783768113462",
+      "name": "a1",
+      "style": {
+        "color": "#d376d5",
+        "zIndex": 2
+      },
+      "type": "area",
+      "width": 159,
+      "x": 23,
+      "y": 20
+    },
+    {
+      "height": 300,
+      "id": 3,
+      "key": "block_1783768142663",
+      "name": "a2",
+      "style": {
+        "color": "#2f9d87",
+        "zIndex": 3
+      },
+      "type": "area",
+      "width": 437,
+      "x": 284,
+      "y": 282
+    },
+    {
+      "height": 162,
+      "id": 4,
+      "key": "block_1783768183072",
+      "name": "a3",
+      "style": {
+        "color": "#d7bd3c",
+        "zIndex": 4
+      },
+      "type": "area",
+      "width": 160,
+      "x": 203,
+      "y": 19
+    },
+    {
+      "height": 144,
+      "id": 5,
+      "key": "block_1783768205688",
+      "name": "a4",
+      "style": {
+        "color": "#285fbd",
+        "zIndex": 5
+      },
+      "type": "area",
+      "width": 553,
+      "x": 284,
+      "y": 578
+    },
+    {
+      "height": 218,
+      "id": 6,
+      "key": "block_1783768232283",
+      "name": "a5",
+      "style": {
+        "color": "#9665d2",
+        "zIndex": 6
+      },
+      "type": "area",
+      "width": 184,
+      "x": 16,
+      "y": 441
+    },
+    {
+      "height": 145,
+      "id": 7,
+      "key": "block_1783768268488",
+      "name": "a6",
+      "style": {
+        "color": "#b3374a",
+        "zIndex": 7
+      },
+      "type": "area",
+      "width": 600,
+      "x": 800,
+      "y": 359
+    },
+    {
+      "height": 238,
+      "id": 8,
+      "key": "block_1783768302513",
+      "name": "a7",
+      "style": {
+        "color": "#51aed6",
+        "zIndex": 8
+      },
+      "type": "area",
+      "width": 601,
+      "x": 800,
+      "y": 61
+    },
+    {
+      "height": 140,
+      "id": 9,
+      "key": "block_1783768346850",
+      "name": "a8",
+      "style": {
+        "color": "#37bac3",
+        "zIndex": 9
+      },
+      "type": "area",
+      "width": 425,
+      "x": 838,
+      "y": 581
+    },
+    {
+      "height": 60,
+      "id": 10,
+      "key": "block_1783768403811",
+      "name": "21",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 10
+      },
+      "type": "area",
+      "width": 436,
+      "x": 284,
+      "y": 518
+    },
+    {
+      "height": 58,
+      "id": 11,
+      "key": "block_1783768433199",
+      "name": "22",
+      "style": {
+        "color": "#c440b9",
+        "zIndex": 11
+      },
+      "type": "area",
+      "width": 437,
+      "x": 286,
+      "y": 442
+    },
+    {
+      "height": 57,
+      "id": 12,
+      "key": "block_1783768455098",
+      "name": "23",
+      "style": {
+        "color": "#43df63",
+        "zIndex": 12
+      },
+      "type": "area",
+      "width": 435,
+      "x": 287,
+      "y": 362
+    },
+    {
+      "height": 58,
+      "id": 13,
+      "key": "block_1783768479090",
+      "name": "24",
+      "style": {
+        "color": "#87d651",
+        "zIndex": 13
+      },
+      "type": "area",
+      "width": 433,
+      "x": 285,
+      "y": 280
+    },
+    {
+      "height": 141,
+      "id": 14,
+      "key": "block_1783768683508",
+      "name": "41",
+      "style": {
+        "color": "#50b983",
+        "zIndex": 14
+      },
+      "type": "area",
+      "width": 58,
+      "x": 282,
+      "y": 582
+    },
+    {
+      "height": 141,
+      "id": 15,
+      "key": "block_1783768704886",
+      "name": "42",
+      "style": {
+        "color": "#76d581",
+        "zIndex": 15
+      },
+      "type": "area",
+      "width": 56,
+      "x": 363,
+      "y": 582
+    },
+    {
+      "height": 138,
+      "id": 16,
+      "key": "block_1783768727036",
+      "name": "43",
+      "style": {
+        "color": "#73b431",
+        "zIndex": 16
+      },
+      "type": "area",
+      "width": 60,
+      "x": 441,
+      "y": 584
+    },
+    {
+      "height": 143,
+      "id": 17,
+      "key": "block_1783768747589",
+      "name": "44",
+      "style": {
+        "color": "#cf864a",
+        "zIndex": 17
+      },
+      "type": "area",
+      "width": 62,
+      "x": 518,
+      "y": 580
+    },
+    {
+      "height": 29,
+      "id": 18,
+      "key": "block_1783769030439",
+      "name": "71",
+      "style": {
+        "color": "#9e3f2e",
+        "zIndex": 18
+      },
+      "type": "area",
+      "width": 515,
+      "x": 802,
+      "y": 60
+    },
+    {
+      "height": 50,
+      "id": 19,
+      "key": "block_1783769051875",
+      "name": "72",
+      "style": {
+        "color": "#abbb35",
+        "zIndex": 19
+      },
+      "type": "area",
+      "width": 565,
+      "x": 803,
+      "y": 109
+    },
+    {
+      "height": 42,
+      "id": 20,
+      "key": "block_1783769086165",
+      "name": "73",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 20
+      },
+      "type": "area",
+      "width": 581,
+      "x": 802,
+      "y": 178
+    },
+    {
+      "height": 161,
+      "id": 21,
+      "key": "block_1783769247884",
+      "name": "a9",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 21
+      },
+      "type": "area",
+      "width": 142,
+      "x": 417,
+      "y": 21
+    },
+    {
+      "height": 185,
+      "id": 22,
+      "key": "block_1783769262624",
+      "name": "a10",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 22
+      },
+      "type": "area",
+      "width": 138,
+      "x": 562,
+      "y": 17
+    },
+    {
+      "height": 82,
+      "id": 23,
+      "key": "block_1783769595835",
+      "name": "61",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 23
+      },
+      "type": "block",
+      "width": 61,
+      "x": 1299,
+      "y": 360
+    },
+    {
+      "height": 83,
+      "id": 24,
+      "key": "block_1783769630402",
+      "name": "62",
+      "style": {
+        "color": "#3b90c4",
+        "zIndex": 24
+      },
+      "type": "block",
+      "width": 55,
+      "x": 1241,
+      "y": 360
+    },
+    {
+      "height": 82,
+      "id": 25,
+      "items": [
+        {
+          "block_id": 25,
+          "id": 52,
+          "item_model": "s7up-11mowed",
+          "item_type": "text"
+        },
+        {
+          "block_id": 25,
+          "id": 53,
+          "item_model": "k7fp-5hote",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769651193",
+      "name": "63",
+      "style": {
+        "color": "#4fbab3",
+        "zIndex": 25
+      },
+      "type": "block",
+      "width": 62,
+      "x": 1177,
+      "y": 359
+    },
+    {
+      "height": 104,
+      "id": 26,
+      "items": [
+        {
+          "block_id": 26,
+          "id": 50,
+          "item_model": "k7fp-8von",
+          "item_type": "text"
+        },
+        {
+          "block_id": 26,
+          "id": 51,
+          "item_model": "k7fp-3hote",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769673888",
+      "name": "64",
+      "style": {
+        "color": "#b2c238",
+        "zIndex": 26
+      },
+      "type": "block",
+      "width": 63,
+      "x": 1114,
+      "y": 360
+    },
+    {
+      "height": 82,
+      "id": 27,
+      "items": [
+        {
+          "block_id": 27,
+          "id": 40,
+          "item_model": "10mowed",
+          "item_type": "text"
+        },
+        {
+          "block_id": 27,
+          "id": 41,
+          "item_model": "s3ep-5mowe",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769694241",
+      "name": "65",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 27
+      },
+      "type": "block",
+      "width": 54,
+      "x": 804,
+      "y": 362
+    },
+    {
+      "height": 82,
+      "id": 28,
+      "items": [
+        {
+          "block_id": 28,
+          "id": 21,
+          "item_model": "s3ep-5mowe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 28,
+          "id": 42,
+          "item_model": "n110w",
+          "item_type": "text"
+        },
+        {
+          "block_id": 28,
+          "id": 43,
+          "item_model": "n110",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769717976",
+      "name": "66",
+      "style": {
+        "color": "#d576cd",
+        "zIndex": 28
+      },
+      "type": "block",
+      "width": 83,
+      "x": 859,
+      "y": 362
+    },
+    {
+      "height": 99,
+      "id": 29,
+      "items": [
+        {
+          "block_id": 29,
+          "id": 44,
+          "item_model": "k7fp-3howe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 29,
+          "id": 45,
+          "item_model": "k2mp-3h1we",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769744216",
+      "name": "67",
+      "style": {
+        "color": "#af76d5",
+        "zIndex": 29
+      },
+      "type": "block",
+      "width": 59,
+      "x": 940.99290812592,
+      "y": 401.73913043478
+    },
+    {
+      "height": 100,
+      "id": 30,
+      "items": [
+        {
+          "block_id": 30,
+          "id": 46,
+          "item_model": "a52p-pro",
+          "item_type": "text"
+        },
+        {
+          "block_id": 30,
+          "id": 47,
+          "item_model": "a52p",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769768319",
+      "name": "68",
+      "style": {
+        "color": "#62a8cb",
+        "zIndex": 30
+      },
+      "type": "block",
+      "width": 65,
+      "x": 998.98270497804,
+      "y": 381.07453416149
+    },
+    {
+      "height": 100,
+      "id": 31,
+      "items": [
+        {
+          "block_id": 31,
+          "id": 12,
+          "item_model": "k7fp-5howe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 31,
+          "id": 49,
+          "item_model": "b7ed-5motea",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769781599",
+      "name": "69",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 31
+      },
+      "type": "block",
+      "width": 51,
+      "x": 1063,
+      "y": 362
+    },
+    {
+      "height": 45,
+      "id": 32,
+      "items": [
+        {
+          "block_id": 32,
+          "id": 19,
+          "item_model": "s2xep-10mos",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769802599",
+      "name": "610",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 32
+      },
+      "type": "block",
+      "width": 79,
+      "x": 862,
+      "y": 443
+    },
+    {
+      "height": 56,
+      "id": 33,
+      "items": [
+        {
+          "block_id": 33,
+          "id": 22,
+          "item_model": "s3ep-3mowe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 33,
+          "id": 76,
+          "item_model": "s2xep-6mos",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783769823141",
+      "name": "611",
+      "style": {
+        "color": "#4ca9a3",
+        "zIndex": 33
+      },
+      "type": "block",
+      "width": 58,
+      "x": 802,
+      "y": 443
+    },
+    {
+      "height": 56,
+      "id": 34,
+      "key": "block_1783769958077",
+      "name": "101",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 34
+      },
+      "type": "block",
+      "width": 59,
+      "x": 641,
+      "y": 143
+    },
+    {
+      "height": 63,
+      "id": 35,
+      "key": "block_1783769987701",
+      "name": "102",
+      "style": {
+        "color": "#76d5a9",
+        "zIndex": 35
+      },
+      "type": "block",
+      "width": 58,
+      "x": 641,
+      "y": 82
+    },
+    {
+      "height": 65,
+      "id": 36,
+      "items": [
+        {
+          "block_id": 36,
+          "id": 24,
+          "item_model": "xvr5116hs-5m-i3/t",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783770010253",
+      "name": "103",
+      "style": {
+        "color": "#d576d2",
+        "zIndex": 36
+      },
+      "type": "block",
+      "width": 58,
+      "x": 642,
+      "y": 16
+    },
+    {
+      "height": 58,
+      "id": 37,
+      "key": "block_1783770043578",
+      "name": "25",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 37
+      },
+      "type": "block",
+      "width": 51,
+      "x": 650,
+      "y": 521
+    },
+    {
+      "height": 56,
+      "id": 38,
+      "items": [
+        {
+          "block_id": 38,
+          "item_desc": "",
+          "item_model": "P5d-5f-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 38,
+          "item_desc": "",
+          "item_model": "P3d-3f-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 38,
+          "item_desc": "",
+          "item_model": "Hac-b1a51p-u-il-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 38,
+          "item_desc": "",
+          "item_model": "Hac-t1a51p-u-il-a",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783770063596",
+      "name": "26",
+      "style": {
+        "color": "#76d5d3",
+        "zIndex": 38
+      },
+      "type": "block",
+      "width": 53,
+      "x": 596,
+      "y": 520
+    },
+    {
+      "height": 56,
+      "id": 39,
+      "key": "block_1783780348868",
+      "name": "27",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 39
+      },
+      "type": "block",
+      "width": 44,
+      "x": 283,
+      "y": 521
+    },
+    {
+      "height": 61,
+      "id": 40,
+      "key": "block_1783780369623",
+      "name": "28",
+      "style": {
+        "color": "#16479c",
+        "zIndex": 40
+      },
+      "type": "block",
+      "width": 50,
+      "x": 328,
+      "y": 518
+    },
+    {
+      "height": 57,
+      "id": 41,
+      "items": [
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Hfw1500tlp-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Hfw1500tlp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "B1e29-a-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Pfs3006-4et-60",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Hfw1230ds1-s5",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Hfw1230tl2-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Hfw1200cmp-s5",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2",
+          "item_model": "Hfw1200dp-s5",
+          "item_type": "text"
+        },
+        {
+          "block_id": 41,
+          "item_desc": "Trên giá tầng 2, bên trong",
+          "item_model": "Sd49225db-hny",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780386227",
+      "name": "29",
+      "style": {
+        "color": "#76d593",
+        "zIndex": 41
+      },
+      "type": "block",
+      "width": 56,
+      "x": 380,
+      "y": 522
+    },
+    {
+      "height": 57,
+      "id": 42,
+      "items": [
+        {
+          "block_id": 42,
+          "id": 94,
+          "item_desc": "(không có đuôi vn)thùng có băng dính xanh nép sát giá",
+          "item_model": "dh-ipc-hdbw1239e1-a-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Hdbw1230ep-s5",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Hdw1200tlmp-il-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Hdw1200clqp-il-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Nvr2104hs-s3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Hfw1230dt-stw-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Xvr5104h-4kl-i3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Xvr4116hs-i",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Xvr1b08-it",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Xvr5216-ei",
+          "item_type": "text"
+        },
+        {
+          "block_id": 42,
+          "item_desc": "Trên giá tầng 2 ",
+          "item_model": "Nvr4116hs-4ks3",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780414443",
+      "name": "210",
+      "style": {
+        "color": "#d576bc",
+        "zIndex": 42
+      },
+      "type": "block",
+      "width": 70,
+      "x": 438,
+      "y": 521
+    },
+    {
+      "height": 59,
+      "id": 43,
+      "items": [
+        {
+          "block_id": 43,
+          "item_desc": "",
+          "item_model": "P4f-pv-4g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 43,
+          "item_desc": "",
+          "item_model": "Hdw3241tmp-as",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780436276",
+      "name": "211",
+      "style": {
+        "color": "#a5c365",
+        "zIndex": 43
+      },
+      "type": "block",
+      "width": 88,
+      "x": 507,
+      "y": 518
+    },
+    {
+      "height": 31,
+      "id": 44,
+      "items": [
+        {
+          "block_id": 44,
+          "item_desc": "",
+          "item_model": "Hfw3449t1-as-pv-pro",
+          "item_type": "text"
+        },
+        {
+          "block_id": 44,
+          "item_desc": "",
+          "item_model": "Hfw2249s-s-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 44,
+          "item_desc": "",
+          "item_model": "Hfw1500rlp-il-t",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780485327",
+      "name": "221",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 44
+      },
+      "type": "block",
+      "width": 54,
+      "x": 286,
+      "y": 444
+    },
+    {
+      "height": 34,
+      "id": 45,
+      "items": [
+        {
+          "block_id": 45,
+          "item_desc": "",
+          "item_model": "Sl020512-ir",
+          "item_type": "text"
+        },
+        {
+          "block_id": 45,
+          "item_desc": "",
+          "item_model": "Hfw1200dp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 45,
+          "item_desc": "",
+          "item_model": "Hdw1200tqp-il-t",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780512588",
+      "name": "222",
+      "style": {
+        "color": "#a676d5",
+        "zIndex": 45
+      },
+      "type": "block",
+      "width": 69,
+      "x": 341,
+      "y": 442
+    },
+    {
+      "height": 34,
+      "id": 46,
+      "items": [
+        {
+          "block_id": 46,
+          "id": 67,
+          "item_model": "1339dtk1-sw-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 46,
+          "item_desc": "",
+          "item_model": "H5d-5f",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780532390",
+      "name": "223",
+      "style": {
+        "color": "#a975a7",
+        "zIndex": 46
+      },
+      "type": "block",
+      "width": 58,
+      "x": 411,
+      "y": 442
+    },
+    {
+      "height": 32,
+      "id": 47,
+      "items": [
+        {
+          "block_id": 47,
+          "item_desc": "",
+          "item_model": "Hfw1200tlmp-il-t",
+          "item_type": "text"
+        },
+        {
+          "block_id": 47,
+          "item_desc": "",
+          "item_model": "Hfw1500thp-il-a",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780549678",
+      "name": "224",
+      "style": {
+        "color": "#76d5cf",
+        "zIndex": 47
+      },
+      "type": "block",
+      "width": 73,
+      "x": 469,
+      "y": 442
+    },
+    {
+      "height": 29,
+      "id": 48,
+      "items": [
+        {
+          "block_id": 48,
+          "item_desc": "",
+          "item_model": "Hfw1200rlp-tl-t",
+          "item_type": "text"
+        },
+        {
+          "block_id": 48,
+          "item_desc": "",
+          "item_model": "Hfw2849s-s-il",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780575014",
+      "name": "225",
+      "style": {
+        "color": "#c1d576",
+        "zIndex": 48
+      },
+      "type": "block",
+      "width": 65,
+      "x": 541,
+      "y": 442
+    },
+    {
+      "height": 30,
+      "id": 49,
+      "key": "block_1783780594135",
+      "name": "226",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 49
+      },
+      "type": "block",
+      "width": 87,
+      "x": 606,
+      "y": 442
+    },
+    {
+      "height": 27,
+      "id": 50,
+      "key": "block_1783780646016",
+      "name": "230",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 50
+      },
+      "type": "block",
+      "width": 63,
+      "x": 286,
+      "y": 364
+    },
+    {
+      "height": 55,
+      "id": 51,
+      "items": [
+        {
+          "block_id": 51,
+          "item_desc": "",
+          "item_model": "Hfw1239mp-a-il-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 51,
+          "item_desc": "",
+          "item_model": "Hfw1239e1-a-il-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 51,
+          "item_desc": "",
+          "item_model": "Hfw1439tl1-a-il-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780665083",
+      "name": "240",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 51
+      },
+      "type": "block",
+      "width": 50,
+      "x": 285,
+      "y": 283
+    },
+    {
+      "height": 26,
+      "id": 52,
+      "items": [
+        {
+          "block_id": 52,
+          "id": 81,
+          "item_model": "dh-cs4010-8et2gt-110",
+          "item_type": "text"
+        },
+        {
+          "block_id": 52,
+          "item_desc": "",
+          "item_model": "Xvr1b04-i/t",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780743599",
+      "name": "710",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 52
+      },
+      "type": "block",
+      "width": 43,
+      "x": 803,
+      "y": 61
+    },
+    {
+      "height": 27,
+      "id": 53,
+      "key": "block_1783780759505",
+      "name": "720",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 53
+      },
+      "type": "block",
+      "width": 53,
+      "x": 801,
+      "y": 134
+    },
+    {
+      "height": 41,
+      "id": 54,
+      "items": [
+        {
+          "block_id": 54,
+          "item_desc": "",
+          "item_model": "Xvr5232an-5m-i3/t",
+          "item_type": "text"
+        },
+        {
+          "block_id": 54,
+          "item_desc": "",
+          "item_model": "Nvr5208-ei2",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780784608",
+      "name": "730",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 54
+      },
+      "type": "block",
+      "width": 59,
+      "x": 802,
+      "y": 179
+    },
+    {
+      "height": 42,
+      "id": 55,
+      "items": [
+        {
+          "block_id": 55,
+          "id": 4,
+          "item_model": "tl-sg1016d",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780822794",
+      "name": "410",
+      "style": {
+        "color": "#76d5c2",
+        "zIndex": 55
+      },
+      "type": "block",
+      "width": 32,
+      "x": 282,
+      "y": 582
+    },
+    {
+      "height": 34,
+      "id": 56,
+      "key": "block_1783780847802",
+      "name": "420",
+      "style": {
+        "color": "#76d593",
+        "zIndex": 56
+      },
+      "type": "block",
+      "width": 57,
+      "x": 361,
+      "y": 685
+    },
+    {
+      "height": 34,
+      "id": 57,
+      "key": "block_1783780874762",
+      "name": "430",
+      "style": {
+        "color": "#d5cd76",
+        "zIndex": 57
+      },
+      "type": "block",
+      "width": 54,
+      "x": 442,
+      "y": 684
+    },
+    {
+      "height": 33,
+      "id": 58,
+      "items": [
+        {
+          "block_id": 58,
+          "id": 11,
+          "item_model": "x60(1-pack)",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780895988",
+      "name": "440",
+      "style": {
+        "color": "#76c2d5",
+        "zIndex": 58
+      },
+      "type": "block",
+      "width": 58,
+      "x": 522,
+      "y": 686
+    },
+    {
+      "height": 35,
+      "id": 59,
+      "items": [
+        {
+          "block_id": 59,
+          "id": 75,
+          "item_model": "s7xp-8u0wed",
+          "item_type": "text"
+        },
+        {
+          "block_id": 59,
+          "item_desc": "",
+          "item_model": "Ps7fp-3mo",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780936642",
+      "name": "740",
+      "style": {
+        "color": "#9c76d5",
+        "zIndex": 59
+      },
+      "type": "block",
+      "width": 61,
+      "x": 801,
+      "y": 224
+    },
+    {
+      "height": 42,
+      "id": 60,
+      "items": [
+        {
+          "block_id": 60,
+          "id": 28,
+          "item_model": "3mo",
+          "item_type": "text"
+        },
+        {
+          "block_id": 60,
+          "id": 29,
+          "item_model": "ps8d-5vo",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780955579",
+      "name": "741",
+      "style": {
+        "color": "#b7d576",
+        "zIndex": 60
+      },
+      "type": "block",
+      "width": 60,
+      "x": 803,
+      "y": 257
+    },
+    {
+      "height": 78,
+      "id": 61,
+      "items": [
+        {
+          "block_id": 61,
+          "id": 30,
+          "item_model": "3towe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 61,
+          "id": 31,
+          "item_model": "ps8ep-3vo",
+          "item_type": "text"
+        },
+        {
+          "block_id": 61,
+          "id": 32,
+          "item_model": "5mowez",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783780982332",
+      "name": "742",
+      "style": {
+        "color": "#93acd7",
+        "zIndex": 61
+      },
+      "type": "block",
+      "width": 45,
+      "x": 864,
+      "y": 221
+    },
+    {
+      "height": 78,
+      "id": 62,
+      "items": [
+        {
+          "block_id": 62,
+          "id": 10,
+          "item_model": "f52fp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 62,
+          "id": 33,
+          "item_model": "ps3ep-3mo",
+          "item_type": "text"
+        },
+        {
+          "block_id": 62,
+          "id": 35,
+          "item_model": "f32p",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783781076852",
+      "name": "743",
+      "style": {
+        "color": "#d376d5",
+        "zIndex": 62
+      },
+      "type": "block",
+      "width": 44,
+      "x": 910,
+      "y": 221
+    },
+    {
+      "height": 60,
+      "id": 63,
+      "items": [
+        {
+          "block_id": 63,
+          "item_desc": "",
+          "item_model": "Hdbw1439e1-a-il-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 63,
+          "item_desc": "",
+          "item_model": "Hfw2441t-zs",
+          "item_type": "text"
+        },
+        {
+          "block_id": 63,
+          "item_desc": "",
+          "item_model": "Pts2249b-e2-s-pv-pro",
+          "item_type": "text"
+        },
+        {
+          "block_id": 63,
+          "item_desc": "",
+          "item_model": "Hfw1439mp-a-il-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783781257067",
+      "name": "241",
+      "style": {
+        "color": "#d576c8",
+        "zIndex": 63
+      },
+      "type": "block",
+      "width": 47,
+      "x": 334,
+      "y": 279
+    },
+    {
+      "height": 56,
+      "id": 64,
+      "key": "block_1783781359859",
+      "name": "612",
+      "style": {
+        "color": "#76d598",
+        "zIndex": 64
+      },
+      "type": "block",
+      "width": 41,
+      "x": 1401,
+      "y": 446
+    },
+    {
+      "height": 45,
+      "id": 65,
+      "items": [
+        {
+          "block_id": 65,
+          "item_desc": "",
+          "item_model": "Ls1005",
+          "item_type": "text"
+        },
+        {
+          "block_id": 65,
+          "item_desc": "",
+          "item_model": "Ls1008",
+          "item_type": "text"
+        },
+        {
+          "block_id": 65,
+          "item_desc": "",
+          "item_model": "Ax12",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783781447184",
+      "name": "411",
+      "style": {
+        "color": "#cf76d5",
+        "zIndex": 65
+      },
+      "type": "block",
+      "width": 26,
+      "x": 316,
+      "y": 579
+    },
+    {
+      "height": 40,
+      "id": 66,
+      "items": [
+        {
+          "block_id": 66,
+          "item_desc": "",
+          "item_model": "Tl-sg1210mpe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 66,
+          "item_desc": "",
+          "item_model": "Es210gp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 66,
+          "item_desc": "",
+          "item_model": "Tl-sg1210mp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 66,
+          "item_desc": "",
+          "item_model": "Tl-sg1024de",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783781479811",
+      "name": "421",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 66
+      },
+      "type": "block",
+      "width": 35,
+      "x": 359,
+      "y": 580
+    },
+    {
+      "height": 41,
+      "id": 67,
+      "key": "block_1783781501600",
+      "name": "422",
+      "style": {
+        "color": "#76d5c2",
+        "zIndex": 67
+      },
+      "type": "block",
+      "width": 29,
+      "x": 393,
+      "y": 580
+    },
+    {
+      "height": 34,
+      "id": 68,
+      "key": "block_1783781539925",
+      "name": "431",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 68
+      },
+      "type": "block",
+      "width": 36,
+      "x": 440,
+      "y": 651
+    },
+    {
+      "height": 35,
+      "id": 69,
+      "key": "block_1783781573238",
+      "name": "432",
+      "style": {
+        "color": "#90d576",
+        "zIndex": 69
+      },
+      "type": "block",
+      "width": 26,
+      "x": 474,
+      "y": 649
+    },
+    {
+      "height": 32,
+      "id": 70,
+      "items": [
+        {
+          "block_id": 70,
+          "id": 8,
+          "item_model": "tl-mc112cs",
+          "item_type": "text"
+        },
+        {
+          "block_id": 70,
+          "id": 9,
+          "item_model": "tl-mc111cs",
+          "item_type": "text"
+        },
+        {
+          "block_id": 70,
+          "item_desc": "Bên dưới mc111-cs",
+          "item_model": "Mc211cs",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783782022224",
+      "name": "441",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 70
+      },
+      "type": "block",
+      "width": 35,
+      "x": 519,
+      "y": 654
+    },
+    {
+      "height": 32,
+      "id": 71,
+      "key": "block_1783782035261",
+      "name": "442",
+      "style": {
+        "color": "#d376d5",
+        "zIndex": 71
+      },
+      "type": "block",
+      "width": 29,
+      "x": 554,
+      "y": 654
+    },
+    {
+      "height": 43,
+      "id": 72,
+      "key": "block_1783782075197",
+      "name": "51",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 72
+      },
+      "type": "area",
+      "width": 158,
+      "x": 22,
+      "y": 443
+    },
+    {
+      "height": 42,
+      "id": 73,
+      "key": "block_1783782089437",
+      "name": "52",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 73
+      },
+      "type": "area",
+      "width": 163,
+      "x": 18,
+      "y": 519
+    },
+    {
+      "height": 88,
+      "id": 74,
+      "key": "block_1783782126975",
+      "name": "53",
+      "style": {
+        "color": "#d5768e",
+        "zIndex": 74
+      },
+      "type": "area",
+      "width": 45,
+      "x": 17,
+      "y": 580
+    },
+    {
+      "height": 89,
+      "id": 75,
+      "key": "block_1783782144511",
+      "name": "54",
+      "style": {
+        "color": "#d57680",
+        "zIndex": 75
+      },
+      "type": "area",
+      "width": 40,
+      "x": 80,
+      "y": 578
+    },
+    {
+      "height": 29,
+      "id": 76,
+      "items": [
+        {
+          "block_id": 76,
+          "id": 61,
+          "item_model": "c216",
+          "item_type": "text"
+        },
+        {
+          "block_id": 76,
+          "item_desc": "",
+          "item_model": "Tl-sg1005d",
+          "item_type": "text"
+        },
+        {
+          "block_id": 76,
+          "item_desc": "",
+          "item_model": "Tl-sf1008d",
+          "item_type": "text"
+        },
+        {
+          "block_id": 76,
+          "item_desc": "",
+          "item_model": "Tl-sf1005d",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783782188900",
+      "name": "550",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 76
+      },
+      "type": "block",
+      "width": 57,
+      "x": 143,
+      "y": 630
+    },
+    {
+      "height": 27,
+      "id": 77,
+      "items": [
+        {
+          "block_id": 77,
+          "item_desc": "",
+          "item_model": "Ls108gp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 77,
+          "item_desc": "",
+          "item_model": "Sf1016d",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783782224148",
+      "name": "551",
+      "style": {
+        "color": "#76c2d5",
+        "zIndex": 77
+      },
+      "type": "block",
+      "width": 58,
+      "x": 142,
+      "y": 603
+    },
+    {
+      "height": 24,
+      "id": 78,
+      "items": [
+        {
+          "block_id": 78,
+          "item_desc": "",
+          "item_model": "Sg2218",
+          "item_type": "text"
+        },
+        {
+          "block_id": 78,
+          "item_desc": "",
+          "item_model": "Ms120gp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 78,
+          "item_desc": "",
+          "item_model": "Sg3428",
+          "item_type": "text"
+        },
+        {
+          "block_id": 78,
+          "item_desc": "",
+          "item_model": "Tg-3468",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783782461731",
+      "name": "552",
+      "style": {
+        "color": "#d5c176",
+        "zIndex": 78
+      },
+      "type": "block",
+      "width": 60,
+      "x": 142,
+      "y": 579
+    },
+    {
+      "height": 32,
+      "id": 79,
+      "items": [
+        {
+          "block_id": 79,
+          "item_desc": "",
+          "item_model": "A64",
+          "item_type": "text"
+        },
+        {
+          "block_id": 79,
+          "item_desc": "",
+          "item_model": "Ls105g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 79,
+          "item_desc": "",
+          "item_model": "Tl-sg1016",
+          "item_type": "text"
+        },
+        {
+          "block_id": 79,
+          "item_desc": "",
+          "item_model": "Cpe210",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783783839819",
+      "name": "530",
+      "style": {
+        "color": "#aa76d5",
+        "zIndex": 79
+      },
+      "type": "block",
+      "width": 45,
+      "x": 17,
+      "y": 627
+    },
+    {
+      "height": 32,
+      "id": 80,
+      "items": [
+        {
+          "block_id": 80,
+          "item_desc": "",
+          "item_model": "Tl-r480t+",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783783868111",
+      "name": "540",
+      "style": {
+        "color": "#76b6d5",
+        "zIndex": 80
+      },
+      "type": "block",
+      "width": 36,
+      "x": 82,
+      "y": 632
+    },
+    {
+      "height": 41,
+      "id": 81,
+      "items": [
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, trên giá ",
+          "item_model": "Ax53hp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, trên giá ",
+          "item_model": "Mr27be",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, trên giá ",
+          "item_model": "Tc65",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, trên giá ",
+          "item_model": "Tc40",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, trên giá ",
+          "item_model": "Poe150s",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Be400",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Tc70",
+          "item_type": "text"
+        },
+        {
+          "block_id": 81,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Mb112-4g",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783783932506",
+      "name": "520",
+      "style": {
+        "color": "#d5a976",
+        "zIndex": 81
+      },
+      "type": "block",
+      "width": 35,
+      "x": 20,
+      "y": 520
+    },
+    {
+      "height": 41,
+      "id": 82,
+      "items": [
+        {
+          "block_id": 82,
+          "id": 96,
+          "item_desc": "tầng dưới",
+          "item_model": "tl-mr400",
+          "item_type": "text"
+        },
+        {
+          "block_id": 82,
+          "item_desc": "Tầng dưới",
+          "item_model": "Tx50uh",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783783955547",
+      "name": "510",
+      "style": {
+        "color": "#d576a9",
+        "zIndex": 82
+      },
+      "type": "block",
+      "width": 35,
+      "x": 18,
+      "y": 443
+    },
+    {
+      "height": 40,
+      "id": 83,
+      "items": [
+        {
+          "block_id": 83,
+          "id": 16,
+          "item_desc": "tầng dưới của giá",
+          "item_model": "mb112-4g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 83,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Tc71",
+          "item_type": "text"
+        },
+        {
+          "block_id": 83,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Re315",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784053623",
+      "name": "521",
+      "style": {
+        "color": "#76d5b9",
+        "zIndex": 83
+      },
+      "type": "block",
+      "width": 34,
+      "x": 55,
+      "y": 520
+    },
+    {
+      "height": 42,
+      "id": 84,
+      "items": [
+        {
+          "block_id": 84,
+          "id": 62,
+          "item_desc": "tầng trên của giá, phía bên trong",
+          "item_model": "tx20u",
+          "item_type": "text"
+        },
+        {
+          "block_id": 84,
+          "item_desc": "Tầng dưới",
+          "item_model": "T3u",
+          "item_type": "text"
+        },
+        {
+          "block_id": 84,
+          "item_desc": "Tầng dưới",
+          "item_model": "Tx55e",
+          "item_type": "text"
+        },
+        {
+          "block_id": 84,
+          "item_desc": "Tầng dưới",
+          "item_model": "Wn722n",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784087777",
+      "name": "511",
+      "style": {
+        "color": "#70ea57",
+        "zIndex": 84
+      },
+      "type": "block",
+      "width": 29,
+      "x": 54,
+      "y": 444
+    },
+    {
+      "height": 34,
+      "id": 85,
+      "items": [
+        {
+          "block_id": 85,
+          "id": 5,
+          "item_model": "ls1024g",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784125322",
+      "name": "412",
+      "style": {
+        "color": "#af76d5",
+        "zIndex": 85
+      },
+      "type": "block",
+      "width": 34,
+      "x": 282,
+      "y": 624
+    },
+    {
+      "height": 32,
+      "id": 86,
+      "items": [
+        {
+          "block_id": 86,
+          "id": 7,
+          "item_model": "tl-sg1024d",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784148172",
+      "name": "413",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 86
+      },
+      "type": "block",
+      "width": 31,
+      "x": 284,
+      "y": 658
+    },
+    {
+      "height": 30,
+      "id": 87,
+      "items": [
+        {
+          "block_id": 87,
+          "item_desc": "Thùng dẹp, băng dính nâu ",
+          "item_model": "2218p",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784178613",
+      "name": "414",
+      "style": {
+        "color": "#d5cd76",
+        "zIndex": 87
+      },
+      "type": "block",
+      "width": 56,
+      "x": 282,
+      "y": 690
+    },
+    {
+      "height": 28,
+      "id": 88,
+      "key": "block_1783784247495",
+      "name": "541",
+      "style": {
+        "color": "#d576b2",
+        "zIndex": 88
+      },
+      "type": "block",
+      "width": 41,
+      "x": 81,
+      "y": 579
+    },
+    {
+      "height": 24,
+      "id": 89,
+      "items": [
+        {
+          "block_id": 89,
+          "id": 59,
+          "item_model": "zkt-mb10-vl",
+          "item_type": "text"
+        },
+        {
+          "block_id": 89,
+          "id": 60,
+          "item_model": "c206",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784282209",
+      "name": "542",
+      "style": {
+        "color": "#c5d576",
+        "zIndex": 89
+      },
+      "type": "block",
+      "width": 41,
+      "x": 81,
+      "y": 606
+    },
+    {
+      "height": 40,
+      "id": 90,
+      "items": [
+        {
+          "block_id": 90,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Ms108",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Ms110gmp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "Mặt lối đi số 2, giá bên dưới ",
+          "item_model": "Ms106lp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở lối đi ",
+          "item_model": "Re505x",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở lối đi ",
+          "item_model": "Eap683 ur",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở giá bên dưới ",
+          "item_model": "Tl-sf1005p",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở giá bên dưới ",
+          "item_model": "Tl-sf105pe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở giá bên trên",
+          "item_model": "Re315",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở giá bên trên",
+          "item_model": "Tl-sf1009p",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở giá bên trên",
+          "item_model": "Poe4824g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 90,
+          "item_desc": "lối đi số 2, nằm ở giá bên trên",
+          "item_model": "Poe2412g",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784329825",
+      "name": "522",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 90
+      },
+      "type": "block",
+      "width": 38,
+      "x": 90,
+      "y": 521
+    },
+    {
+      "height": 42,
+      "id": 91,
+      "items": [
+        {
+          "block_id": 91,
+          "id": 95,
+          "item_desc": "tầng dưới phía bên trong",
+          "item_model": "t2ub nano",
+          "item_type": "text"
+        },
+        {
+          "block_id": 91,
+          "id": 97,
+          "item_desc": "tầng dưới, cạnh t2ub nano",
+          "item_model": "t2u plus",
+          "item_type": "text"
+        },
+        {
+          "block_id": 91,
+          "item_desc": "",
+          "item_model": "Mr80x",
+          "item_type": "text"
+        },
+        {
+          "block_id": 91,
+          "item_desc": "Trên giá ",
+          "item_model": "Mr90x",
+          "item_type": "text"
+        },
+        {
+          "block_id": 91,
+          "item_desc": "Trên giá ",
+          "item_model": "Sm5220-1m",
+          "item_type": "text"
+        },
+        {
+          "block_id": 91,
+          "item_desc": "Trên giá ",
+          "item_model": "Tl-sg108s-m2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 91,
+          "item_desc": "Trên giá ",
+          "item_model": "Be25 outdoor ",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784429958",
+      "name": "512",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 91
+      },
+      "type": "block",
+      "width": 37,
+      "x": 84,
+      "y": 442
+    },
+    {
+      "height": 46,
+      "id": 92,
+      "items": [
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "Ub400(un)",
+          "item_type": "text"
+        },
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "Uh7020c",
+          "item_type": "text"
+        },
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "Ua520c",
+          "item_type": "text"
+        },
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "T3u nano",
+          "item_type": "text"
+        },
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "Tl-wr844n(eu)",
+          "item_type": "text"
+        },
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "Tl-sg105s-m2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 92,
+          "item_desc": "Trên giá ",
+          "item_model": "Uh6120c",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784607844",
+      "name": "513",
+      "style": {
+        "color": "#9076d5",
+        "zIndex": 92
+      },
+      "type": "block",
+      "width": 30,
+      "x": 122,
+      "y": 439
+    },
+    {
+      "height": 43,
+      "id": 93,
+      "items": [
+        {
+          "block_id": 93,
+          "item_desc": "",
+          "item_model": "Mt110",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Ms105gs",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Uh9120c",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Sg2206mp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Uh5020c",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Ac600",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "T2e(us)",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Uh3020c",
+          "item_type": "text"
+        },
+        {
+          "block_id": 93,
+          "item_desc": "Trên giá ",
+          "item_model": "Ma14n",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784643621",
+      "name": "514",
+      "style": {
+        "color": "#cfd576",
+        "zIndex": 93
+      },
+      "type": "block",
+      "width": 30,
+      "x": 152,
+      "y": 441
+    },
+    {
+      "height": 27,
+      "id": 94,
+      "key": "block_1783784825034",
+      "name": "721",
+      "style": {
+        "color": "#81d576",
+        "zIndex": 94
+      },
+      "type": "block",
+      "width": 46,
+      "x": 857,
+      "y": 133
+    },
+    {
+      "height": 25,
+      "id": 95,
+      "items": [
+        {
+          "block_id": 95,
+          "id": 87,
+          "item_model": "dh-ipc-hdbw2249e-s-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 95,
+          "item_desc": "",
+          "item_model": "T1a21p-u-il-a-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783784853731",
+      "name": "722",
+      "style": {
+        "color": "#d576b7",
+        "zIndex": 95
+      },
+      "type": "block",
+      "width": 43,
+      "x": 904,
+      "y": 135
+    },
+    {
+      "height": 38,
+      "id": 96,
+      "items": [
+        {
+          "block_id": 96,
+          "id": 78,
+          "item_model": "tl-mw325r",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783785044184",
+      "name": "wc",
+      "style": {
+        "color": "#8676d5",
+        "zIndex": 96
+      },
+      "type": "area",
+      "width": 80,
+      "x": 821,
+      "y": -3
+    },
+    {
+      "height": 30,
+      "id": 97,
+      "key": "block_1783785076537",
+      "name": "w1",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 97
+      },
+      "type": "block",
+      "width": 46,
+      "x": 902,
+      "y": 13
+    },
+    {
+      "height": 43,
+      "id": 98,
+      "key": "block_1783785104650",
+      "name": "w2",
+      "style": {
+        "color": "#76d5b6",
+        "zIndex": 98
+      },
+      "type": "area",
+      "width": 182,
+      "x": 900,
+      "y": 0
+    },
+    {
+      "height": 29,
+      "id": 99,
+      "key": "block_1783785128579",
+      "name": "w11",
+      "style": {
+        "color": "#76d586",
+        "zIndex": 99
+      },
+      "type": "block",
+      "width": 53,
+      "x": 948,
+      "y": 12
+    },
+    {
+      "height": 30,
+      "id": 100,
+      "items": [
+        {
+          "block_id": 100,
+          "id": 73,
+          "item_model": "xvr1b04-i/t-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1783785254841",
+      "name": "72x",
+      "style": {
+        "color": "#b476d5",
+        "zIndex": 100
+      },
+      "type": "block",
+      "width": 54,
+      "x": 1312,
+      "y": 111
+    },
+    {
+      "height": 38,
+      "id": 101,
+      "key": "block_1783785482518",
+      "name": "71x",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 101
+      },
+      "type": "block",
+      "width": 44,
+      "x": 1317,
+      "y": 62
+    },
+    {
+      "height": 26,
+      "id": 102,
+      "key": "block_1785679139380",
+      "name": "729",
+      "style": {
+        "color": "#af76d5",
+        "zindex": 102
+      },
+      "type": "block",
+      "width": 54,
+      "x": 801,
+      "y": 110
+    },
+    {
+      "height": 29,
+      "id": 103,
+      "key": "block_1785679559205",
+      "name": "711",
+      "style": {
+        "color": "#bc76d5",
+        "zIndex": 103
+      },
+      "type": "block",
+      "width": 55,
+      "x": 847,
+      "y": 59
+    },
+    {
+      "height": 29,
+      "id": 104,
+      "items": [
+        {
+          "block_id": 104,
+          "id": 63,
+          "item_model": "t1e29-a-il",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785679581852",
+      "name": "712",
+      "style": {
+        "color": "#78d576",
+        "zIndex": 104
+      },
+      "type": "block",
+      "width": 50,
+      "x": 901,
+      "y": 59
+    },
+    {
+      "height": 27,
+      "id": 105,
+      "items": [
+        {
+          "block_id": 105,
+          "id": 80,
+          "item_desc": "mặt trong",
+          "item_model": "dhi-asi3203e-w",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785679631147",
+      "name": "713",
+      "style": {
+        "color": "#d2604b",
+        "zIndex": 105
+      },
+      "type": "block",
+      "width": 68,
+      "x": 950,
+      "y": 62
+    },
+    {
+      "height": 29,
+      "id": 106,
+      "items": [
+        {
+          "block_id": 106,
+          "id": 99,
+          "item_model": "dh-xvr5116h-4kl-i3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 106,
+          "item_desc": "",
+          "item_model": "B1e29-a-il-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785679652149",
+      "name": "714",
+      "style": {
+        "color": "#aa4174",
+        "zIndex": 106
+      },
+      "type": "block",
+      "width": 65,
+      "x": 1019,
+      "y": 60
+    },
+    {
+      "height": 28,
+      "id": 107,
+      "key": "block_1785679666678",
+      "name": "715",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 107
+      },
+      "type": "block",
+      "width": 54,
+      "x": 1085,
+      "y": 62
+    },
+    {
+      "height": 32,
+      "id": 108,
+      "key": "block_1785679687051",
+      "name": "716",
+      "style": {
+        "color": "#a676d5",
+        "zIndex": 108
+      },
+      "type": "block",
+      "width": 66,
+      "x": 1139,
+      "y": 57
+    },
+    {
+      "height": 31,
+      "id": 109,
+      "key": "block_1785679708310",
+      "name": "717",
+      "style": {
+        "color": "#bd4261",
+        "zIndex": 109
+      },
+      "type": "block",
+      "width": 63,
+      "x": 1205,
+      "y": 57
+    },
+    {
+      "height": 31,
+      "id": 110,
+      "key": "block_1785679728412",
+      "name": "718",
+      "style": {
+        "color": "#3490a2",
+        "zIndex": 110
+      },
+      "type": "block",
+      "width": 49,
+      "x": 1268,
+      "y": 57
+    },
+    {
+      "height": 83,
+      "id": 111,
+      "items": [
+        {
+          "block_id": 111,
+          "id": 23,
+          "item_model": "s31fep",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785679763725",
+      "name": "30",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 111
+      },
+      "type": "block",
+      "width": 52,
+      "x": 206,
+      "y": 98
+    },
+    {
+      "height": 82,
+      "id": 112,
+      "key": "block_1785679786443",
+      "name": "10",
+      "style": {
+        "color": "#1fe073",
+        "zIndex": 112
+      },
+      "type": "block",
+      "width": 38,
+      "x": 40,
+      "y": 101
+    },
+    {
+      "height": 25,
+      "id": 113,
+      "items": [
+        {
+          "block_id": 113,
+          "id": 57,
+          "item_model": "t1a21p-u-il-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 113,
+          "id": 58,
+          "item_model": "b1a21p-u-il-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 113,
+          "item_desc": "",
+          "item_model": "Dh-p5i-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 113,
+          "item_desc": "",
+          "item_model": "B1a21p-u-il-a-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 113,
+          "item_desc": "",
+          "item_model": "Hfw2449m-as-b-pro",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785679811061",
+      "name": "723",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 113
+      },
+      "type": "block",
+      "width": 63,
+      "x": 945,
+      "y": 134
+    },
+    {
+      "height": 25,
+      "id": 114,
+      "items": [
+        {
+          "block_id": 114,
+          "id": 83,
+          "item_model": "dh-p5i-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 114,
+          "item_desc": "",
+          "item_model": "Cs4218-16et-190",
+          "item_type": "text"
+        },
+        {
+          "block_id": 114,
+          "item_desc": "",
+          "item_model": "Tqh0b4c-s2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 114,
+          "item_desc": "",
+          "item_model": "Pfs3008-8et-l",
+          "item_type": "text"
+        },
+        {
+          "block_id": 114,
+          "item_desc": "",
+          "item_model": "P8f-pv",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680217535",
+      "name": "724",
+      "style": {
+        "color": "#aa76d5",
+        "zIndex": 114
+      },
+      "type": "block",
+      "width": 48,
+      "x": 1008,
+      "y": 134
+    },
+    {
+      "height": 27,
+      "id": 115,
+      "items": [
+        {
+          "block_id": 115,
+          "item_desc": "",
+          "item_model": "Hfw1200tlmp-il-t-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 115,
+          "item_desc": "",
+          "item_model": "Hfw2230sp-s-s2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 115,
+          "item_desc": "",
+          "item_model": "Dh-p3d-pv",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680239407",
+      "name": "725",
+      "style": {
+        "color": "#47bd80",
+        "zIndex": 115
+      },
+      "type": "block",
+      "width": 53,
+      "x": 1058,
+      "y": 133
+    },
+    {
+      "height": 27,
+      "id": 116,
+      "items": [
+        {
+          "block_id": 116,
+          "item_desc": "",
+          "item_model": "Hfw2449tl-s-pro",
+          "item_type": "text"
+        },
+        {
+          "block_id": 116,
+          "item_desc": "",
+          "item_model": "Dh-t5a-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 116,
+          "item_desc": "",
+          "item_model": "Hfw1230tc-a-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680265719",
+      "name": "726",
+      "style": {
+        "color": "#d1c53d",
+        "zIndex": 116
+      },
+      "type": "block",
+      "width": 54,
+      "x": 1111,
+      "y": 132
+    },
+    {
+      "height": 23,
+      "id": 117,
+      "items": [
+        {
+          "block_id": 117,
+          "id": 55,
+          "item_model": "hdw2449t-s-pro",
+          "item_type": "text"
+        },
+        {
+          "block_id": 117,
+          "item_desc": "",
+          "item_model": "Hdbw1230de-sw",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680294774",
+      "name": "727",
+      "style": {
+        "color": "#50ccce",
+        "zIndex": 117
+      },
+      "type": "block",
+      "width": 42.162518301611,
+      "x": 1167,
+      "y": 133
+    },
+    {
+      "height": 28,
+      "id": 118,
+      "items": [
+        {
+          "block_id": 118,
+          "id": 89,
+          "item_model": "dh-p3as-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 118,
+          "item_desc": "",
+          "item_model": "Hfw1230tc-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 118,
+          "item_desc": "",
+          "item_model": "Dh-h3ae",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680331758",
+      "name": "728",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 118
+      },
+      "type": "block",
+      "width": 49,
+      "x": 1211,
+      "y": 131
+    },
+    {
+      "height": 23,
+      "id": 119,
+      "key": "block_1785680364279",
+      "name": "7201",
+      "style": {
+        "color": "#d58576",
+        "zindex": 119
+      },
+      "type": "block",
+      "width": 49,
+      "x": 854,
+      "y": 110
+    },
+    {
+      "height": 24,
+      "id": 120,
+      "key": "block_1785680383574",
+      "name": "7202",
+      "style": {
+        "color": "#7296d4",
+        "zindex": 120
+      },
+      "type": "block",
+      "width": 55,
+      "x": 902,
+      "y": 111
+    },
+    {
+      "height": 25,
+      "id": 121,
+      "items": [
+        {
+          "block_id": 121,
+          "id": 86,
+          "item_model": "dh-ipc-hfw2249t-as-il",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680584833",
+      "name": "7203",
+      "style": {
+        "color": "#d59876",
+        "zIndex": 121
+      },
+      "type": "block",
+      "width": 67,
+      "x": 946,
+      "y": 110
+    },
+    {
+      "height": 24,
+      "id": 122,
+      "items": [
+        {
+          "block_id": 122,
+          "id": 82,
+          "item_model": "dh-cs4226-24et-240",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680606314",
+      "name": "7204",
+      "style": {
+        "color": "#afd576",
+        "zIndex": 122
+      },
+      "type": "block",
+      "width": 59,
+      "x": 1012,
+      "y": 110
+    },
+    {
+      "height": 24,
+      "id": 123,
+      "key": "block_1785680622833",
+      "name": "7205",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 123
+      },
+      "type": "block",
+      "width": 56,
+      "x": 1070,
+      "y": 110
+    },
+    {
+      "height": 26,
+      "id": 124,
+      "key": "block_1785680706224",
+      "name": "7206",
+      "style": {
+        "color": "#d57685",
+        "zIndex": 124
+      },
+      "type": "block",
+      "width": 58,
+      "x": 1124,
+      "y": 108
+    },
+    {
+      "height": 23,
+      "id": 125,
+      "key": "block_1785680731616",
+      "name": "7207",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 125
+      },
+      "type": "block",
+      "width": 69,
+      "x": 1182,
+      "y": 110
+    },
+    {
+      "height": 28,
+      "id": 126,
+      "key": "block_1785680756042",
+      "name": "7208",
+      "style": {
+        "color": "#ab3674",
+        "zIndex": 126
+      },
+      "type": "block",
+      "width": 65,
+      "x": 1246,
+      "y": 110
+    },
+    {
+      "height": 40,
+      "id": 127,
+      "items": [
+        {
+          "block_id": 127,
+          "item_desc": "",
+          "item_model": "Nvr5232-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 127,
+          "item_desc": "",
+          "item_model": "Nvr5832-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 127,
+          "item_desc": "",
+          "item_model": "Nvr5216-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 127,
+          "item_desc": "",
+          "item_model": "Nvr2108hs-4ks3",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680806521",
+      "name": "731",
+      "style": {
+        "color": "#76d5d3",
+        "zIndex": 127
+      },
+      "type": "block",
+      "width": 60,
+      "x": 859,
+      "y": 181
+    },
+    {
+      "height": 41,
+      "id": 128,
+      "items": [
+        {
+          "block_id": 128,
+          "item_desc": "",
+          "item_model": "Xvr5216an-5m-i3/t",
+          "item_type": "text"
+        },
+        {
+          "block_id": 128,
+          "item_desc": "",
+          "item_model": "Nvr5432-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 128,
+          "item_desc": "",
+          "item_model": "Nvr2104hs-4ks3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 128,
+          "item_desc": "",
+          "item_model": "Nvr4104hs-4ks3",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680826394",
+      "name": "732",
+      "style": {
+        "color": "#d576c8",
+        "zIndex": 128
+      },
+      "type": "block",
+      "width": 70,
+      "x": 918,
+      "y": 179
+    },
+    {
+      "height": 39,
+      "id": 129,
+      "items": [
+        {
+          "block_id": 129,
+          "id": 85,
+          "item_model": "nvr5464-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 129,
+          "item_desc": "",
+          "item_model": "Nvr4208-4ks3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 129,
+          "item_desc": "",
+          "item_model": "Nvr5864-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 129,
+          "item_desc": "",
+          "item_model": "Nvr5416-ei2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 129,
+          "item_desc": "",
+          "item_model": "Nvr2116hs-4ks3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 129,
+          "item_desc": "",
+          "item_model": "Nvr1104hs-4ks3",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680845312",
+      "name": "734",
+      "style": {
+        "color": "#76d57d",
+        "zIndex": 129
+      },
+      "type": "block",
+      "width": 66,
+      "x": 986,
+      "y": 181
+    },
+    {
+      "height": 39,
+      "id": 130,
+      "items": [
+        {
+          "block_id": 130,
+          "id": 68,
+          "item_model": "cs4216-16et-135",
+          "item_type": "text"
+        },
+        {
+          "block_id": 130,
+          "item_desc": "",
+          "item_model": "Nvr1104hs-s3/h",
+          "item_type": "text"
+        },
+        {
+          "block_id": 130,
+          "item_desc": "",
+          "item_model": "Nvr4216-4ks3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 130,
+          "item_desc": "",
+          "item_model": "Nvr1108hs-s3/h",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680915594",
+      "name": "735",
+      "style": {
+        "color": "#8b3ea8",
+        "zIndex": 130
+      },
+      "type": "block",
+      "width": 65,
+      "x": 1052,
+      "y": 180
+    },
+    {
+      "height": 39,
+      "id": 131,
+      "items": [
+        {
+          "block_id": 131,
+          "id": 18,
+          "item_model": "dh-p3i-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 131,
+          "item_desc": "",
+          "item_model": "Cs4218-16et-190",
+          "item_type": "text"
+        },
+        {
+          "block_id": 131,
+          "item_desc": "",
+          "item_model": "Hfw1239mp-a-il-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680932202",
+      "name": "736",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 131
+      },
+      "type": "block",
+      "width": 77,
+      "x": 1118,
+      "y": 181
+    },
+    {
+      "height": 40,
+      "id": 132,
+      "items": [
+        {
+          "block_id": 132,
+          "item_desc": "",
+          "item_model": "Nvr4232-4ks3-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 132,
+          "item_desc": "",
+          "item_model": "Nvr2108hs-4ks3-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680951083",
+      "name": "737",
+      "style": {
+        "color": "#d5b276",
+        "zIndex": 132
+      },
+      "type": "block",
+      "width": 67,
+      "x": 1197,
+      "y": 181
+    },
+    {
+      "height": 40,
+      "id": 133,
+      "key": "block_1785680969969",
+      "name": "738",
+      "style": {
+        "color": "#d25e41",
+        "zIndex": 133
+      },
+      "type": "block",
+      "width": 62,
+      "x": 1262,
+      "y": 180
+    },
+    {
+      "height": 75,
+      "id": 134,
+      "items": [
+        {
+          "block_id": 134,
+          "id": 34,
+          "item_model": "n118-8aoe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 134,
+          "id": 36,
+          "item_model": "n118w-8aoe",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785680996292",
+      "name": "744",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 134
+      },
+      "type": "block",
+      "width": 76,
+      "x": 955,
+      "y": 222
+    },
+    {
+      "height": 77,
+      "id": 135,
+      "items": [
+        {
+          "block_id": 135,
+          "id": 17,
+          "item_model": "nvr4116hs-4ks3-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681010347",
+      "name": "745",
+      "style": {
+        "color": "#d576d2",
+        "zIndex": 135
+      },
+      "type": "block",
+      "width": 79,
+      "x": 1029,
+      "y": 221
+    },
+    {
+      "height": 77,
+      "id": 136,
+      "items": [
+        {
+          "block_id": 136,
+          "id": 74,
+          "item_model": "xvr1b08-i/t-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681028860",
+      "name": "747",
+      "style": {
+        "color": "#3bba50",
+        "zIndex": 136
+      },
+      "type": "block",
+      "width": 67,
+      "x": 1107,
+      "y": 221
+    },
+    {
+      "height": 76,
+      "id": 137,
+      "key": "block_1785681086324",
+      "name": "748",
+      "style": {
+        "color": "#a894d6",
+        "zIndex": 137
+      },
+      "type": "block",
+      "width": 63,
+      "x": 1173,
+      "y": 221
+    },
+    {
+      "height": 28,
+      "id": 138,
+      "key": "block_1785681107939",
+      "name": "749",
+      "style": {
+        "color": "#54b2c9",
+        "zIndex": 138
+      },
+      "type": "block",
+      "width": 49,
+      "x": 1237,
+      "y": 218
+    },
+    {
+      "height": 52,
+      "id": 139,
+      "key": "block_1785681139090",
+      "name": "7400",
+      "style": {
+        "color": "#b476d5",
+        "zIndex": 139
+      },
+      "type": "block",
+      "width": 52,
+      "x": 1237,
+      "y": 247
+    },
+    {
+      "height": 73,
+      "id": 140,
+      "items": [
+        {
+          "block_id": 140,
+          "id": 56,
+          "item_model": "nvr5232-ei",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681163545",
+      "name": "7401",
+      "style": {
+        "color": "#bcd576",
+        "zIndex": 140
+      },
+      "type": "block",
+      "width": 43,
+      "x": 1309,
+      "y": 224
+    },
+    {
+      "height": 40,
+      "id": 141,
+      "key": "block_1785681181810",
+      "name": "7402",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 141
+      },
+      "type": "block",
+      "width": 74,
+      "x": 1352,
+      "y": 223
+    },
+    {
+      "height": 28,
+      "id": 142,
+      "items": [
+        {
+          "block_id": 142,
+          "item_desc": "",
+          "item_model": "Dh-pfa130-e",
+          "item_type": "text"
+        },
+        {
+          "block_id": 142,
+          "item_desc": "",
+          "item_model": "Hfw1239tc1-a-led",
+          "item_type": "text"
+        },
+        {
+          "block_id": 142,
+          "item_desc": "",
+          "item_model": "P3d-3f-pv-4g",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681298545",
+      "name": "227",
+      "style": {
+        "color": "#d576c4",
+        "zIndex": 142
+      },
+      "type": "block",
+      "width": 72,
+      "x": 286,
+      "y": 472
+    },
+    {
+      "height": 26,
+      "id": 143,
+      "items": [
+        {
+          "block_id": 143,
+          "item_desc": "",
+          "item_model": "Hdw1339da-sw-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 143,
+          "item_desc": "",
+          "item_model": "Nvr2108hc-w",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681317216",
+      "name": "228",
+      "style": {
+        "color": "#3f45a2",
+        "zIndex": 143
+      },
+      "type": "block",
+      "width": 85,
+      "x": 356,
+      "y": 475
+    },
+    {
+      "height": 26,
+      "id": 144,
+      "items": [
+        {
+          "block_id": 144,
+          "id": 65,
+          "item_model": "1339dtk1-sw-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 144,
+          "item_desc": "",
+          "item_model": "Dh-h5d-5f",
+          "item_type": "text"
+        },
+        {
+          "block_id": 144,
+          "item_desc": "",
+          "item_model": "Hdw3349qm-s-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 144,
+          "item_desc": "",
+          "item_model": "Hdw1439v-a-il",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681350312",
+      "name": "229",
+      "style": {
+        "color": "#287662",
+        "zIndex": 144
+      },
+      "type": "block",
+      "width": 71,
+      "x": 442,
+      "y": 474
+    },
+    {
+      "height": 27,
+      "id": 145,
+      "items": [
+        {
+          "block_id": 145,
+          "item_desc": "",
+          "item_model": "Hdw1500tqp-il-t",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681406137",
+      "name": "2200",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 145
+      },
+      "type": "block",
+      "width": 68,
+      "x": 512,
+      "y": 473
+    },
+    {
+      "height": 30,
+      "id": 146,
+      "items": [
+        {
+          "block_id": 146,
+          "item_desc": "",
+          "item_model": "Dh-ipc-hfw2849t-as-il",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681425576",
+      "name": "2201",
+      "style": {
+        "color": "#8c57c1",
+        "zIndex": 146
+      },
+      "type": "block",
+      "width": 71,
+      "x": 578,
+      "y": 471
+    },
+    {
+      "height": 29,
+      "id": 147,
+      "items": [
+        {
+          "block_id": 147,
+          "item_desc": "",
+          "item_model": "Hdw1439v-pv-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681527743",
+      "name": "2202",
+      "style": {
+        "color": "#b2792a",
+        "zIndex": 147
+      },
+      "type": "block",
+      "width": 56,
+      "x": 648,
+      "y": 472
+    },
+    {
+      "height": 29,
+      "id": 148,
+      "items": [
+        {
+          "block_id": 148,
+          "item_desc": "",
+          "item_model": "Vth2621g-wp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 148,
+          "item_desc": "",
+          "item_model": "Vth2621gw-wp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 148,
+          "item_desc": "",
+          "item_model": "Vth5441g",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681578273",
+      "name": "231",
+      "style": {
+        "color": "#d576c8",
+        "zIndex": 148
+      },
+      "type": "block",
+      "width": 64,
+      "x": 284,
+      "y": 390
+    },
+    {
+      "height": 29,
+      "id": 149,
+      "key": "block_1785681599135",
+      "name": "232",
+      "style": {
+        "color": "#76d5b1",
+        "zIndex": 149
+      },
+      "type": "block",
+      "width": 76,
+      "x": 349,
+      "y": 362
+    },
+    {
+      "height": 27,
+      "id": 150,
+      "items": [
+        {
+          "block_id": 150,
+          "item_desc": "",
+          "item_model": "Hfw1539dtk2-saw-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 150,
+          "item_desc": "",
+          "item_model": "Hdw1539da-sw-pv",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681616129",
+      "name": "233",
+      "style": {
+        "color": "#15841c",
+        "zIndex": 150
+      },
+      "type": "block",
+      "width": 82,
+      "x": 427,
+      "y": 362
+    },
+    {
+      "height": 27,
+      "id": 151,
+      "items": [
+        {
+          "block_id": 151,
+          "item_desc": "",
+          "item_model": "P3d-3f-pv-p",
+          "item_type": "text"
+        },
+        {
+          "block_id": 151,
+          "item_desc": "",
+          "item_model": "Dh-sg1016",
+          "item_type": "text"
+        },
+        {
+          "block_id": 151,
+          "item_desc": "",
+          "item_model": "Hdw1239v-pv-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 151,
+          "item_desc": "",
+          "item_model": "Hfw1539dtk1-sw-pv",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681639451",
+      "name": "234",
+      "style": {
+        "color": "#5eb62f",
+        "zIndex": 151
+      },
+      "type": "block",
+      "width": 77,
+      "x": 510,
+      "y": 363
+    },
+    {
+      "height": 30,
+      "id": 152,
+      "items": [
+        {
+          "block_id": 152,
+          "item_desc": "",
+          "item_model": "Hfw1439tl1-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 152,
+          "item_desc": "",
+          "item_model": "Hdw1239v-pv",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681663064",
+      "name": "235",
+      "style": {
+        "color": "#a35f1f",
+        "zIndex": 152
+      },
+      "type": "block",
+      "width": 69,
+      "x": 587,
+      "y": 363
+    },
+    {
+      "height": 31,
+      "id": 153,
+      "items": [
+        {
+          "block_id": 153,
+          "id": 39,
+          "item_model": "a82pro",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681681678",
+      "name": "236",
+      "style": {
+        "color": "#d72d2d",
+        "zIndex": 153
+      },
+      "type": "block",
+      "width": 48,
+      "x": 655,
+      "y": 363
+    },
+    {
+      "height": 29,
+      "id": 154,
+      "items": [
+        {
+          "block_id": 154,
+          "item_desc": "",
+          "item_model": "Vto2111d-p-s3",
+          "item_type": "text"
+        },
+        {
+          "block_id": 154,
+          "item_desc": "",
+          "item_model": "Vtm09r",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681696169",
+      "name": "237",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 154
+      },
+      "type": "block",
+      "width": 70,
+      "x": 345,
+      "y": 390
+    },
+    {
+      "height": 33,
+      "id": 155,
+      "items": [
+        {
+          "block_id": 155,
+          "item_desc": "",
+          "item_model": "Hfw1230sp-s5-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 155,
+          "item_desc": "",
+          "item_model": "Hdw1539da-sw-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 155,
+          "item_desc": "",
+          "item_model": "Hfw1539dtk2-saw-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 155,
+          "item_desc": "",
+          "item_model": "Hfw2649s-s-il",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681712800",
+      "name": "238",
+      "style": {
+        "color": "#5637c8",
+        "zIndex": 155
+      },
+      "type": "block",
+      "width": 73,
+      "x": 415,
+      "y": 387
+    },
+    {
+      "height": 31,
+      "id": 156,
+      "items": [
+        {
+          "block_id": 156,
+          "item_desc": "",
+          "item_model": "Hfw1539dtk1-sw-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 156,
+          "item_desc": "",
+          "item_model": "Hfw2449s-s-il",
+          "item_type": "text"
+        },
+        {
+          "block_id": 156,
+          "item_desc": "",
+          "item_model": "P3d-3f-pv-p",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681731560",
+      "name": "239",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 156
+      },
+      "type": "block",
+      "width": 65,
+      "x": 490,
+      "y": 390
+    },
+    {
+      "height": 28,
+      "id": 157,
+      "items": [
+        {
+          "block_id": 157,
+          "item_desc": "",
+          "item_model": "Hdw12e9v-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 157,
+          "item_desc": "",
+          "item_model": "Hdw1239v-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 157,
+          "item_desc": "",
+          "item_model": "Hfw1439tl1-pv",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681794000",
+      "name": "2300",
+      "style": {
+        "color": "#76cad5",
+        "zIndex": 157
+      },
+      "type": "block",
+      "width": 72,
+      "x": 554,
+      "y": 392
+    },
+    {
+      "height": 27,
+      "id": 158,
+      "items": [
+        {
+          "block_id": 158,
+          "item_desc": "",
+          "item_model": "Hdw1549xp-il-a-pro",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681813160",
+      "name": "2301",
+      "style": {
+        "color": "#bc76d5",
+        "zIndex": 158
+      },
+      "type": "block",
+      "width": 50,
+      "x": 626,
+      "y": 394
+    },
+    {
+      "height": 23,
+      "id": 159,
+      "key": "block_1785681837032",
+      "name": "2302",
+      "style": {
+        "color": "#7dd576",
+        "zIndex": 159
+      },
+      "type": "block",
+      "width": 45,
+      "x": 678,
+      "y": 395
+    },
+    {
+      "height": 56,
+      "id": 160,
+      "items": [
+        {
+          "block_id": 160,
+          "item_desc": "",
+          "item_model": "Hfw1239tl1-pv",
+          "item_type": "text"
+        },
+        {
+          "block_id": 160,
+          "item_desc": "",
+          "item_model": "Hfw1249xp-il-a-pro",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681874744",
+      "name": "2402",
+      "style": {
+        "color": "#82bfd3",
+        "zIndex": 160
+      },
+      "type": "block",
+      "width": 49,
+      "x": 380,
+      "y": 283
+    },
+    {
+      "height": 58,
+      "id": 161,
+      "items": [
+        {
+          "block_id": 161,
+          "item_desc": "",
+          "item_model": "Hdw1431t1-a",
+          "item_type": "text"
+        },
+        {
+          "block_id": 161,
+          "item_desc": "",
+          "item_model": "Hfw1500tlmp-il-t",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681897536",
+      "name": "2403",
+      "style": {
+        "color": "#e3ea75",
+        "zIndex": 161
+      },
+      "type": "block",
+      "width": 80,
+      "x": 430,
+      "y": 281
+    },
+    {
+      "height": 58,
+      "id": 162,
+      "items": [
+        {
+          "block_id": 162,
+          "id": 91,
+          "item_model": "dh-ipc-hdw1239v-a-il-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 162,
+          "id": 92,
+          "item_model": "dh-ipc-hdw1439v-a-il-vn",
+          "item_type": "text"
+        },
+        {
+          "block_id": 162,
+          "item_desc": "",
+          "item_model": "Hfw1200rlp-il-t-vn",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681919830",
+      "name": "2404",
+      "style": {
+        "color": "#5cce5a",
+        "zIndex": 162
+      },
+      "type": "block",
+      "width": 71,
+      "x": 510,
+      "y": 282
+    },
+    {
+      "height": 57,
+      "id": 163,
+      "items": [
+        {
+          "block_id": 163,
+          "id": 25,
+          "item_model": "pt1239h",
+          "item_type": "text"
+        },
+        {
+          "block_id": 163,
+          "id": 26,
+          "item_model": "pt1439h",
+          "item_type": "text"
+        },
+        {
+          "block_id": 163,
+          "item_desc": "",
+          "item_model": "Hdw1249xp-il-a-pro",
+          "item_type": "text"
+        },
+        {
+          "block_id": 163,
+          "item_desc": "",
+          "item_model": "Hdw2441t-zs",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785681939736",
+      "name": "2405",
+      "style": {
+        "color": "#ee4949",
+        "zIndex": 163
+      },
+      "type": "block",
+      "width": 60,
+      "x": 581,
+      "y": 280
+    },
+    {
+      "height": 31,
+      "id": 164,
+      "key": "block_1785681955135",
+      "name": "2406",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 164
+      },
+      "type": "block",
+      "width": 59,
+      "x": 641,
+      "y": 281
+    },
+    {
+      "height": 27,
+      "id": 165,
+      "key": "block_1785681983863",
+      "name": "2407",
+      "style": {
+        "color": "#b776d5",
+        "zIndex": 165
+      },
+      "type": "block",
+      "width": 74,
+      "x": 643,
+      "y": 312
+    },
+    {
+      "height": 38,
+      "id": 166,
+      "key": "block_1785682014177",
+      "name": "of-1",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 166
+      },
+      "type": "block",
+      "width": 57,
+      "x": 34,
+      "y": 382
+    },
+    {
+      "height": 35,
+      "id": 167,
+      "items": [
+        {
+          "block_id": 167,
+          "item_desc": "",
+          "item_model": "C64",
+          "item_type": "text"
+        },
+        {
+          "block_id": 167,
+          "item_desc": "Lẻ",
+          "item_model": "Sg3428xf",
+          "item_type": "text"
+        },
+        {
+          "block_id": 167,
+          "item_desc": "Lẻ",
+          "item_model": "Sg5452x(un)",
+          "item_type": "text"
+        },
+        {
+          "block_id": 167,
+          "item_desc": "Lẻ",
+          "item_model": "Sg54528xf",
+          "item_type": "text"
+        },
+        {
+          "block_id": 167,
+          "item_desc": "Lẻ",
+          "item_model": "Sg3452",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682059454",
+      "name": "415",
+      "style": {
+        "color": "#cd8747",
+        "zIndex": 167
+      },
+      "type": "block",
+      "width": 27,
+      "x": 316,
+      "y": 626
+    },
+    {
+      "height": 32,
+      "id": 168,
+      "key": "block_1785682086583",
+      "name": "416",
+      "style": {
+        "color": "#f21818",
+        "zIndex": 168
+      },
+      "type": "block",
+      "width": 27,
+      "x": 314,
+      "y": 660
+    },
+    {
+      "height": 42,
+      "id": 169,
+      "items": [
+        {
+          "block_id": 169,
+          "id": 14,
+          "item_desc": "trên giá tầng 2",
+          "item_model": "cpe710",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "id": 72,
+          "item_desc": "trên giá còn 1",
+          "item_model": "eap211",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Eap100-bridge",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Eap772",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Es205g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Oc220",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Oc200",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Eap625",
+          "item_type": "text"
+        },
+        {
+          "block_id": 169,
+          "item_desc": "Lối đi số 2, giá trên",
+          "item_model": "Eap673",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682131630",
+      "name": "523",
+      "style": {
+        "color": "#f2f547",
+        "zIndex": 169
+      },
+      "type": "block",
+      "width": 36,
+      "x": 130,
+      "y": 519
+    },
+    {
+      "height": 34,
+      "id": 170,
+      "items": [
+        {
+          "block_id": 170,
+          "item_desc": "",
+          "item_model": "Sg2210p",
+          "item_type": "text"
+        },
+        {
+          "block_id": 170,
+          "item_desc": "",
+          "item_model": "Tl-sx1008(un)",
+          "item_type": "text"
+        },
+        {
+          "block_id": 170,
+          "item_desc": "",
+          "item_model": "Tl-ls1016de",
+          "item_type": "text"
+        },
+        {
+          "block_id": 170,
+          "item_desc": "",
+          "item_model": "Tl-sg105-m2",
+          "item_type": "text"
+        },
+        {
+          "block_id": 170,
+          "item_desc": "Thùng lẻ",
+          "item_model": "4032h",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682164520",
+      "name": "423",
+      "style": {
+        "color": "#d576d2",
+        "zIndex": 170
+      },
+      "type": "block",
+      "width": 31,
+      "x": 359,
+      "y": 622
+    },
+    {
+      "height": 36,
+      "id": 171,
+      "items": [
+        {
+          "block_id": 171,
+          "id": 70,
+          "item_desc": "nằm dưới mấy thùng đè lên nhau",
+          "item_model": "sx108",
+          "item_type": "text"
+        },
+        {
+          "block_id": 171,
+          "id": 71,
+          "item_model": "er605",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682185776",
+      "name": "424",
+      "style": {
+        "color": "#d7df68",
+        "zIndex": 171
+      },
+      "type": "block",
+      "width": 31,
+      "x": 361,
+      "y": 648
+    },
+    {
+      "height": 28,
+      "id": 172,
+      "key": "block_1785682237913",
+      "name": "425",
+      "style": {
+        "color": "#3f2c63",
+        "zIndex": 172
+      },
+      "type": "block",
+      "width": 32,
+      "x": 390,
+      "y": 622
+    },
+    {
+      "height": 36,
+      "id": 173,
+      "items": [
+        {
+          "block_id": 173,
+          "id": 54,
+          "item_model": "sg1428pe",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682257375",
+      "name": "426",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 173
+      },
+      "type": "block",
+      "width": 32,
+      "x": 390,
+      "y": 649
+    },
+    {
+      "height": 26,
+      "id": 174,
+      "key": "block_1785682317385",
+      "name": "434",
+      "style": {
+        "color": "#d6902e",
+        "zIndex": 174
+      },
+      "type": "block",
+      "width": 33,
+      "x": 440,
+      "y": 584
+    },
+    {
+      "height": 42,
+      "id": 175,
+      "items": [
+        {
+          "block_id": 175,
+          "item_desc": "Màu đỏ, nằm giữa 2 dãy",
+          "item_model": "Ms108gp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 175,
+          "item_desc": "",
+          "item_model": "Ms108g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 175,
+          "item_desc": "",
+          "item_model": "Ms105gp",
+          "item_type": "text"
+        },
+        {
+          "block_id": 175,
+          "item_desc": "Thùng dẹp",
+          "item_model": "M7000",
+          "item_type": "text"
+        },
+        {
+          "block_id": 175,
+          "item_desc": "Thùng dẹp",
+          "item_model": "M7200",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682337753",
+      "name": "435",
+      "style": {
+        "color": "#cf6cd0",
+        "zIndex": 175
+      },
+      "type": "block",
+      "width": 31,
+      "x": 440,
+      "y": 609
+    },
+    {
+      "height": 34,
+      "id": 176,
+      "key": "block_1785682360111",
+      "name": "436",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 176
+      },
+      "type": "block",
+      "width": 29,
+      "x": 473,
+      "y": 581
+    },
+    {
+      "height": 38,
+      "id": 177,
+      "key": "block_1785682382152",
+      "name": "437",
+      "style": {
+        "color": "#858f32",
+        "zIndex": 177
+      },
+      "type": "block",
+      "width": 32,
+      "x": 471,
+      "y": 614
+    },
+    {
+      "height": 31,
+      "id": 178,
+      "items": [
+        {
+          "block_id": 178,
+          "item_desc": "",
+          "item_model": "Mw300re",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682467289",
+      "name": "443",
+      "style": {
+        "color": "#c92c2c",
+        "zIndex": 178
+      },
+      "type": "block",
+      "width": 35,
+      "x": 518,
+      "y": 623
+    },
+    {
+      "height": 43,
+      "id": 179,
+      "key": "block_1785682492415",
+      "name": "444",
+      "style": {
+        "color": "#4de7ea",
+        "zIndex": 179
+      },
+      "type": "block",
+      "width": 35,
+      "x": 518,
+      "y": 580
+    },
+    {
+      "height": 42,
+      "id": 180,
+      "key": "block_1785682509417",
+      "name": "445",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 180
+      },
+      "type": "block",
+      "width": 32,
+      "x": 550,
+      "y": 579
+    },
+    {
+      "height": 36,
+      "id": 181,
+      "items": [
+        {
+          "block_id": 181,
+          "id": 98,
+          "item_model": "tl-wr820n",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682530234",
+      "name": "446",
+      "style": {
+        "color": "#af9828",
+        "zIndex": 181
+      },
+      "type": "block",
+      "width": 28,
+      "x": 552,
+      "y": 619
+    },
+    {
+      "height": 64,
+      "id": 182,
+      "items": [
+        {
+          "block_id": 182,
+          "id": 90,
+          "item_model": "tl-mb115-4g",
+          "item_type": "text"
+        },
+        {
+          "block_id": 182,
+          "item_desc": "",
+          "item_model": " C50",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682585296",
+      "name": "450",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 182
+      },
+      "type": "block",
+      "width": 41,
+      "x": 601,
+      "y": 583
+    },
+    {
+      "height": 40,
+      "id": 183,
+      "items": [
+        {
+          "block_id": 183,
+          "item_desc": "",
+          "item_model": "Ge230",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682608553",
+      "name": "451",
+      "style": {
+        "color": "#7551b8",
+        "zIndex": 183
+      },
+      "type": "block",
+      "width": 41,
+      "x": 600,
+      "y": 646
+    },
+    {
+      "height": 35,
+      "id": 184,
+      "items": [
+        {
+          "block_id": 184,
+          "id": 84,
+          "item_model": "tl-mr100",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682635537",
+      "name": "452",
+      "style": {
+        "color": "#37a978",
+        "zIndex": 184
+      },
+      "type": "block",
+      "width": 61,
+      "x": 599,
+      "y": 686
+    },
+    {
+      "height": 98,
+      "id": 185,
+      "items": [
+        {
+          "block_id": 185,
+          "id": 20,
+          "item_model": "c32ep",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682665457",
+      "name": "460",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 185
+      },
+      "type": "block",
+      "width": 47,
+      "x": 664,
+      "y": 582
+    },
+    {
+      "height": 80,
+      "id": 186,
+      "key": "block_1785682690425",
+      "name": "81",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 186
+      },
+      "type": "block",
+      "width": 88,
+      "x": 862,
+      "y": 581
+    },
+    {
+      "height": 77,
+      "id": 187,
+      "key": "block_1785682720706",
+      "name": "820",
+      "style": {
+        "color": "#ca76d5",
+        "zIndex": 187
+      },
+      "type": "block",
+      "width": 86,
+      "x": 992,
+      "y": 582
+    },
+    {
+      "height": 84,
+      "id": 188,
+      "items": [
+        {
+          "block_id": 188,
+          "item_desc": "Bên trong ",
+          "item_model": "M6708d",
+          "item_type": "text"
+        },
+        {
+          "block_id": 188,
+          "item_desc": "Bên trong ",
+          "item_model": "Bp5100dw",
+          "item_type": "text"
+        },
+        {
+          "block_id": 188,
+          "item_desc": "Bên trong, bọc nilon",
+          "item_model": "M6558",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682741851",
+      "name": "830",
+      "style": {
+        "color": "#4fc472",
+        "zIndex": 188
+      },
+      "type": "block",
+      "width": 50,
+      "x": 1100,
+      "y": 577
+    },
+    {
+      "height": 57,
+      "id": 189,
+      "key": "block_1785682761241",
+      "name": "840",
+      "style": {
+        "color": "#7296d4",
+        "zindex": 189
+      },
+      "type": "block",
+      "width": 41,
+      "x": 1218,
+      "y": 621
+    },
+    {
+      "height": 36,
+      "id": 190,
+      "key": "block_1785682807644",
+      "name": "841",
+      "style": {
+        "color": "#954fb5",
+        "zIndex": 190
+      },
+      "type": "block",
+      "width": 97,
+      "x": 1104.0549048316,
+      "y": 683.96273291925
+    },
+    {
+      "height": 34,
+      "id": 191,
+      "key": "block_1785682827794",
+      "name": "842",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 191
+      },
+      "type": "block",
+      "width": 61,
+      "x": 1044.595442899,
+      "y": 683.57142857143
+    },
+    {
+      "height": 22,
+      "id": 192,
+      "items": [
+        {
+          "block_id": 192,
+          "id": 13,
+          "item_model": "cpe510",
+          "item_type": "text"
+        },
+        {
+          "block_id": 192,
+          "item_desc": "Mặt lối đi giữa ",
+          "item_model": "Eap115",
+          "item_type": "text"
+        },
+        {
+          "block_id": 192,
+          "item_desc": "Mặt lối đi cửa",
+          "item_model": "Tl-sg108pe",
+          "item_type": "text"
+        },
+        {
+          "block_id": 192,
+          "item_desc": "Mặt lối đi cửa",
+          "item_model": "Tl-sg108",
+          "item_type": "text"
+        },
+        {
+          "block_id": 192,
+          "item_desc": "Mặt lối đi cửa",
+          "item_model": "Tl-sg105",
+          "item_type": "text"
+        },
+        {
+          "block_id": 192,
+          "item_desc": "Mặt lối đi cửa",
+          "item_model": "Ls109p",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682852083",
+      "name": "531",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 192
+      },
+      "type": "block",
+      "width": 42,
+      "x": 18,
+      "y": 581
+    },
+    {
+      "height": 25,
+      "id": 193,
+      "items": [
+        {
+          "block_id": 193,
+          "item_desc": "Mặt trong",
+          "item_model": "Mw300re",
+          "item_type": "text"
+        },
+        {
+          "block_id": 193,
+          "item_desc": "",
+          "item_model": "Tl-sl1226p",
+          "item_type": "text"
+        },
+        {
+          "block_id": 193,
+          "item_desc": "Mặt lối đi giữa ",
+          "item_model": "Eap110",
+          "item_type": "text"
+        },
+        {
+          "block_id": 193,
+          "item_desc": "Mặt lối đi cửa",
+          "item_model": "Ms118cp",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785682874272",
+      "name": "532",
+      "style": {
+        "color": "#4be2b5",
+        "zIndex": 193
+      },
+      "type": "block",
+      "width": 44,
+      "x": 17,
+      "y": 602
+    },
+    {
+      "height": 45.503105590062,
+      "id": 194,
+      "items": [
+        {
+          "block_id": 194,
+          "id": 1,
+          "item_model": "eap223",
+          "item_type": "text"
+        },
+        {
+          "block_id": 194,
+          "id": 2,
+          "item_model": "be400",
+          "item_type": "text"
+        },
+        {
+          "block_id": 194,
+          "id": 3,
+          "item_model": "tl-sg1008",
+          "item_type": "text"
+        },
+        {
+          "block_id": 194,
+          "id": 69,
+          "item_desc": "trên giá",
+          "item_model": "sx105",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785724044882",
+      "name": "515",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 194
+      },
+      "type": "block",
+      "width": 24.665583821376,
+      "x": 181.58331808199,
+      "y": 441.05590062112
+    },
+    {
+      "height": 40.732919254658,
+      "id": 195,
+      "items": [
+        {
+          "block_id": 195,
+          "id": 15,
+          "item_desc": "thùng bên dưới phía ngoài",
+          "item_model": "cpe610",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785741041144",
+      "name": "524",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 195
+      },
+      "type": "block",
+      "width": 28.065290995608,
+      "x": 166.85125366032,
+      "y": 519.76397515528
+    },
+    {
+      "height": 59.60625,
+      "id": 196,
+      "items": [
+        {
+          "block_id": 196,
+          "id": 37,
+          "item_model": "6vone",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1785895076316",
+      "name": "910",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 196
+      },
+      "type": "block",
+      "width": 64.328834187408,
+      "x": 418.42958455344,
+      "y": 53.19375
+    },
+    {
+      "height": 36.80625,
+      "id": 197,
+      "items": [
+        {
+          "block_id": 197,
+          "id": 64,
+          "item_model": "nvr4232-4ks3",
+          "item_type": "text"
+        }
+      ],
+      "key": "block_1786352995670",
+      "name": "739",
+      "style": {
+        "color": "#7296d4",
+        "zIndex": 197
+      },
+      "type": "block",
+      "width": 41.664119692533,
+      "x": 1323.8849286237,
+      "y": 180.39375
+    }
+  ],
+  "screen": {
+    "height": 768,
+    "width": 1548
+  },
+  "test": [
+    22,
+    333,
+    null,
+    567,
+    678,
+    789
+  ]
+}

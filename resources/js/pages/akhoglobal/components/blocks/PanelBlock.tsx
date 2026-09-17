@@ -4,6 +4,7 @@ import { Settings } from 'lucide-react';
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { type Block } from '@/pages/test/StockPosition';
 import AkhoUrl from '../../network/Url';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 
 
@@ -15,7 +16,8 @@ type Props = Omit<Block, 'key'> & {
 };
 
 const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected, style, type, items }: Props) => {
-    const itemsString = items.map((item) => item.item_model).join(' \n ');
+  const isMobile = useIsMobile();
+  const itemsString = items?.map((item) => item.item_model).join(' \n ') || '';
 
   const { init_screen } = usePage().props as unknown as { init_screen?: { width: number; height: number } };
 
@@ -180,8 +182,8 @@ const PanelBlock = ({ width, height, x, y, name, blockKey, onSelected, selected,
         }}
       />
       <div className='flex justify-center py-1 w-full h-full relative'>
-        {name && <b className='text-black text-sm'>{name}</b>}
-        <Settings className='absolute top-1 right-1 cursor-pointer opacity-30 hover:opacity-100 ' onClick={onSetSelectedBlock} size={20} color='black'></Settings>
+        {name && !isMobile && <b className='text-black text-sm'>{name}</b>}
+        {!isMobile && <Settings className='absolute top-1 right-1 cursor-pointer opacity-30 hover:opacity-100 ' onClick={onSetSelectedBlock} size={20} color='black'></Settings>}
       </div>
       {/* Nút nắm hình vuông nhỏ ở góc dưới bên phải */}
       <div

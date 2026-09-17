@@ -10,6 +10,8 @@ Route::prefix('adminhtml')->group(function (): void {
 	Route::prefix('block')->group(function (): void {
 		Route::get('/', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'blockList'])->name('akho.block');
 
+		Route::get('group/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'groupDetail']);
+
 		Route::post('create', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'addBlock']);
 
 		Route::delete('delete/{id}', [\Thanhnt\Akhoglobal\Controllers\Adminhtml\BlockAdminController::class, 'deleteBlock']);
