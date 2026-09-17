@@ -4,11 +4,14 @@ namespace Thanhnt\Akhoglobal\Controllers\Adminhtml;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Inertia\Inertia;
 use Thanhnt\Akhoglobal\Models\Block;
+use Thanhnt\Akhoglobal\Models\Types\BlockGroupInterface;
 use Thanhnt\Akhoglobal\Models\Types\BlockInterface;
 use Thanhnt\Akhoglobal\Models\Types\BlockItemInterface;
 use Thanhnt\Akhoglobal\Models\Types\ConfigInterface;
+use Thanhnt\Akhoglobal\Models\BlockGroup;
 
 final class BlockAdminController extends Controller
 {
@@ -22,11 +25,26 @@ final class BlockAdminController extends Controller
 
 	public function blockList()
 	{
-		$blockList = Block::query()->with('items')->get();
-
+		// $blockListJson = File::json(__DIR__ . '/../../Database/Test/abac-d53bb-default-rtdb-export.json');
+		// return $blockListJson['blockList'];
+		/**
+		 * whereNull || WhereNotNull
+		 */
+		$blockList = Block::query()->WhereNotNull(BlockInterface::_GROUP_ID)->with('items')->get();
+		return $blockList->toJson(JSON_PRETTY_PRINT);
+		// return $this->configAction->getConfig('init_screen') ? json_decode($this->configAction->getConfig('init_screen')->value, true) : null;
 		return Inertia::render('akhoglobal/screens/StockPosition', [
-			'blockList' => $blockList,
+			'blockList' => $blockList, //$blockListJson['blockList'], // $blockList,
 			'message' => session('message', null),
+			'init_screen' => $this->configAction->getConfig('init_screen') ? json_decode($this->configAction->getConfig('init_screen')->value, true) : null,
+		]);
+	}
+
+	public function groupDetail(int $id)
+	{
+		$blockGroup = BlockGroup::with(BlockGroupInterface::R_BLOCKS)->find($id);
+		return Inertia::render('akhoglobal/screens/BlockGroupDetail', [
+			'group' => $blockGroup,
 			'init_screen' => $this->configAction->getConfig('init_screen') ? json_decode($this->configAction->getConfig('init_screen')->value, true) : null,
 		]);
 	}
@@ -54,13 +72,14 @@ final class BlockAdminController extends Controller
 			ConfigInterface::_TYPE => 'string',
 			ConfigInterface::_DESCRIPTION => 'Initial screen configuration for blocks',
 		]);
-
+		return redirect()->back()->with('message', 'Block added successfully');
 		return redirect(route('akho.block'))->with('message', 'Block added successfully');
 	}
 
 	public function deleteBlock(string $id)
 	{
 		$this->blockAction->deleteBlock($id);
+		return redirect()->back()->with('message', 'Block added successfully');
 		return redirect(route('akho.block'))->with('message', 'Block deleted successfully');
 	}
 
@@ -88,6 +107,7 @@ final class BlockAdminController extends Controller
 		// Ví dụ áp dụng cho trường hợp của bạn (Sau khi PUT Update)Sau khi người dùng bấm cập nhật (PUT), bạn nên giữ nguyên mã
 		// 302 (mặc định) hoặc dùng mã 303 để trình duyệt chuyển hướng an toàn về trang hiển thị (GET)
 		// return redirect(route('akho.block'), 303)->with('message', 'Block updated successfully');
+		return redirect()->back()->with('message', 'Block added successfully');
 		return redirect()->route('akho.block')->with('message', 'Block updated successfully');
 	}
 
@@ -98,6 +118,7 @@ final class BlockAdminController extends Controller
 			BlockItemInterface::_ITEM_MODEL => 'required|string'
 		]);
 		$this->blockAction->addBlockItem($request->input('key'), $request->only([BlockItemInterface::_ITEM_MODEL, BlockItemInterface::_DESCRIPTION]));
+		return redirect()->back()->with('message', 'Block added successfully');
 		return redirect(route('akho.block'))->with('message', 'Block item added successfully');
 	}
 
@@ -105,7 +126,7 @@ final class BlockAdminController extends Controller
 	{
 		$blockItem = \Thanhnt\Akhoglobal\Models\BlockItem::findOrFail($id);
 		$blockItem->delete();
-
+		return redirect()->back()->with('message', 'Block added successfully');
 		return redirect(route('akho.block'))->with('message', 'Block item deleted successfully');
 	}
 }

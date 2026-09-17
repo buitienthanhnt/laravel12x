@@ -1,6 +1,6 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition } from './../../wayfinder'
 /**
- * @see [serialized-closure]:2
+ * @see routes/web.php:39
  * @route '/flmngr'
  */
 export const api = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -14,7 +14,7 @@ api.definition = {
 } satisfies RouteDefinition<["post"]>
 
 /**
- * @see [serialized-closure]:2
+ * @see routes/web.php:39
  * @route '/flmngr'
  */
 api.url = (options?: RouteQueryOptions) => {
@@ -22,7 +22,7 @@ api.url = (options?: RouteQueryOptions) => {
 }
 
 /**
- * @see [serialized-closure]:2
+ * @see routes/web.php:39
  * @route '/flmngr'
  */
 api.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -31,7 +31,7 @@ api.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 })
 
     /**
- * @see [serialized-closure]:2
+ * @see routes/web.php:39
  * @route '/flmngr'
  */
     const apiForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -40,14 +40,14 @@ api.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     })
 
             /**
- * @see [serialized-closure]:2
+ * @see routes/web.php:39
  * @route '/flmngr'
  */
         apiForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
             action: api.url(options),
             method: 'post',
         })
-    
+
     api.form = apiForm
 const flmngr = {
     api: Object.assign(api, api),

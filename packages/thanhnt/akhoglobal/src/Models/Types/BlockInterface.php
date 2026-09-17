@@ -26,6 +26,7 @@ interface BlockInterface
 	const _HEIGHT = 'height';
 	const _STYLE = 'style';
 	const _TYPE = 'type';
+	const _GROUP_ID = 'group_id';
 
 	const FILLED_FIELDS = [
 		self::_NAME,
@@ -36,5 +37,6 @@ interface BlockInterface
 		self::_HEIGHT,
 		self::_STYLE,
 		self::_TYPE,
+		self::_GROUP_ID,
 	];
 }
